@@ -13,6 +13,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'system',
     name: 'System',
     logoText: 'System',
+    logoUrl: 'https://assets.explorets.com/system.svg',
     rating: 9.87,
     stars: 4.94,
     tagline: 'Starting at $79 your first month. Free shipping.',
