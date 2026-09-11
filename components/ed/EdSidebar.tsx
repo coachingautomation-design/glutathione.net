@@ -164,13 +164,6 @@ export function EdSidebar({
             <li>Unverifiable numbers are shown as “not published”.</li>
             <li>Rankings are editorial, not paid placement.</li>
           </ul>
-          <a
-            href="#methodology"
-            className="mt-3 inline-block text-xs font-bold underline underline-offset-2"
-            style={{ color: ED_BLUE }}
-          >
-            Read our full methodology →
-          </a>
         </Module>
       </div>
     </aside>

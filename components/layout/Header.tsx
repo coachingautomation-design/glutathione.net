@@ -8,7 +8,6 @@ type HeaderNavItem = { label: string; href: string };
 const DEFAULT_NAV: HeaderNavItem[] = [
   { label: 'Rankings', href: '#rankings' },
   { label: 'Which Programme Is Right for Me?', href: '#treatment-types' },
-  { label: 'How We Evaluate', href: '#methodology' },
   { label: 'FAQs', href: '#faq' },
 ];
 

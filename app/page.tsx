@@ -100,33 +100,6 @@ const PROGRAMME_TYPES = [
   },
 ];
 
-const EVALUATION_CRITERIA = [
-  {
-    title: 'Clinician oversight',
-    body: 'Whether a licensed prescriber genuinely reviews your intake, and whether you can reach one again to change a dose rather than only at sign-up.',
-  },
-  {
-    title: 'Pharmacy sourcing',
-    body: 'Whether the compounding pharmacy is named and state-licensed. Compounded glutathione is only as good as the facility preparing it.',
-  },
-  {
-    title: 'Format options',
-    body: 'Injection, liposomal oral, nasal spray or patch — and whether changing format later means changing provider.',
-  },
-  {
-    title: 'Pricing and transparency',
-    body: 'Whether the monthly figure is published before intake, what it becomes after any introductory month, and whether the consultation and shipping are inside it.',
-  },
-  {
-    title: 'State availability',
-    body: 'Which states a provider actually prescribes into. bmiMD, for instance, does not ship to five of them, and that is easier to learn here than at checkout.',
-  },
-  {
-    title: 'What is bundled',
-    body: 'Labs, coaching, follow-up and dose adjustments included in the monthly price, or billed as extras once you are enrolled.',
-  },
-];
-
 const FORMAT_TABLE = [
   {
     method: 'Subcutaneous injection',
@@ -220,14 +193,7 @@ export default function GlutathioneHomePage() {
           body: 'Compounded glutathione is a prescription medication prepared by licensed compounding pharmacies; it is not an FDA-approved finished product and is not approved to treat, cure or prevent any disease. It is a wellness protocol, and no provider on this page — or this page itself — can tell you what it will do for you. Disclose your full medical history and every medication and supplement you take at intake.',
         },
       }}
-      methodology={{
-        heading: 'How We Evaluate Glutathione Providers',
-        intro:
-          'Our comparison is a documentary review of what each provider publishes, checked against its own site. We do not run clinical trials, we do not test medication, and we do not collect patient outcome data — so you will not find efficacy scores, success rates or survey results anywhere on this page.',
-        criteria: EVALUATION_CRITERIA,
-        footnote:
-          'Editorial scores and reader vote counts shown on the cards reflect our own assessment. They are not clinical ratings, and they are not a measure of medical effectiveness. Provider details change frequently — always confirm current pricing, state availability and terms on the provider’s own site before you buy.',
-      }}
+      methodology={null}
       guide={{
         heading: 'The Complete Guide to Glutathione Therapy in 2026',
         children: (

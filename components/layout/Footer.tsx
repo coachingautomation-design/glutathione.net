@@ -4,7 +4,6 @@ import { currentYear } from '@/lib/utils';
 const ON_PAGE_LINKS = [
   { href: '#rankings', label: 'Ranked Providers' },
   { href: '#treatment-types', label: 'Which Programme Is Right for Me?' },
-  { href: '#methodology', label: 'How We Evaluate' },
   { href: '#education', label: 'Glutathione Therapy Guide' },
   { href: '#faq', label: 'FAQs' },
 ];
