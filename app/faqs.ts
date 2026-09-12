@@ -19,7 +19,7 @@ export const GLUTATHIONE_FAQS = [
   },
   {
     q: 'What does glutathione therapy cost?',
-    a: 'System is the lowest verified entry price in this comparison at $79 for the first month with free shipping. AgelessRx starts at $90/month across three formats, Hone Health at roughly $99/month with comprehensive labs included, and Embody charges a flat $99/month with free 1–2 day shipping. Shed opens with 20% off the first month and includes health coaching. Ongoing monthly costs across the category typically run $79–$200+ depending on format and dose.',
+    a: 'System is the lowest verified entry price in this comparison at $69 for the first month, rising to $133/month afterward. AgelessRx starts at $90/month across three formats, Hone Health at roughly $99/month with comprehensive labs included, and Embody charges a flat $99/month with free 1–2 day shipping. Shed opens with 20% off the first month and includes health coaching. Ongoing monthly costs across the category typically run $90–$200+ depending on format and dose.',
   },
   {
     q: 'Is compounded glutathione FDA-approved?',

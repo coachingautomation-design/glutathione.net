@@ -3,10 +3,10 @@ import { clampDescription } from './seo';
 
 export const SITE_CONFIG = {
   name: 'Glutathione.net',
-  domain: 'https://glutathione.net',
+  domain: 'https://www.glutathione.net',
   description: 'Compare clinician-prescribed glutathione therapy providers online — format, pricing and state availability.',
-  logo: 'https://glutathione.net/icon.svg',
-  ogImage: 'https://glutathione.net/icon.svg',
+  logo: 'https://www.glutathione.net/icon.svg',
+  ogImage: 'https://www.glutathione.net/icon.svg',
 } as const;
 
 export function generateWebsiteSchema() {

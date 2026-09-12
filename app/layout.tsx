@@ -30,6 +30,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#0d9488" />
         <meta name="format-detection" content="telephone=no" />
 
+        {/* AI / LLM discoverability */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Reference (llms.txt)" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Comprehensive LLM Reference" />
+
+        {/* Sitemap */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

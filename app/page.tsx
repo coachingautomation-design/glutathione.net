@@ -30,7 +30,7 @@ const VERTICAL_SLUG = 'glutathione';
 
 const META_TITLE = 'Best Glutathione Treatments 2026 | Top Providers';
 const META_DESCRIPTION =
-  'Compare the best online glutathione providers of 2026 — clinician-prescribed injection, oral and patch protocols from $79, delivered to your door.';
+  'Compare the best online glutathione providers of 2026 — clinician-prescribed injection, oral and patch protocols from $69, delivered to your door.';
 
 const CANONICAL = '/';
 
@@ -48,7 +48,7 @@ export async function generateMetadata() {
  * publishes.
  */
 const POSITIONING: Record<string, string> = {
-  system: 'Lowest entry price at $79',
+  system: 'Lowest entry price at $69',
   agelessrx: 'Three formats from $90/month',
   hone: 'Comprehensive labs included',
   shed: '20% off month one, coaching included',
@@ -91,7 +91,7 @@ const PROGRAMME_TYPES = [
   {
     name: 'Low-cost entry',
     body: 'A discounted or low first month to get started, then the standard rate. Useful for trying a provider — the figure to compare across the page is still the ongoing monthly price.',
-    onPage: 'System opens at $79 for the first month with free shipping, the lowest verified entry price here; Shed opens with 20% off and includes health coaching.',
+    onPage: 'System opens at $69 for the first month (reg. $133), the lowest verified entry price here; Shed opens with 20% off and includes health coaching.',
   },
   {
     name: 'Coaching and support bundles',
@@ -253,11 +253,11 @@ export default function GlutathioneHomePage() {
 
             <EdGuideHeading id="cost">What glutathione therapy costs online</EdGuideHeading>
             <EdGuideText first>
-              Entry prices on this page run from $79 to about $99 for a first month, and ongoing monthly costs across
-              the category typically sit between $79 and $200+ depending on format and dose. System is the lowest
-              verified entry at $79 with free shipping; AgelessRx starts at $90/month across three formats; Hone Health
-              and Embody both sit around $99/month, the first with comprehensive labs included and the second as a flat
-              rate with free 1–2 day delivery.
+              Entry prices on this page run from $69 to about $99 for a first month, and ongoing monthly costs across
+              the category typically sit between $90 and $200+ depending on format and dose. System is the lowest
+              verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
+              three formats; Hone Health and Embody both sit around $99/month, the first with comprehensive labs
+              included and the second as a flat rate with free 1–2 day delivery.
             </EdGuideText>
             <EdGuideText>
               The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
@@ -278,7 +278,7 @@ export default function GlutathioneHomePage() {
 
             <EdGuideHeading id="how-they-compare">How the ranked providers compare</EdGuideHeading>
             <EdGuideText first>
-              System takes the top spot on entry price: $79 for the first month with free shipping and a fully online
+              System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
               clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
               ranks second as the most established platform here, and the only one offering three formats — weekly
               injection, daily nasal spray or a needle-free patch — from $90/month. Hone Health is third for anyone who

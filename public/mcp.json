@@ -1,0 +1,25 @@
+{
+  "name": "Glutathione.net MCP",
+  "description": "Structured AI-readable data for the glutathione.net provider comparison",
+  "version": "1.0",
+  "base_url": "https://www.glutathione.net",
+  "site_metadata": "https://www.glutathione.net/api/webmcp/site/",
+  "resources": [
+    {
+      "endpoint": "/api/mcp/providers/",
+      "description": "Ranked glutathione therapy providers with ratings, pricing, features and FAQs"
+    },
+    {
+      "endpoint": "/api/webmcp/site/",
+      "description": "Site metadata and API directory"
+    },
+    {
+      "endpoint": "/llms.txt",
+      "description": "Curated, concise site directory for LLMs (llmstxt.org convention)"
+    },
+    {
+      "endpoint": "/llms-full.txt",
+      "description": "Full page content and provider data for LLMs"
+    }
+  ]
+}
