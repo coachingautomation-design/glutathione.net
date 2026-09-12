@@ -1,5 +1,6 @@
 import OutboundLink from '@/components/OutboundLink';
 import SmartLink from '@/components/SmartLink';
+import { TOP_PICK_VIAL_IMAGE_URL } from './EdProviderRow';
 import type { EdHubProvider } from './types';
 import type { RelatedLink } from '@/lib/internal-links';
 
@@ -63,34 +64,49 @@ export function EdSidebar({
             className="absolute inset-0 z-[1]"
             style={{ textDecoration: 'none' }}
           />
-          <div className="flex h-10 items-center">
-            {topPick.logoUrl ? (
-              /* eslint-disable-next-line @next/next/no-img-element */
-              <img
-                src={topPick.logoUrl}
-                alt={`${topPick.name} logo`}
-                width={140}
-                height={36}
-                style={{ height: 36, maxWidth: 140, objectFit: 'contain', objectPosition: 'left center' }}
-                loading="lazy"
-              />
-            ) : (
-              <span className="text-base font-bold" style={{ color: BRAND_DARK }}>
-                {topPick.name}
+
+          <div className="flex flex-col items-center text-center">
+            <div className="flex h-10 items-center justify-center">
+              {topPick.logoUrl ? (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={topPick.logoUrl}
+                  alt={`${topPick.name} logo`}
+                  width={140}
+                  height={36}
+                  style={{ height: 36, maxWidth: 140, objectFit: 'contain' }}
+                  loading="lazy"
+                />
+              ) : (
+                <span className="text-base font-bold" style={{ color: BRAND_DARK }}>
+                  {topPick.name}
+                </span>
+              )}
+            </div>
+
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={TOP_PICK_VIAL_IMAGE_URL}
+              alt={`${topPick.name} product`}
+              className="mt-3"
+              style={{ height: 90, maxWidth: '100%', objectFit: 'contain' }}
+              loading="lazy"
+            />
+
+            <div className="mt-3 flex items-center gap-2">
+              <span className="text-2xl font-black leading-none tabular-nums" style={{ color: '#000' }}>
+                {topPick.rating.toFixed(2)}
               </span>
-            )}
-          </div>
-
-          <div className="mt-2 flex items-center gap-2">
-            <span className="text-2xl font-black leading-none tabular-nums" style={{ color: '#000' }}>
-              {topPick.rating.toFixed(2)}
+              <EdStars rating={topPick.rating} />
+            </div>
+            <span className="mt-1 text-xs" style={{ color: '#6b7280' }}>
+              {topPick.userVotes.toLocaleString('en-US')} user votes
             </span>
-            <EdStars rating={topPick.rating} />
-          </div>
 
-          <p className="mt-2 text-sm leading-snug" style={{ color: '#374151' }}>
-            {topPick.tagline}
-          </p>
+            <p className="mt-3 text-sm leading-snug" style={{ color: '#374151' }}>
+              {topPick.tagline}
+            </p>
+          </div>
 
           <OutboundLink
             href={topPick.affiliateUrl}

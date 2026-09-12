@@ -39,8 +39,12 @@ import type { EdHubProvider } from './types';
 /** Tracking vertical when a page does not pass its own. */
 const DEFAULT_VERTICAL = 'best-ed-providers';
 
-/** Product shot shown on the back of the #1 pick's logo on hover. */
-const TOP_PICK_VIAL_IMAGE_URL =
+/**
+ * Product shot for the #1 pick — shown on the back of the logo on hover in
+ * the ranked row, and statically in the sidebar's "Editor's Top Pick" module
+ * (see EdSidebar). Exported so both share one URL.
+ */
+export const TOP_PICK_VIAL_IMAGE_URL =
   'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png';
 
 function CheckMark() {
