@@ -123,11 +123,10 @@ export default function GlutathioneNasalSprayPage() {
 
             <EdGuideHeading id="what-is-it">What intranasal glutathione is</EdGuideHeading>
             <EdGuideText first>
-              A nasal spray moves glutathione across the nasal mucosa rather than through an injection or a swallowed
-              dose. That route matters for two practical reasons: it skips first-pass liver metabolism the way a
-              swallowed pill can't, and the nasal cavity sits close to olfactory pathways that some intranasal
-              formulations are specifically designed to reach — which is the pharmacological reasoning behind
-              marketing a spray around cognitive effects rather than the whole-body framing an injection gets.
+              A nasal spray delivers glutathione through the nasal lining instead of a needle or a swallowed pill.
+              That matters for two practical reasons: you skip the injection entirely, and a spray doesn't get broken
+              down in digestion the way a pill does — which is also why AgelessRx markets this format around focus
+              and mental clarity rather than the whole-body framing its injection gets.
             </EdGuideText>
             <EdGuideText>
               AgelessRx is the provider on this page selling a spray alongside its injection and patch. ReadyRx also
@@ -135,8 +134,6 @@ export default function GlutathioneNasalSprayPage() {
               how the two stack up in{' '}
               <EdGuideLink href="/">our full glutathione comparison</EdGuideLink>.
             </EdGuideText>
-
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="how-it-works">The daily-routine trade-off</EdGuideHeading>
             <EdGuideText first>
@@ -163,9 +160,9 @@ export default function GlutathioneNasalSprayPage() {
               <EdAuthorityLink href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">
                 the FDA does not review compounded drugs
               </EdAuthorityLink>{' '}
-              for safety or effectiveness before they reach a patient, and a nasal formulation's sterility and
-              preservative handling depend entirely on the compounding pharmacy that prepares it — one more reason the
-              pharmacy's licensing is worth confirming, not just the clinician's.
+              for safety or effectiveness before they reach a patient, and how a nasal spray is prepared and stored
+              depends entirely on the compounding pharmacy that made it — one more reason the pharmacy's licensing is
+              worth confirming, not just the clinician's.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />

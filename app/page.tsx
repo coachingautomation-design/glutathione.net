@@ -211,21 +211,18 @@ export default function GlutathioneHomePage() {
 
             <EdGuideHeading id="what-is-glutathione">What glutathione is</EdGuideHeading>
             <EdGuideText first>
-              Glutathione is a tripeptide — three amino acids, glutamate, cysteine and glycine, joined together — and,
-              as the{' '}
+              Glutathione is an antioxidant your body makes on its own, in every cell, described by the{' '}
               <EdAuthorityLink href="https://pubchem.ncbi.nlm.nih.gov/compound/Glutathione">
                 NIH&apos;s PubChem database
               </EdAuthorityLink>{' '}
-              records, it is the most abundant thiol in mammalian cells. Unlike vitamin C or E it is not something you
-              take in from food in any meaningful quantity: your cells synthesise it, continuously, and use it as the
-              main line of defence against oxidative damage.
+              as the most abundant of its kind. Unlike vitamin C or E, you can&apos;t meaningfully get more of it from
+              food — which is the whole reason a therapy category built around topping it up exists.
             </EdGuideText>
             <EdGuideText>
-              Two of its roles explain why it is sold as a therapy at all. It neutralises reactive oxygen species
-              directly and helps regenerate other antioxidants once they have been spent. And it is the substrate for
-              the glutathione S-transferase enzymes of the liver&apos;s Phase II detoxification pathway, where it binds
-              reactive metabolites and makes them water-soluble enough to be excreted. That biochemistry is settled;
-              what supplementing it does for an individual is a separate question this page does not answer.
+              What it does inside the body is well established: it neutralises the oxidative damage that builds up
+              from age, alcohol, illness and everyday environmental exposure, and supports the liver&apos;s own
+              detox process. What a course of it will do for you personally is a separate question — one this page
+              doesn&apos;t answer and no provider on it should claim to either.
             </EdGuideText>
 
             <EdGuideHeading id="why-levels-fall">Why glutathione levels fall</EdGuideHeading>
@@ -237,8 +234,8 @@ export default function GlutathioneHomePage() {
 
             <EdGuideHeading id="formats">Delivery formats compared</EdGuideHeading>
             <EdGuideText first>
-              Oral glutathione has an absorption problem — the same digestive tract that handles food breaks down a
-              tripeptide efficiently — which is why almost every clinician-supervised programme uses a route that
+              Oral glutathione has an absorption problem — your digestive system breaks most of it down before it
+              reaches your bloodstream — which is why almost every clinician-supervised programme uses a route that
               bypasses it. Liposomal formulations improve on standard oral considerably; injection improves on both.
             </EdGuideText>
             <EdGuideTable
@@ -314,8 +311,6 @@ export default function GlutathioneHomePage() {
               1:1 health coaching into a $69/month subscribe-and-save plan — the lowest recurring monthly price here —
               dosed slightly more often, at 1–2 injections a week.
             </EdGuideText>
-
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="getting-started">How to get started</EdGuideHeading>
             <EdGuideList

@@ -47,7 +47,7 @@ export function EdGuideHeading({ id, children }: { id?: string; children: ReactN
 /** Body paragraph. `first` tightens the gap under a heading. */
 export function EdGuideText({ children, first = false }: { children: ReactNode; first?: boolean }) {
   return (
-    <p className={first ? 'mt-2 leading-relaxed' : 'mt-3 leading-relaxed'} style={{ fontSize: 18, color: ED_TEXT }}>
+    <p className={first ? 'mt-2 leading-relaxed' : 'mt-3 leading-relaxed'} style={{ fontSize: 22, color: ED_TEXT }}>
       {children}
     </p>
   );
@@ -58,7 +58,7 @@ export function EdGuideList({ items, columns = 2 }: { items: string[]; columns?:
   return (
     <ul className={`mt-3 grid gap-2 ${columns === 2 ? 'sm:grid-cols-2' : ''}`}>
       {items.map((item) => (
-        <li key={item} className="flex items-start gap-2 text-[18px] leading-snug text-neutral-700">
+        <li key={item} className="flex items-start gap-2 text-[22px] leading-snug text-neutral-700">
           <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full" style={{ backgroundColor: ED_CTA }} aria-hidden="true" />
           {item}
         </li>

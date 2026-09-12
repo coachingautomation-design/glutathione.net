@@ -119,19 +119,16 @@ export default function GlutathionePatchPage() {
 
             <EdGuideHeading id="what-is-it">What iontophoresis actually is</EdGuideHeading>
             <EdGuideText first>
-              Iontophoresis uses a mild electrical current to push a charged compound through the skin's outer
-              barrier, instead of a needle breaking through it. It isn't unique to glutathione — the same principle
-              shows up in sweat-based cystic fibrosis testing and in some prescription pain patches — but it's the
-              least common delivery method on this page, and the reason AgelessRx's patch can claim whole-body support
-              with nothing to inject and nothing to remember daily.
+              Iontophoresis uses a mild electrical current to move glutathione through the skin instead of a needle
+              breaking through it. It's the least common delivery method on this page, and it's the reason
+              AgelessRx's patch can claim whole-body support with nothing to inject and nothing to remember daily —
+              you apply it once and leave it on.
             </EdGuideText>
             <EdGuideText>
               AgelessRx is the only provider in our glutathione comparison currently publishing a patch. See how it
               compares to the injection and spray it also sells in{' '}
               <EdGuideLink href="/">our full glutathione comparison</EdGuideLink>.
             </EdGuideText>
-
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="how-it-works">Why once a week changes the calculus</EdGuideHeading>
             <EdGuideText first>
@@ -159,8 +156,9 @@ export default function GlutathionePatchPage() {
                 the FDA does not review compounded drugs
               </EdAuthorityLink>{' '}
               for safety or effectiveness before a patient receives them. For a patch specifically, that also means
-              the adhesive and the delivery matrix are the compounding pharmacy's own formulation, not a standardized
-              one — another reason the pharmacy's licensing is worth confirming alongside the prescriber's.
+              how well it sticks and delivers the dose depends on the compounding pharmacy's own formulation, not a
+              standardized one — another reason the pharmacy's licensing is worth confirming alongside the
+              prescriber's.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
