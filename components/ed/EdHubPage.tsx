@@ -13,7 +13,7 @@ import type { RelatedLink } from '@/lib/internal-links';
 import { EdFaqList } from './EdFaqList';
 import { EdProviderRow, EdBestOverallPick, EdOfferBanner } from './EdProviderRow';
 import { EdRankedList } from './EdRankedList';
-import { EdSidebar } from './EdSidebar';
+import { EdHowWeRankStrip, EdSidebar } from './EdSidebar';
 import { EdTopThreeFlashcard } from './EdTopThreeFlashcard';
 import { ED_HEADING, ED_CTA, ED_HERO_BG, hubThemeVars, type HubTheme } from './theme';
 import type { EdHubProvider } from './types';
@@ -344,7 +344,10 @@ export function EdHubPage({
           Desktop only, by request: on a phone the ranked rows already start
           within a screen of the hero, so the strip would push the actual list
           below a second fold instead of saving anyone a scroll. */}
-      {strip.length > 0 && (
+      {/* A 3-up strip built from fewer than 3 providers renders one lonely
+          card in an otherwise-empty row — not a "quick picks" strip, just a
+          layout bug. Skip it entirely on short rosters. */}
+      {providers.length >= 3 && strip.length > 0 && (
         <section id="top-picks" className="hidden scroll-mt-16 pt-6 pb-2 sm:block">
           <div className="container-shell">
             <EdTopThreeFlashcard providers={strip} vertical={vertical} />
@@ -365,6 +368,8 @@ export function EdHubPage({
               {bestOverallHeading && (
                 <EdBestOverallPick provider={topPick} vertical={vertical} heading={bestOverallHeading} />
               )}
+
+              <EdHowWeRankStrip />
             </section>
           </div>
 

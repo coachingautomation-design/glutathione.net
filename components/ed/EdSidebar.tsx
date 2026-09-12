@@ -157,15 +157,38 @@ export function EdSidebar({
         </Module>
         )}
 
-        <Module title="How We Rank">
-          <ul className="space-y-2 text-sm leading-snug" style={{ color: '#374151' }}>
-            <li>Only figures a provider publishes on its own site.</li>
-            <li>No clinical testing and no patient outcome data.</li>
-            <li>Unverifiable numbers are shown as “not published”.</li>
-            <li>Rankings are editorial, not paid placement.</li>
-          </ul>
-        </Module>
       </div>
     </aside>
+  );
+}
+
+const HOW_WE_RANK_POINTS = [
+  'Only figures a provider publishes on its own site.',
+  'No clinical testing and no patient outcome data.',
+  'Unverifiable numbers are shown as “not published”.',
+  'Rankings are editorial, not paid placement.',
+];
+
+/**
+ * "How We Rank" — used to live as a stacked module in `EdSidebar`, but on a
+ * short page (few providers, no Articles/Provider Reviews modules to fill
+ * the rail) that left the sidebar visibly taller than the ranked-list column
+ * beside it. Rendered instead as a slim horizontal strip directly under the
+ * ranked list, so it works the same on a 9-provider page and a 1-provider
+ * spotlight page alike.
+ */
+export function EdHowWeRankStrip() {
+  return (
+    <div
+      className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-1.5 bg-white px-4 py-3 text-xs leading-snug"
+      style={{ border: `1px solid ${ED_BORDER}`, color: '#374151' }}
+    >
+      <span className="text-[11px] font-bold uppercase tracking-wider" style={{ color: BRAND_DARK }}>
+        How We Rank
+      </span>
+      {HOW_WE_RANK_POINTS.map((point) => (
+        <span key={point}>{point}</span>
+      ))}
+    </div>
   );
 }
