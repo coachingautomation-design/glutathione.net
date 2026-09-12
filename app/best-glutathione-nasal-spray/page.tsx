@@ -25,7 +25,7 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 
 const VERTICAL_SLUG = 'glutathione-nasal-spray';
 
-const META_TITLE = 'Best glutathione nasal spray';
+const META_TITLE = 'Best Glutathione Nasal Spray';
 const META_DESCRIPTION =
   "We've compared the top glutathione nasal spray providers online. Find affordable, trusted US glutathione providers.";
 
@@ -53,7 +53,7 @@ export default function GlutathioneNasalSprayPage() {
       canonical={CANONICAL}
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
-      heading="Best glutathione nasal spray"
+      heading="Best Glutathione Nasal Spray"
       intro="We've compared the top glutathione nasal spray providers online. Find affordable, trusted US glutathione providers."
       trustStrip={[
         'Licensed Clinician Review',

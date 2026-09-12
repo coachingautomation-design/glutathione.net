@@ -21,7 +21,7 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 
 const VERTICAL_SLUG = 'glutathione-patch';
 
-const META_TITLE = 'Best glutathione patch providers';
+const META_TITLE = 'Best Glutathione Patch Providers';
 const META_DESCRIPTION =
   "We've compared the top glutathione patch providers online. Find affordable, trusted US glutathione providers.";
 
@@ -49,7 +49,7 @@ export default function GlutathionePatchPage() {
       canonical={CANONICAL}
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
-      heading="Best glutathione patch providers"
+      heading="Best Glutathione Patch Providers"
       intro="We've compared the top glutathione patch providers online. Find affordable, trusted US glutathione providers."
       trustStrip={[
         'Licensed Clinician Review',

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { clampDescription } from './seo';
 
 export const SITE_CONFIG = {
-  name: 'Glutathione.net',
+  name: 'Best Glutathione',
   domain: 'https://www.glutathione.net',
   description: 'Compare clinician-prescribed glutathione therapy providers online — format, pricing and state availability.',
   logo: 'https://www.glutathione.net/icon.svg',

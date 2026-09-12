@@ -1,7 +1,7 @@
 export const currentYear = () => new Date().getFullYear();
 
 export const siteConfig = {
-  name: 'Glutathione.net',
+  name: 'Best Glutathione',
   url: 'https://www.glutathione.net',
   description: 'Independent comparison of clinician-prescribed glutathione therapy providers.'
 };

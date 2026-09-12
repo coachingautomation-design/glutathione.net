@@ -29,7 +29,7 @@ import { GLUTATHIONE_FAQS } from './faqs';
 
 const VERTICAL_SLUG = 'glutathione';
 
-const META_TITLE = 'Best glutathione injections 2026';
+const META_TITLE = 'Best Glutathione Injections 2026';
 const META_DESCRIPTION =
   'Compare the best online glutathione providers of 2026 — clinician-prescribed injection, oral and patch protocols from $69, delivered to your door.';
 
@@ -167,7 +167,7 @@ export default function GlutathioneHomePage() {
       canonical={CANONICAL}
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
-      heading="Best glutathione injections 2026"
+      heading="Best Glutathione Injections 2026"
       intro="Compare best & affordable glutathione injections telehealth providers."
       trustStrip={[
         'Licensed Clinician Review',
