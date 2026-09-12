@@ -196,11 +196,19 @@ export function EdProviderRow({
    */
   duplicate = false,
   vertical = DEFAULT_VERTICAL,
+  /**
+   * The #1 pick's hover-flip product shot. On by default, but the shot is an
+   * injection vial — off on the nasal spray and patch spotlight pages, where
+   * showing an injection photo on the #1 (and only) card would misrepresent
+   * the format the page is actually about.
+   */
+  enableVialFlip = true,
 }: {
   provider: EdHubProvider;
   duplicate?: boolean;
   /** Tracking vertical for this page — every ED hub reuses this row. */
   vertical?: string;
+  enableVialFlip?: boolean;
 }) {
   return (
     <div
@@ -247,7 +255,7 @@ export function EdProviderRow({
           className="order-1 flex min-w-0 flex-1 items-center justify-start md:w-1/4 md:flex-none md:justify-center"
           style={{ padding: '16px' }}
         >
-          <ProviderLogo provider={provider} flip />
+          <ProviderLogo provider={provider} flip={enableVialFlip} />
         </div>
 
         {/* Score + CTA — beside the logo on mobile (flex-none so it keeps its
@@ -304,17 +312,19 @@ export function EdBestOverallPick({
   provider,
   vertical = DEFAULT_VERTICAL,
   heading = 'Best Overall Pick',
+  enableVialFlip = true,
 }: {
   provider: EdHubProvider;
   vertical?: string;
   heading?: string;
+  enableVialFlip?: boolean;
 }) {
   return (
     <section aria-label="Best overall pick" className="mt-10">
       <h2 className="text-center" style={{ fontSize: 20, fontWeight: 600, color: ED_HEADING, marginBottom: 12 }}>
         {heading}
       </h2>
-      <EdProviderRow provider={provider} duplicate vertical={vertical} />
+      <EdProviderRow provider={provider} duplicate vertical={vertical} enableVialFlip={enableVialFlip} />
     </section>
   );
 }

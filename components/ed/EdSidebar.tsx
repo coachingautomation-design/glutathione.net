@@ -41,6 +41,7 @@ export function EdSidebar({
   guidesHref = '/best-ed-providers/guides/',
   guidesHeading = 'ED Guides',
   guidesLinkLabel = 'See all ED guides →',
+  showVial = true,
 }: {
   topPick: EdHubProvider;
   articles: RelatedLink[];
@@ -51,6 +52,8 @@ export function EdSidebar({
   /** Labels default to the ED wording; every other vertical passes its own. */
   guidesHeading?: string;
   guidesLinkLabel?: string;
+  /** The top pick's product vial shot — off where the shot (an injection) doesn't match the page's format. */
+  showVial?: boolean;
 }) {
   return (
     <aside className="hidden lg:block">
@@ -84,14 +87,16 @@ export function EdSidebar({
               )}
             </div>
 
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={TOP_PICK_VIAL_IMAGE_URL}
-              alt={`${topPick.name} product`}
-              className="mt-3"
-              style={{ height: 90, maxWidth: '100%', objectFit: 'contain' }}
-              loading="lazy"
-            />
+            {showVial && (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={TOP_PICK_VIAL_IMAGE_URL}
+                alt={`${topPick.name} product`}
+                className="mt-3"
+                style={{ height: 90, maxWidth: '100%', objectFit: 'contain' }}
+                loading="lazy"
+              />
+            )}
 
             <div className="mt-3 flex items-center gap-2">
               <span className="text-2xl font-black leading-none tabular-nums" style={{ color: '#000' }}>

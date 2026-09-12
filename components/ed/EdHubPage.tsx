@@ -2,6 +2,7 @@ import { Fragment, type ReactNode } from 'react';
 import SmartLink from '@/components/SmartLink';
 import { ConsolidatedDisclaimer } from '@/components/content/ConsolidatedDisclaimer';
 import { PageEvent } from '@/components/tracking/PageEvent';
+import { montserrat } from '@/lib/fonts';
 import {
   generateMedicalWebPageSchema,
   generateItemListSchema,
@@ -70,6 +71,14 @@ export type EdHubPageProps = {
    * list uncollapsed. Only shows when the roster is longer than the count.
    */
   showMore?: { initialVisibleCount?: number; moreLabel?: string; fewerLabel?: string } | null;
+
+  /**
+   * The #1 pick's product vial shot — the ranked row's hover-flip and the
+   * sidebar's static image. On by default. The shot is an injection vial, so
+   * pages about a different format (nasal spray, patch) should pass `false`
+   * rather than show a photo of the wrong product.
+   */
+  showTopPickVial?: boolean;
 
   /** Right rail. */
   sidebarArticles?: RelatedLink[];
@@ -175,6 +184,7 @@ export function EdHubPage({
   offerBannerAfterIndex = 1,
   bestOverallHeading = 'Best Overall Pick',
   showMore,
+  showTopPickVial = true,
   sidebarArticles = [],
   sidebarGuides,
   treatmentTypes,
@@ -204,7 +214,7 @@ export function EdHubPage({
   // sibling, which keeps that indexing one-to-one with `providers`.
   const rows = providers.map((provider, index) => (
     <Fragment key={provider.slug}>
-      <EdProviderRow provider={provider} vertical={vertical} />
+      <EdProviderRow provider={provider} vertical={vertical} enableVialFlip={showTopPickVial} />
       {/* One interstitial, after the second row — far enough in to have earned
           attention, early enough to still be seen. */}
       {index === offerBannerAfterIndex && <EdOfferBanner provider={topPick} vertical={vertical} />}
@@ -366,7 +376,12 @@ export function EdHubPage({
               {rankedRows}
 
               {bestOverallHeading && (
-                <EdBestOverallPick provider={topPick} vertical={vertical} heading={bestOverallHeading} />
+                <EdBestOverallPick
+                  provider={topPick}
+                  vertical={vertical}
+                  heading={bestOverallHeading}
+                  enableVialFlip={showTopPickVial}
+                />
               )}
 
               <EdHowWeRankStrip />
@@ -378,6 +393,7 @@ export function EdHubPage({
             articles={sidebarArticles}
             reviewedProviders={reviewedProviders}
             vertical={vertical}
+            showVial={showTopPickVial}
             {...(sidebarGuides?.href && { guidesHref: sidebarGuides.href })}
             {...(sidebarGuides?.heading && { guidesHeading: sidebarGuides.heading })}
             {...(sidebarGuides?.linkLabel && { guidesLinkLabel: sidebarGuides.linkLabel })}
@@ -444,17 +460,20 @@ export function EdHubPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------- 8. Educational content */}
+      {/* ---------------------------------------------------- 8. Educational content
+          Montserrat + 18px body text, and full container-shell width (matching
+          the ranked-list + sidebar row above) rather than the narrower
+          reading-width column most prose sections use — both by request. */}
       {guide && (
-        <section id="education" className="scroll-mt-16 bg-neutral-50 py-10 sm:py-12">
+        <section id="education" className={`scroll-mt-16 bg-neutral-50 py-10 sm:py-12 ${montserrat.className}`}>
           <div className="container-shell">
-            <div className="mx-auto max-w-3xl">
+            <div>
               <h2 style={{ fontSize: 20, fontWeight: 600, color: ED_HEADING }}>{guide.heading}</h2>
               {guide.children}
             </div>
 
             {guide.moreGuides && guide.moreGuides.length > 0 && (
-              <div className="mx-auto mt-8 max-w-3xl">
+              <div className="mt-8">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-500">
                   {guide.moreGuidesHeading ?? 'More guides'}
                 </h3>

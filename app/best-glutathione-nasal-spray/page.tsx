@@ -66,6 +66,9 @@ export default function GlutathioneNasalSprayPage() {
       showMore={null}
       offerBannerAfterIndex={null}
       bestOverallHeading={null}
+      // The vial shot is an injection photo — off here so a nasal-spray page
+      // doesn't show the wrong product.
+      showTopPickVial={false}
       methodology={null}
       schema={{
         medicalCondition: 'Glutathione Nasal Spray Therapy',
@@ -131,7 +134,7 @@ export default function GlutathioneNasalSprayPage() {
               own injectable option, in our main glutathione comparison.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="how-it-works">How the spray works</EdGuideHeading>
             <EdGuideText first>
@@ -148,7 +151,7 @@ export default function GlutathioneNasalSprayPage() {
               charged once a licensed provider approves your request.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>
@@ -162,7 +165,7 @@ export default function GlutathioneNasalSprayPage() {
               start.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideList
               columns={1}

@@ -62,6 +62,9 @@ export default function GlutathionePatchPage() {
       showMore={null}
       offerBannerAfterIndex={null}
       bestOverallHeading={null}
+      // The vial shot is an injection photo — off here so a patch page
+      // doesn't show the wrong product.
+      showTopPickVial={false}
       methodology={null}
       schema={{
         medicalCondition: 'Glutathione Patch Therapy',
@@ -126,7 +129,7 @@ export default function GlutathionePatchPage() {
               routine to keep up.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="how-it-works">How iontophoresis works</EdGuideHeading>
             <EdGuideText first>
@@ -144,7 +147,7 @@ export default function GlutathionePatchPage() {
               request.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>
@@ -158,7 +161,7 @@ export default function GlutathionePatchPage() {
               start.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideList
               columns={1}
