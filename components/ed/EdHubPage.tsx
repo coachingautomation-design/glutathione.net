@@ -303,7 +303,7 @@ export function EdHubPage({
             H1 over the photo; the intro copy and trust strip appear from `sm` up. */}
         <div className="container-shell flex min-h-[72px] flex-col justify-center py-2 sm:block sm:min-h-0 sm:py-9">
           <div className="max-w-2xl">
-            <h1 className="text-[21px] leading-[1.15] sm:text-[36px] sm:leading-[1.1]" style={{ fontWeight: 700, color: '#000' }}>
+            <h1 className="text-center text-[21px] leading-[1.15] sm:text-left sm:text-[36px] sm:leading-[1.1]" style={{ fontWeight: 700, color: '#000' }}>
               {h1}
             </h1>
             <p className="mt-3 hidden text-[15px] leading-relaxed sm:block sm:text-base" style={{ color: '#374151' }}>
