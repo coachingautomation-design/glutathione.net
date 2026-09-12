@@ -23,7 +23,9 @@ clinical trials, test medication, or collect patient outcome data.
 
 ## Pages
 
-- [Best Glutathione Treatments 2026](${SITE_CONFIG.domain}/): Ranked comparison of ${roster}, plus a guide to glutathione therapy formats, cost and FAQs.
+- [Best glutathione injections 2026](${SITE_CONFIG.domain}/): Ranked comparison of ${roster}, plus a guide to glutathione therapy formats, cost and FAQs.
+- [Best glutathione nasal spray](${SITE_CONFIG.domain}/best-glutathione-nasal-spray/): AgelessRx's needle-free intranasal spray format, format-specific pricing, guide and FAQs.
+- [Best glutathione patch providers](${SITE_CONFIG.domain}/best-glutathione-patch/): AgelessRx's needle-free, once-weekly transdermal patch format, format-specific pricing, guide and FAQs.
 - [About](${SITE_CONFIG.domain}/about/): What this site is and how it's funded.
 - [Advertising Disclosure](${SITE_CONFIG.domain}/advertising-disclosure/): How affiliate compensation relates to the rankings.
 - [Contact](${SITE_CONFIG.domain}/contact/)

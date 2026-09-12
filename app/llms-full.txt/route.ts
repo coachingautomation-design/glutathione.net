@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { SITE_CONFIG } from '@/lib/seo-schema';
 import { glutathioneProviders } from '@/data/providers/glutathione';
+import { glutathioneNasalSprayProviders } from '@/data/providers/glutathione-nasal-spray';
+import { glutathionePatchProviders } from '@/data/providers/glutathione-patch';
 import { GLUTATHIONE_FAQS } from '../faqs';
 
 export const dynamic = 'force-static';
@@ -30,6 +32,19 @@ export function GET() {
 
   const faqSection = GLUTATHIONE_FAQS.map((item) => `Q: ${item.q}\nA: ${item.a}`).join('\n\n');
 
+  const formatPage = (path: string, heading: string, p: (typeof glutathioneNasalSprayProviders)[number]) => `### ${heading} (${SITE_CONFIG.domain}${path})
+
+Featured provider: ${p.name}
+- Price: ${p.priceRange}
+- Headline: ${p.tagline}
+- Features: ${p.features.join('; ')}
+- Best for: ${p.bestFor}`;
+
+  const formatPagesSection = [
+    formatPage('/best-glutathione-nasal-spray/', 'Best glutathione nasal spray', glutathioneNasalSprayProviders[0]),
+    formatPage('/best-glutathione-patch/', 'Best glutathione patch providers', glutathionePatchProviders[0]),
+  ].join('\n\n');
+
   const body = `# Comprehensive LLM Reference — ${SITE_CONFIG.name}
 
 > ${SITE_CONFIG.description}
@@ -45,6 +60,13 @@ to a provider and buys, at no extra cost to them; see ${SITE_CONFIG.domain}/adve
 ## Provider Directory (ranked)
 
 ${providerSections}
+
+## Format-Specific Pages
+
+AgelessRx is the only provider above publishing more than one glutathione format (injection, nasal spray
+and patch). Its spray and patch each get their own page, with format-specific pricing, guide and FAQs:
+
+${formatPagesSection}
 
 ## Evaluation Criteria
 
@@ -72,6 +94,8 @@ ${faqSection}
 ## Key Pages
 
 - ${SITE_CONFIG.domain}/ — the ranked comparison, guide and FAQs
+- ${SITE_CONFIG.domain}/best-glutathione-nasal-spray/ — AgelessRx's nasal spray format
+- ${SITE_CONFIG.domain}/best-glutathione-patch/ — AgelessRx's patch format
 - ${SITE_CONFIG.domain}/about/
 - ${SITE_CONFIG.domain}/advertising-disclosure/
 - ${SITE_CONFIG.domain}/contact/

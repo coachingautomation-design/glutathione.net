@@ -196,6 +196,11 @@ export default function GlutathioneHomePage() {
       methodology={null}
       guide={{
         heading: 'The Complete Guide to Glutathione Therapy in 2026',
+        moreGuides: [
+          { href: '/best-glutathione-nasal-spray/', label: 'Best glutathione nasal spray' },
+          { href: '/best-glutathione-patch/', label: 'Best glutathione patch providers' },
+        ],
+        moreGuidesHeading: 'More glutathione formats',
         children: (
           <>
             <EdGuideContents items={GUIDE_CONTENTS} />

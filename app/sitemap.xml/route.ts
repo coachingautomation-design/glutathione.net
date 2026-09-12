@@ -11,6 +11,8 @@ export const dynamic = 'force-static';
  */
 const PAGES: Array<{ path: string; priority: string; changefreq: string }> = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/best-glutathione-nasal-spray/', priority: '0.9', changefreq: 'weekly' },
+  { path: '/best-glutathione-patch/', priority: '0.9', changefreq: 'weekly' },
   { path: '/about/', priority: '0.3', changefreq: 'monthly' },
   { path: '/advertising-disclosure/', priority: '0.3', changefreq: 'monthly' },
   { path: '/contact/', priority: '0.3', changefreq: 'monthly' },
