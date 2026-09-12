@@ -6,9 +6,8 @@ import SmartLink from '@/components/SmartLink';
 type HeaderNavItem = { label: string; href: string };
 
 const DEFAULT_NAV: HeaderNavItem[] = [
-  { label: 'Rankings', href: '#rankings' },
-  { label: 'Which Programme Is Right for Me?', href: '#treatment-types' },
-  { label: 'FAQs', href: '#faq' },
+  { label: 'Glutathione Spray', href: '/best-glutathione-nasal-spray/' },
+  { label: 'Glutathione Patch', href: '/best-glutathione-patch/' },
 ];
 
 /**

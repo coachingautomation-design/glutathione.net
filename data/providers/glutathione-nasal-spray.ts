@@ -21,7 +21,7 @@ export const glutathioneNasalSprayProviders: Provider[] = [
     shortDescription: 'AgelessRx\'s glutathione nasal spray is a once-daily, needle-free intranasal formulation built for mental clarity and focus rather than injection. It starts at $90 for the first month, renewing at $110/month, with a 100% online medical evaluation and free shipping from a US-licensed pharmacy — you pay only if a licensed provider approves.',
     badges: ['Needle-Free', 'Daily Routine'],
     affiliate: {
-      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?_ef_transaction_id=&utm_source=everflow&utm_medium=affiliate&utm_campaign=&oid=6&affid=11&sub1=1896&sub5=&oid2=6004&affid2=1896',
+      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=glutathione&utm_term=aff11&_ef_transaction_id=&oid=6&affid=11&sub1=1896&sub5=&oid2=6004&affid2=1896',
       network: 'everflow',
     },
     features: [

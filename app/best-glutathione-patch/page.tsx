@@ -7,6 +7,7 @@ import {
   EdGuideText,
 } from '@/components/ed/EdGuide';
 import { EdHubPage } from '@/components/ed/EdHubPage';
+import { EdProviderRow } from '@/components/ed/EdProviderRow';
 import { GLUTATHIONE_HUB_THEME } from '@/components/ed/theme';
 import { glutathionePatchProviders } from '@/data/providers/glutathione-patch';
 import { hubProvidersFromProviders } from '@/data/providers/hub-cards';
@@ -125,6 +126,8 @@ export default function GlutathionePatchPage() {
               routine to keep up.
             </EdGuideText>
 
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+
             <EdGuideHeading id="how-it-works">How iontophoresis works</EdGuideHeading>
             <EdGuideText first>
               The patch uses iontophoresis — a mild electrical current that helps move the compound through the skin
@@ -141,6 +144,8 @@ export default function GlutathionePatchPage() {
               request.
             </EdGuideText>
 
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>
               The glutathione patch is a compounded preparation — made by a licensed pharmacy against an individual
@@ -152,6 +157,8 @@ export default function GlutathionePatchPage() {
               reach patients. That's why the prescriber and the pharmacy are the two things worth verifying before you
               start.
             </EdGuideText>
+
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideList
               columns={1}

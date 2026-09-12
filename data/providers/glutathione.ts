@@ -20,7 +20,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'System offers injectable glutathione — a 2000mg monthly supply — starting at $69 for your first month (regularly $133), one of the lowest entry prices in the market. The plan includes injection supplies, 20% off a Rythm blood test and 2-day temperature-controlled shipping, with no clinic visit required. If you want an affordable, fully online path to injectable glutathione, System is the clear first choice.',
     badges: ['#1 Ranked', 'Best Value'],
     affiliate: {
-      url: 'https://track.revoffers.com/aff_c?offer_id=1575&aff_id=10248&source=.now&url_id=12144',
+      url: 'https://track.revoffers.com/aff_c?offer_id=1575&aff_id=10248&url_id=12144',
       network: 'custom',
     },
     features: [
@@ -79,7 +79,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'AgelessRx is the most established name on this list, a research-led longevity platform that has served 197,000+ customers and offers glutathione in three distinct delivery formats: a weekly injection, a daily nasal spray made for mental clarity, and a needle-free once-weekly patch. Starting at $90 a month with a 100% online medical evaluation and free shipping, AgelessRx lets you match the delivery method to your routine and your goals instead of forcing a single product on everyone.',
     badges: ['Most Established', '3 Delivery Formats'],
     affiliate: {
-      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?_ef_transaction_id=&utm_source=everflow&utm_medium=affiliate&utm_campaign=&oid=6&affid=11&sub1=1896&sub5=&oid2=6004&affid2=1896',
+      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=glutathione&utm_term=aff11&_ef_transaction_id=&oid=6&affid=11&sub1=1896&sub5=&oid2=6004&affid2=1896',
       network: 'everflow',
     },
     features: [
@@ -143,7 +143,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'Hone Health brings clinical depth to glutathione therapy that few telehealth providers can match, comprehensive lab testing is included in the program, giving your clinician the data needed to design a personalized protocol. For patients who want more than a one-size-fits-all prescription, Hone Health delivers the monitoring and expert oversight that translates glutathione therapy into targeted, measurable results.',
     badges: ['Best Personalized Care'],
     affiliate: {
-      url: 'https://track.revoffers.com/aff_c?offer_id=1291&aff_id=10248',
+      url: 'https://track.revoffers.com/aff_c?offer_id=1291&aff_id=10248&url_id=11197',
       network: 'custom',
     },
     features: [
@@ -202,7 +202,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'Shed combines speed with value, their 5-minute signup and same-day shipping on approved orders gets your glutathione therapy started faster than any other platform. New patients receive 20% off their first month, and health coaching is included in every plan at no extra cost. For patients who want to move quickly and get lifestyle support alongside treatment, Shed delivers.',
     badges: ['Fastest Approval'],
     affiliate: {
-      url: 'https://www.shm2idjl.com/BRK5HK/27P3D6/?source_id=glutathione.now',
+      url: 'https://www.shm2idjl.com/BRK5HK/27P3D6/',
       network: 'everflow',
     },
     features: [
@@ -320,8 +320,8 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'bmiMD offers clinician-prescribed glutathione therapy at one of the most competitive ongoing price points in this market, with free shipping and sourcing from a licensed U.S. compounding pharmacy. For patients in eligible states who want a straightforward, affordable monthly glutathione program, bmiMD is a reliable option. Not available in AR, CA, LA, MS, or SC.',
     badges: ['Best Budget Option'],
     affiliate: {
-      url: 'https://track.revoffers.com/aff_c?offer_id=1332&aff_id=10248&url_id=11196',
-      network: 'custom',
+      url: 'https://www.bmimd.com/glutathione-injection/?_ef_transaction_id=&utm_source=everflow&utm_medium=affiliate&utm_campaign=134&utm_content=144&oid2=144&aff_id2=134',
+      network: 'everflow',
     },
     features: [
       'Affordable clinician-prescribed glutathione',
@@ -367,6 +367,158 @@ export const glutathioneProviders: Provider[] = [
       {
         question: 'Is bmiMD glutathione from a licensed U.S. pharmacy?',
         answer: 'Yes. bmiMD sources all compounded medications including glutathione from licensed U.S. compounding pharmacies. As with all compounded glutathione, it is a prescription compounded medication, not an FDA-approved finished product, prepared at a licensed pharmacy.',
+      },
+    ],
+  },
+  {
+    // Rating/stars follow the shared position-based scale (lib/ratings.ts
+    // RATING_MAP position 7), not a hand-picked number.
+    slug: 'readyrx',
+    name: 'ReadyRx',
+    logoText: 'ReadyRx',
+    logoUrl: 'https://readyhealth.everflowclient.io/logo.png',
+    rating: 8.96,
+    stars: 4.48,
+    tagline: 'From $84 per dose, injection or nasal spray. No membership.',
+    shortDescription: 'ReadyRx offers clinician-prescribed glutathione in your choice of injection or nasal spray, priced per dose at $84 with no recurring monthly membership required. Every order includes a 100% online consultation with a licensed provider and free 1–2 day shipping, and you can cancel anytime.',
+    badges: ['Format Choice', 'No Membership'],
+    affiliate: {
+      url: 'https://www.dpy84ben.com/6MW5NB/SL1HB/',
+      network: 'everflow',
+    },
+    features: [
+      'Injection or nasal spray, your choice',
+      '$84 per dose, no monthly membership required',
+      'Free 1–2 day shipping, cancel anytime',
+    ],
+    pros: [
+      'Choice of injectable or nasal spray format',
+      'No recurring monthly membership — pay per dose, cancel anytime',
+      '100% online consultation with a licensed provider',
+      'Free shipping with 1–2 day delivery',
+      'HSA/FSA eligible',
+    ],
+    cons: [
+      'No flat monthly subscription price — cost is per dose',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $84 per dose',
+    bestFor: 'Patients who want a choice of format (injection or nasal spray) without committing to a recurring monthly membership',
+    faq: [
+      {
+        question: 'What glutathione formats does ReadyRx offer?',
+        answer: 'ReadyRx offers both injectable and nasal spray glutathione, both listed at $84 per dose. You choose the format at intake.',
+      },
+      {
+        question: 'Does ReadyRx require a monthly membership?',
+        answer: 'No. ReadyRx prices glutathione per dose at $84 with no recurring monthly membership fee, and you can cancel anytime.',
+      },
+      {
+        question: 'How fast does ReadyRx ship?',
+        answer: 'ReadyRx includes free shipping with 1–2 day delivery on every order once a licensed provider approves your consultation.',
+      },
+      {
+        question: 'Is ReadyRx glutathione FDA-approved?',
+        answer: 'No. ReadyRx sources compounded glutathione from a licensed U.S. pharmacy; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients. A 100% online consultation with a licensed provider is required before anything ships.',
+      },
+    ],
+  },
+  {
+    // Rating/stars follow the shared position-based scale (lib/ratings.ts
+    // RATING_MAP position 8), not a hand-picked number.
+    slug: 'taurus',
+    name: 'Taurus',
+    logoText: 'Taurus',
+    logoUrl: 'https://taurusmeds.com/images/taurus-logo-red.svg',
+    rating: 8.74,
+    stars: 4.37,
+    tagline: 'Powerful antioxidant peptide from $79/mo.',
+    shortDescription: 'Taurus ships a home injection kit of glutathione (200mg/mL, 5mL per bottle) from a licensed US pharmacy, working out to about $10.75 per shot at the discounted $79 first-month rate. No insurance is required and the plan is HSA/FSA eligible, though the price steps up to $179/month after the first month.',
+    badges: ['Home Injection Kit'],
+    affiliate: {
+      url: 'https://taurusmeds.com/pages/glutathione?_ef_transaction_id=&oid=124&aff_id=134',
+      network: 'everflow',
+    },
+    features: [
+      'No insurance required, HSA/FSA eligible',
+      '200mg/mL (5mL per bottle)',
+      'Shipped from licensed US pharmacy',
+    ],
+    pros: [
+      'Low first-month price at $79',
+      'Home injection kit ships directly from a licensed US pharmacy',
+      'No insurance required, HSA/FSA eligible',
+    ],
+    cons: [
+      'Renews at $179/month after the discounted first month — the highest ongoing price in this comparison',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $79 first month, then $179/month',
+    bestFor: 'Patients who want the lowest possible first-month price and plan to reassess before the $179/month renewal',
+    faq: [
+      {
+        question: 'How much does Taurus glutathione cost after the first month?',
+        answer: 'The first month is $79, working out to about $10.75 per shot. It renews at $179/month afterward — the highest ongoing price among the providers in this comparison.',
+      },
+      {
+        question: 'What does the Taurus glutathione kit include?',
+        answer: 'A home injection kit dosed at 200mg/mL in a 5mL bottle, shipped from a licensed US pharmacy. No insurance is required, and the plan is HSA/FSA eligible.',
+      },
+      {
+        question: 'Is Taurus glutathione FDA-approved?',
+        answer: 'No. Taurus\'s glutathione is a compounded medication; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients.',
+      },
+    ],
+  },
+  {
+    // Rating/stars follow the shared position-based scale (lib/ratings.ts
+    // RATING_MAP position 9), not a hand-picked number.
+    slug: 'joi-plus-blokes',
+    name: 'Joi + Blokes',
+    logoText: 'Joi + Blokes',
+    logoUrl: 'https://assets.explorets.com/Joi%20%2B%20Blokes%20logo-Black.png',
+    rating: 8.42,
+    stars: 4.21,
+    tagline: 'From $69/month with 1:1 health coaching included.',
+    shortDescription: 'Joi + Blokes prescribes subcutaneous glutathione injections, 1–2 times a week from a 15-week supply, starting at $69/month with subscribe & save (or $86/month one-time). A board-certified clinician consultation, 1:1 health coaching and unlimited care-team messaging are bundled into the plan rather than sold separately.',
+    badges: ['Coaching Included'],
+    affiliate: {
+      url: 'https://joiandblokes.com/shop/women/longevity/glutathione/?_ef_transaction_id=&utm_source=everflow&utm_medium=affiliate&utm_campaign=134&utm_content=161&oid2=161&aff_id2=134',
+      network: 'everflow',
+    },
+    features: [
+      'From $69/month with subscribe & save, or $86/month one-time',
+      '1–2 subcutaneous injections per week, 15-week supply',
+      '1:1 health coaching and unlimited care-team messaging included',
+    ],
+    pros: [
+      'Lowest ongoing subscription price in this comparison at $69/month',
+      '1:1 health coaching and lifestyle support bundled in, not sold separately',
+      'Board-certified clinician consultation required before prescribing',
+      'Unlimited messaging with your care team',
+    ],
+    cons: [
+      '1–2 injections per week is a more frequent routine than the once-weekly formats on this page',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $69/month (subscribe & save), $86/month one-time',
+    bestFor: 'Patients who want the lowest ongoing subscription price plus health coaching bundled into the plan',
+    faq: [
+      {
+        question: 'How much does Joi + Blokes glutathione cost?',
+        answer: 'Subscribe & save pricing starts at $69/month (a 15-week supply, roughly 20% off); a one-time purchase of the same supply is $86/month. Both include free shipping on the subscription plan.',
+      },
+      {
+        question: 'What is included with Joi + Blokes glutathione?',
+        answer: 'A board-certified clinician consultation, 1:1 health coaching, lifestyle and nutrition support, and unlimited messaging with your care team are all bundled into the plan, alongside home delivery of your medication.',
+      },
+      {
+        question: 'How often do I inject with Joi + Blokes?',
+        answer: 'The subcutaneous glutathione injections are dosed 1–2 times per week from a 15-week supply — more frequent than the once-weekly formats offered elsewhere in this comparison.',
+      },
+      {
+        question: 'Is Joi + Blokes glutathione FDA-approved?',
+        answer: 'No. Joi + Blokes\'s glutathione is a compounded medication; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients. A board-certified clinician evaluates your intake before anything ships.',
       },
     ],
   },

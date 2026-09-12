@@ -8,6 +8,7 @@ import {
   EdGuideText,
 } from '@/components/ed/EdGuide';
 import { EdHubPage } from '@/components/ed/EdHubPage';
+import { EdProviderRow } from '@/components/ed/EdProviderRow';
 import { GLUTATHIONE_HUB_THEME } from '@/components/ed/theme';
 import { glutathioneProviders } from '@/data/providers/glutathione';
 import { hubProvidersFromProviders } from '@/data/providers/hub-cards';
@@ -54,6 +55,9 @@ const POSITIONING: Record<string, string> = {
   shed: '20% off month one, coaching included',
   embody: 'Flat $99/month, 1–2 day shipping',
   bmimd: 'Value pick, five states excluded',
+  readyrx: 'Injection or spray, no membership',
+  taurus: '$79 first month, $10.75/shot',
+  'joi-plus-blokes': 'From $69/month, coaching included',
 };
 
 const GUIDE_CONTENTS = [
@@ -242,6 +246,8 @@ export default function GlutathioneHomePage() {
               rows={FORMAT_TABLE.map((row) => [row.method, row.bioavailability, row.home, row.note])}
             />
 
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+
             <EdGuideHeading id="what-separates">What separates a good programme from a cheap one</EdGuideHeading>
             <EdGuideText first>
               Four things, all visible before you pay. A low headline price attached to none of them is not a saving:
@@ -259,15 +265,21 @@ export default function GlutathioneHomePage() {
             <EdGuideHeading id="cost">What glutathione therapy costs online</EdGuideHeading>
             <EdGuideText first>
               Entry prices on this page run from $69 to about $99 for a first month, and ongoing monthly costs across
-              the category typically sit between $90 and $200+ depending on format and dose. System is the lowest
+              the category typically sit between $69 and $200 depending on format and dose. System is the lowest
               verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
               three formats; Hone Health and Embody both sit around $99/month, the first with comprehensive labs
-              included and the second as a flat rate with free 1–2 day delivery.
+              included and the second as a flat rate with free 1–2 day delivery. Joi + Blokes' $69/month subscribe-and-save
+              rate is the lowest recurring monthly price on the page, and bundles in health coaching, though it's
+              dosed 1–2 times a week rather than once. Taurus opens at a similarly low $79 first month but is the
+              highest ongoing price here at $179/month, and ReadyRx skips a monthly figure entirely, pricing injection
+              or spray at a flat $84 per dose with no membership.
             </EdGuideText>
             <EdGuideText>
               The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
               into Arkansas, California, Louisiana, Mississippi or South Carolina.
             </EdGuideText>
+
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>
@@ -294,6 +306,16 @@ export default function GlutathioneHomePage() {
               flat $99/month with personalised 200mg–2000mg dosing and free 1–2 day shipping, and bmiMD is the
               no-frills value pick with free shipping in the states it serves.
             </EdGuideText>
+            <EdGuideText>
+              The last three round out the page with different trade-offs rather than a straight step down in quality.
+              ReadyRx is the only other provider here offering a nasal spray alongside its injection, priced per dose
+              at $84 with no monthly membership to cancel. Taurus undercuts everyone on entry price at $79 for the
+              first month, but its $179/month renewal is the highest ongoing price on the page. Joi + Blokes bundles
+              1:1 health coaching into a $69/month subscribe-and-save plan — the lowest recurring monthly price here —
+              dosed slightly more often, at 1–2 injections a week.
+            </EdGuideText>
+
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="getting-started">How to get started</EdGuideHeading>
             <EdGuideList

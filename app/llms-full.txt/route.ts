@@ -63,8 +63,9 @@ ${providerSections}
 
 ## Format-Specific Pages
 
-AgelessRx is the only provider above publishing more than one glutathione format (injection, nasal spray
-and patch). Its spray and patch each get their own page, with format-specific pricing, guide and FAQs:
+AgelessRx publishes three glutathione formats (injection, nasal spray and patch); its spray and patch each
+get their own page below, with format-specific pricing, guide and FAQs. ReadyRx also lists a nasal spray
+(and an injection) in the provider directory above, priced per dose.
 
 ${formatPagesSection}
 

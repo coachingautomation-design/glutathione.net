@@ -7,6 +7,7 @@ import {
   EdGuideText,
 } from '@/components/ed/EdGuide';
 import { EdHubPage } from '@/components/ed/EdHubPage';
+import { EdProviderRow } from '@/components/ed/EdProviderRow';
 import { GLUTATHIONE_HUB_THEME } from '@/components/ed/theme';
 import { glutathioneNasalSprayProviders } from '@/data/providers/glutathione-nasal-spray';
 import { hubProvidersFromProviders } from '@/data/providers/hub-cards';
@@ -15,9 +16,10 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 /**
  * /best-glutathione-nasal-spray/ — a format-specific spotlight page on the
  * same EdHubPage template and GLUTATHIONE_HUB_THEME as the homepage
- * (`/`), narrowed to the one provider that publishes this format
- * (AgelessRx). Single-provider, so the restated "Best Overall Pick" block
- * and the offer-banner interstitial are both switched off — repeating (or
+ * (`/`), featuring AgelessRx's nasal spray (ReadyRx also lists a nasal
+ * spray on the main comparison, but this spotlight page is AgelessRx's).
+ * Single-provider, so the restated "Best Overall Pick" block and the
+ * offer-banner interstitial are both switched off — repeating (or
  * interrupting) a one-row list adds nothing.
  */
 
@@ -123,10 +125,13 @@ export default function GlutathioneNasalSprayPage() {
               nasal mucosa once daily rather than injected or swallowed.
             </EdGuideText>
             <EdGuideText>
-              AgelessRx is the only provider in our glutathione comparison publishing a nasal spray alongside its
-              injection and patch, and it markets the format specifically around mental clarity and focus rather than
-              the broader detox and recovery framing its injection carries.
+              AgelessRx is the provider on this page publishing a nasal spray alongside its injection and patch, and
+              it markets the format specifically around mental clarity and focus rather than the broader detox and
+              recovery framing its injection carries. ReadyRx also lists a nasal spray, priced per dose alongside its
+              own injectable option, in our main glutathione comparison.
             </EdGuideText>
+
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="how-it-works">How the spray works</EdGuideHeading>
             <EdGuideText first>
@@ -143,6 +148,8 @@ export default function GlutathioneNasalSprayPage() {
               charged once a licensed provider approves your request.
             </EdGuideText>
 
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>
               Intranasal glutathione is a compounded preparation — made by a licensed pharmacy against an individual
@@ -154,6 +161,8 @@ export default function GlutathioneNasalSprayPage() {
               reach patients. That's why the prescriber and the pharmacy are the two things worth verifying before you
               start.
             </EdGuideText>
+
+            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
 
             <EdGuideList
               columns={1}

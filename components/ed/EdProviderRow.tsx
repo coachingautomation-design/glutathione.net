@@ -99,16 +99,23 @@ function ProviderLogo({
   // The #1 pick's logo flips on hover to reveal a product shot — scoped to
   // rank 1 (not this provider's slug) so it always follows whichever
   // provider currently holds the top spot, not a specific brand.
+  //
+  // The box is sized independently of the front logo's thin `height` (a
+  // wordmark logo and a bottle photo aren't the same aspect ratio) — sized to
+  // roughly match the card's other content (rating block, bullet list) so
+  // the vial actually fills the box on flip instead of floating tiny in a
+  // corner of it.
+  const boxSize = 130;
   return (
-    <div className="[perspective:800px]" style={{ height, width: 150, maxWidth: '100%' }}>
+    <div className="[perspective:800px]" style={{ height: boxSize, width: boxSize, maxWidth: '100%' }}>
       <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 flex items-center [backface-visibility:hidden]">{logo}</div>
+        <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">{logo}</div>
         <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={TOP_PICK_VIAL_IMAGE_URL}
             alt={`${provider.name} product`}
-            style={{ height, maxWidth: '100%', objectFit: 'contain' }}
+            style={{ height: '100%', width: '100%', objectFit: 'contain' }}
             loading="eager"
           />
         </div>
