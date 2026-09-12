@@ -39,6 +39,10 @@ import type { EdHubProvider } from './types';
 /** Tracking vertical when a page does not pass its own. */
 const DEFAULT_VERTICAL = 'best-ed-providers';
 
+/** Product shot shown on the back of the #1 pick's logo on hover. */
+const TOP_PICK_VIAL_IMAGE_URL =
+  'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png';
+
 function CheckMark() {
   return (
     <svg
@@ -59,13 +63,26 @@ function CheckMark() {
   );
 }
 
-function ProviderLogo({ provider, height = 40 }: { provider: EdHubProvider; height?: number }) {
+function ProviderLogo({
+  provider,
+  height = 40,
+  flip = false,
+}: {
+  provider: EdHubProvider;
+  height?: number;
+  /** Flip-on-hover to reveal a product shot. Only meaningful where an
+   *  ancestor carries `group` (the ranked row and its best-overall-pick
+   *  restatement) — pass it there, not in contexts with no hover card
+   *  (e.g. the offer banner) where the flip could never trigger anyway. */
+  flip?: boolean;
+}) {
   if (!provider.logoUrl) {
     return (
       <span style={{ color: ED_ACCENT, fontSize: 18, fontWeight: 700 }}>{provider.logoText}</span>
     );
   }
-  return (
+
+  const logo = (
     /* eslint-disable-next-line @next/next/no-img-element */
     <img
       src={provider.logoUrl}
@@ -75,6 +92,28 @@ function ProviderLogo({ provider, height = 40 }: { provider: EdHubProvider; heig
       style={{ height, maxWidth: '100%', objectFit: 'contain' }}
       loading={provider.rank <= 3 ? 'eager' : 'lazy'}
     />
+  );
+
+  if (!flip || provider.rank !== 1) return logo;
+
+  // The #1 pick's logo flips on hover to reveal a product shot — scoped to
+  // rank 1 (not this provider's slug) so it always follows whichever
+  // provider currently holds the top spot, not a specific brand.
+  return (
+    <div className="[perspective:800px]" style={{ height, width: 150, maxWidth: '100%' }}>
+      <div className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        <div className="absolute inset-0 flex items-center [backface-visibility:hidden]">{logo}</div>
+        <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={TOP_PICK_VIAL_IMAGE_URL}
+            alt={`${provider.name} product`}
+            style={{ height, maxWidth: '100%', objectFit: 'contain' }}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -155,7 +194,7 @@ export function EdProviderRow({
   return (
     <div
       {...(duplicate ? {} : { id: `provider-${provider.slug}` })}
-      className="relative scroll-mt-24 bg-white shadow-[3px_3px_12px_rgba(0,0,0,0.4)] transition-shadow duration-200 hover:shadow-[3px_3px_22px_rgba(0,0,0,0.55)]"
+      className="group relative scroll-mt-24 bg-white shadow-[3px_3px_12px_rgba(0,0,0,0.4)] transition-shadow duration-200 hover:shadow-[3px_3px_22px_rgba(0,0,0,0.55)]"
       style={{ borderRadius: ED_CARD_RADIUS, overflow: 'hidden' }}
     >
       {/* Whole-card affiliate link. It sits beneath the Visit Site buttons
@@ -197,7 +236,7 @@ export function EdProviderRow({
           className="order-1 flex min-w-0 flex-1 items-center justify-start md:w-1/4 md:flex-none md:justify-center"
           style={{ padding: '16px' }}
         >
-          <ProviderLogo provider={provider} />
+          <ProviderLogo provider={provider} flip />
         </div>
 
         {/* Score + CTA — beside the logo on mobile (flex-none so it keeps its
