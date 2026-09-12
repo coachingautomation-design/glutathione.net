@@ -3,6 +3,7 @@ import {
   EdGuideCallout,
   EdGuideContents,
   EdGuideHeading,
+  EdGuideLink,
   EdGuideList,
   EdGuideText,
 } from '@/components/ed/EdGuide';
@@ -84,18 +85,18 @@ export default function GlutathionePatchPage() {
           },
           {
             name: 'Weekly injection',
-            body: 'The most direct route for whole-body antioxidant support, for patients who don\'t mind self-injecting once a week.',
+            body: 'Same weekly cadence as the patch, but delivered under the skin rather than through it — a more direct dose in exchange for a needle.',
             onPage: 'From $99 the first month, then $149/month.',
           },
           {
             name: 'Daily nasal spray',
-            body: 'A once-daily, needle-free spray studied specifically for raising glutathione levels in the brain — a daily routine rather than a weekly one.',
+            body: 'Also needle-free, but a daily spray built around mental clarity rather than a once-a-week whole-body patch.',
             onPage: 'From $90 the first month, then $110/month.',
           },
         ],
         callout: {
           heading: 'What this therapy is not',
-          body: 'Compounded glutathione is a prescription medication prepared by a licensed compounding pharmacy; it is not an FDA-approved finished product and is not approved to treat, cure or prevent any disease. Disclose your full medical history and every medication and supplement you take at intake.',
+          body: 'A patch is still a prescription compounded medication delivered through the skin, not an over-the-counter supplement — it is not FDA-approved to treat, cure or prevent anything, and going needle-free doesn\'t change that status. Disclose your full medical history and every medication and supplement you take before your provider approves a protocol.',
         },
       }}
       guide={{
@@ -109,56 +110,57 @@ export default function GlutathionePatchPage() {
           <>
             <EdGuideContents
               items={[
-                { href: '#what-is-it', label: 'What the glutathione patch is' },
-                { href: '#how-it-works', label: 'How iontophoresis works' },
-                { href: '#cost', label: 'What it costs' },
-                { href: '#compounded', label: 'Compounded glutathione and the FDA' },
+                { href: '#what-is-it', label: 'What iontophoresis actually is' },
+                { href: '#how-it-works', label: 'Why once a week changes the calculus' },
+                { href: '#cost', label: 'What a quarterly kit costs per week' },
+                { href: '#compounded', label: 'Compounded patches and the FDA' },
               ]}
             />
 
-            <EdGuideHeading id="what-is-it">What the glutathione patch is</EdGuideHeading>
+            <EdGuideHeading id="what-is-it">What iontophoresis actually is</EdGuideHeading>
             <EdGuideText first>
-              Glutathione is a tripeptide — glutamate, cysteine and glycine — that the body produces continuously and
-              uses as its main defence against oxidative stress. Most at-home programmes deliver it by injection; a
-              transdermal patch is a needle-free alternative, applied to the skin once a week rather than injected or
-              swallowed.
+              Iontophoresis uses a mild electrical current to push a charged compound through the skin's outer
+              barrier, instead of a needle breaking through it. It isn't unique to glutathione — the same principle
+              shows up in sweat-based cystic fibrosis testing and in some prescription pain patches — but it's the
+              least common delivery method on this page, and the reason AgelessRx's patch can claim whole-body support
+              with nothing to inject and nothing to remember daily.
             </EdGuideText>
             <EdGuideText>
-              AgelessRx is the only provider in our glutathione comparison publishing a patch alongside its injection
-              and nasal spray, and it's the lowest-effort of the three formats — nothing to self-inject and no daily
-              routine to keep up.
+              AgelessRx is the only provider in our glutathione comparison currently publishing a patch. See how it
+              compares to the injection and spray it also sells in{' '}
+              <EdGuideLink href="/">our full glutathione comparison</EdGuideLink>.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
-            <EdGuideHeading id="how-it-works">How iontophoresis works</EdGuideHeading>
+            <EdGuideHeading id="how-it-works">Why once a week changes the calculus</EdGuideHeading>
             <EdGuideText first>
-              The patch uses iontophoresis — a mild electrical current that helps move the compound through the skin
-              barrier, the mechanism that lets it work without an injection. You complete a short online health
-              questionnaire, a licensed provider reviews it, and — if approved — your patch kit ships free from a
-              US-licensed pharmacy. Payment is only taken once approved.
+              A once-weekly patch trades dosing frequency for less control mid-cycle — you're not adjusting anything
+              between applications the way you might time an injection or skip a day of spray. That's a genuine
+              upside for anyone who has missed doses on a daily routine before, and a genuine downside if you'd rather
+              fine-tune as you go. Intake itself is unchanged from AgelessRx's other formats: a short online
+              questionnaire, clinician review, and a US-licensed pharmacy fulfilling the order once approved.
             </EdGuideText>
 
-            <EdGuideHeading id="cost">What it costs</EdGuideHeading>
+            <EdGuideHeading id="cost">What a quarterly kit costs per week</EdGuideHeading>
             <EdGuideText first>
-              AgelessRx bills the patch at $180 per kit, quarterly, rather than a flat monthly figure — worth factoring
-              in if you're comparing it against a per-month price on the injection or spray. The online medical
-              evaluation and shipping are included, and you're only charged once a licensed provider approves your
-              request.
+              AgelessRx bills the patch at $180 per kit, quarterly, rather than a monthly figure. Assuming a standard
+              13-week quarter's supply, that works out to roughly $14/week — the number worth holding next to the
+              injection's and spray's monthly prices, since "$180" on its own reads far more expensive than it
+              actually runs per week. The online medical evaluation and shipping are already inside that figure.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
-            <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
+            <EdGuideHeading id="compounded">Compounded patches and the FDA</EdGuideHeading>
             <EdGuideText first>
-              The glutathione patch is a compounded preparation — made by a licensed pharmacy against an individual
-              prescription rather than manufactured as an approved finished product. As the{' '}
+              A compounded transdermal patch sits under the same rule as any other compounded medication:{' '}
               <EdAuthorityLink href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">
-                FDA explains
-              </EdAuthorityLink>
-              , compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before they
-              reach patients. That's why the prescriber and the pharmacy are the two things worth verifying before you
-              start.
+                the FDA does not review compounded drugs
+              </EdAuthorityLink>{' '}
+              for safety or effectiveness before a patient receives them. For a patch specifically, that also means
+              the adhesive and the delivery matrix are the compounding pharmacy's own formulation, not a standardized
+              one — another reason the pharmacy's licensing is worth confirming alongside the prescriber's.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
@@ -166,18 +168,18 @@ export default function GlutathionePatchPage() {
             <EdGuideList
               columns={1}
               items={[
-                'Complete AgelessRx\'s online health questionnaire — about 30 seconds, no in-person visit.',
-                'A licensed provider reviews your intake and approves only if the patch is appropriate for you.',
-                'Payment is taken only after approval; your patch kit ships free from a US-licensed pharmacy.',
-                'Apply one patch a week as directed, and raise any skin reaction with your provider rather than adjusting the schedule yourself.',
+                'Answer AgelessRx\'s online intake so a licensed provider can confirm the patch fits your goals and health history.',
+                'Once approved, you\'re billed for the quarter and your kit ships free from a US-licensed pharmacy.',
+                'Apply one patch a week on the schedule your provider sets — consistency matters more than the exact day.',
+                'Any skin irritation at the application site goes to your provider, not a DIY fix.',
               ]}
             />
 
             <EdGuideCallout title="Before you start treatment">
-              The glutathione patch is not FDA-approved to treat, cure or prevent any disease, and compounded
-              glutathione is not an FDA-approved finished product. Individual response varies and no outcome is
-              promised here. Consult a licensed clinician before starting, particularly if you are pregnant or
-              breastfeeding, managing a chronic condition, or taking medication that affects liver metabolism.
+              The glutathione patch is not FDA-approved to treat, cure or prevent any disease, and — like every
+              format on this site — it's a compounded product rather than an FDA-reviewed finished one. Response
+              varies person to person. Check with a licensed clinician first if you're pregnant or breastfeeding,
+              manage a chronic condition, or take medication that affects liver metabolism.
             </EdGuideCallout>
           </>
         ),

@@ -3,6 +3,7 @@ import {
   EdGuideCallout,
   EdGuideContents,
   EdGuideHeading,
+  EdGuideLink,
   EdGuideList,
   EdGuideText,
 } from '@/components/ed/EdGuide';
@@ -88,18 +89,18 @@ export default function GlutathioneNasalSprayPage() {
           },
           {
             name: 'Weekly injection',
-            body: 'The most direct route for whole-body antioxidant support, for patients who don\'t mind self-injecting once a week.',
+            body: 'Bypasses the nose entirely for a more direct, whole-body dose — the trade is a weekly self-injection instead of a daily spray.',
             onPage: 'From $99 the first month, then $149/month.',
           },
           {
             name: 'Needle-free patch',
-            body: 'A once-weekly transdermal patch using iontophoresis — needle-free like the spray, but a single weekly application rather than a daily routine.',
+            body: 'Also needle-free, but a once-a-week iontophoresis patch rather than something you apply every day.',
             onPage: 'Billed at $180 per kit, quarterly.',
           },
         ],
         callout: {
           heading: 'What this therapy is not',
-          body: 'Compounded glutathione is a prescription medication prepared by a licensed compounding pharmacy; it is not an FDA-approved finished product and is not approved to treat, cure or prevent any disease. Disclose your full medical history and every medication and supplement you take at intake.',
+          body: 'A nasal spray is still a prescription compounded medication, not an over-the-counter wellness product — it is not FDA-approved to treat, cure or prevent anything, and the intranasal route has not been evaluated by the FDA any more than the injection or patch have. Tell your provider about every medication, supplement and condition at intake, not just the ones that seem relevant to a nasal product.',
         },
       }}
       guide={{
@@ -114,55 +115,57 @@ export default function GlutathioneNasalSprayPage() {
             <EdGuideContents
               items={[
                 { href: '#what-is-it', label: 'What intranasal glutathione is' },
-                { href: '#how-it-works', label: 'How the spray works' },
-                { href: '#cost', label: 'What it costs' },
-                { href: '#compounded', label: 'Compounded glutathione and the FDA' },
+                { href: '#how-it-works', label: 'The daily-routine trade-off' },
+                { href: '#cost', label: 'What it costs, per day' },
+                { href: '#compounded', label: 'Compounded nasal sprays and the FDA' },
               ]}
             />
 
             <EdGuideHeading id="what-is-it">What intranasal glutathione is</EdGuideHeading>
             <EdGuideText first>
-              Glutathione is a tripeptide — glutamate, cysteine and glycine — that the body produces continuously and
-              uses as its main defence against oxidative stress. Most at-home programmes deliver it by injection, which
-              bypasses the digestive tract entirely. A nasal spray is a second needle-free route: absorbed through the
-              nasal mucosa once daily rather than injected or swallowed.
+              A nasal spray moves glutathione across the nasal mucosa rather than through an injection or a swallowed
+              dose. That route matters for two practical reasons: it skips first-pass liver metabolism the way a
+              swallowed pill can't, and the nasal cavity sits close to olfactory pathways that some intranasal
+              formulations are specifically designed to reach — which is the pharmacological reasoning behind
+              marketing a spray around cognitive effects rather than the whole-body framing an injection gets.
             </EdGuideText>
             <EdGuideText>
-              AgelessRx is the provider on this page publishing a nasal spray alongside its injection and patch, and
-              it markets the format specifically around mental clarity and focus rather than the broader detox and
-              recovery framing its injection carries. ReadyRx also lists a nasal spray, priced per dose alongside its
-              own injectable option, in our main glutathione comparison.
+              AgelessRx is the provider on this page selling a spray alongside its injection and patch. ReadyRx also
+              lists a nasal spray in our main comparison, priced per dose rather than as a monthly subscription — see
+              how the two stack up in{' '}
+              <EdGuideLink href="/">our full glutathione comparison</EdGuideLink>.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
-            <EdGuideHeading id="how-it-works">How the spray works</EdGuideHeading>
+            <EdGuideHeading id="how-it-works">The daily-routine trade-off</EdGuideHeading>
             <EdGuideText first>
-              You complete a short online health questionnaire, a licensed provider reviews it, and — if approved —
-              your compounded nasal spray ships free from a US-licensed pharmacy. Payment is only taken once approved.
-              The routine itself is a once-daily spray rather than a weekly self-injection, which is the main practical
-              trade-off against AgelessRx's injectable format.
+              A spray asks more of your memory than a once-weekly format does — it's a daily application, not a
+              weekly one — in exchange for skipping the needle entirely. Intake itself is standard telehealth: a short
+              online questionnaire, review by a licensed provider, and a shipment from a US-licensed pharmacy once
+              approved. Nothing about the intake changes based on format; the trade-off is entirely in the routine
+              you keep afterward.
             </EdGuideText>
 
-            <EdGuideHeading id="cost">What it costs</EdGuideHeading>
+            <EdGuideHeading id="cost">What it costs, per day</EdGuideHeading>
             <EdGuideText first>
-              AgelessRx's nasal spray starts at $90 for the first month, renewing at $110/month. That includes the
-              online medical evaluation and free shipping — there's no separate consultation fee, and you're only
-              charged once a licensed provider approves your request.
+              AgelessRx prices the spray at $90 for the first month, then $110/month. Spread across a 30-day month
+              that's roughly $3/day to start, stepping up to about $3.67/day once the introductory rate ends —
+              useful to compare against a per-dose or per-quarter price rather than the raw monthly figure alone. The
+              online medical evaluation and shipping are already inside both numbers.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
-            <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
+            <EdGuideHeading id="compounded">Compounded nasal sprays and the FDA</EdGuideHeading>
             <EdGuideText first>
-              Intranasal glutathione is a compounded preparation — made by a licensed pharmacy against an individual
-              prescription rather than manufactured as an approved finished product. As the{' '}
+              Compounded nasal products carry the same regulatory status as any other compounded medication:{' '}
               <EdAuthorityLink href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">
-                FDA explains
-              </EdAuthorityLink>
-              , compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before they
-              reach patients. That's why the prescriber and the pharmacy are the two things worth verifying before you
-              start.
+                the FDA does not review compounded drugs
+              </EdAuthorityLink>{' '}
+              for safety or effectiveness before they reach a patient, and a nasal formulation's sterility and
+              preservative handling depend entirely on the compounding pharmacy that prepares it — one more reason the
+              pharmacy's licensing is worth confirming, not just the clinician's.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
@@ -170,18 +173,18 @@ export default function GlutathioneNasalSprayPage() {
             <EdGuideList
               columns={1}
               items={[
-                'Complete AgelessRx\'s online health questionnaire — about 30 seconds, no in-person visit.',
-                'A licensed provider reviews your intake and approves only if the spray is appropriate for you.',
-                'Payment is taken only after approval; your spray ships free from a US-licensed pharmacy.',
-                'Follow the dose and frequency your provider set, and raise any reaction with them rather than adjusting it yourself.',
+                'Answer AgelessRx\'s online intake — it\'s built around goals like focus and energy, not just a generic health history form.',
+                'A licensed provider reviews it and approves only if a nasal formulation is appropriate for you.',
+                'You\'re billed only after approval; the spray ships free from a US-licensed pharmacy.',
+                'Work the spray into a fixed daily slot — same time each day tends to be the difference between keeping the routine and forgetting it.',
               ]}
             />
 
             <EdGuideCallout title="Before you start treatment">
-              Glutathione nasal spray is not FDA-approved to treat, cure or prevent any disease, and compounded
-              glutathione is not an FDA-approved finished product. Individual response varies and no outcome is
-              promised here. Consult a licensed clinician before starting, particularly if you are pregnant or
-              breastfeeding, managing a chronic condition, or taking medication that affects liver metabolism.
+              Glutathione nasal spray is not FDA-approved to treat, cure or prevent any disease. It's a compounded
+              product, not an FDA-reviewed finished one, and individual response varies — nothing here promises an
+              outcome. Talk to a licensed clinician first, especially if you're pregnant or breastfeeding, manage a
+              chronic condition, or take medication that affects liver metabolism.
             </EdGuideCallout>
           </>
         ),
