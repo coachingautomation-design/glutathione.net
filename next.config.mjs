@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Required by @opennextjs/cloudflare, which packages this standalone
+  // output into the Worker it deploys to Cloudflare.
+  output: 'standalone',
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
