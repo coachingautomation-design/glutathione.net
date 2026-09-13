@@ -1,12 +1,13 @@
 import type { Provider } from './types';
 
 /**
- * AgelessRx's nasal-spray format, isolated for the /best-glutathione-nasal-spray/
- * page. AgelessRx's main entry in ./glutathione.ts covers all three of its
- * formats (injection, spray, patch) with one shared tagline; this is a
- * separate, single-format Provider entry so the card headline and bullets on
- * this page can speak to the spray specifically. Pricing and the affiliate
- * URL are the same ones AgelessRx publishes on the shared entry — nothing
+ * Nasal-spray formats, isolated for the /best-glutathione-nasal-spray/ page.
+ * Both AgelessRx and ReadyRx also carry entries in ./glutathione.ts that
+ * cover their full formulary (AgelessRx: injection, spray, patch; ReadyRx:
+ * injection, spray) with one shared tagline each; these are separate,
+ * single-format Provider entries so the card headline and bullets on this
+ * page can speak to the spray specifically. Pricing and the affiliate URLs
+ * are the same ones each provider publishes on its shared entry — nothing
  * here is invented.
  */
 export const glutathioneNasalSprayProviders: Provider[] = [
@@ -26,7 +27,7 @@ export const glutathioneNasalSprayProviders: Provider[] = [
     },
     features: [
       'Intranasal delivery, no needles',
-      'Made for mental clarity and focus',
+      'Studied for raising brain glutathione',
       'Simple daily routine',
     ],
     pros: [
@@ -59,6 +60,59 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       {
         question: 'Is AgelessRx\'s glutathione nasal spray FDA-approved?',
         answer: 'No. Like AgelessRx\'s other glutathione formats, the nasal spray is a compounded preparation from a licensed pharmacy, not an FDA-approved finished product. The FDA does not review compounded drugs for safety or effectiveness before they reach patients — a licensed provider evaluates your intake before anything ships.',
+      },
+    ],
+  },
+  {
+    // Rating/stars carried over from ReadyRx's shared entry in ./glutathione.ts
+    // (lib/ratings.ts RATING_MAP position 7), not a hand-picked number.
+    slug: 'readyrx',
+    name: 'ReadyRx',
+    logoText: 'ReadyRx',
+    logoUrl: 'https://readyhealth.everflowclient.io/logo.png',
+    rating: 8.96,
+    stars: 4.48,
+    tagline: 'From $84 per dose. No membership.',
+    shortDescription: 'ReadyRx offers clinician-prescribed glutathione nasal spray priced per dose at $84, with no recurring monthly membership required. Every order includes a 100% online consultation with a licensed provider and free 1–2 day shipping, and you can cancel anytime.',
+    badges: ['No Membership', 'Format Choice'],
+    affiliate: {
+      url: 'https://www.dpy84ben.com/6MW5NB/SL1HB/',
+      network: 'everflow',
+    },
+    features: [
+      '100% online consultation with licensed provider',
+      'Free 1–2 day shipping',
+      'HSA/FSA eligible, cancel anytime',
+    ],
+    pros: [
+      'No recurring monthly membership — pay per dose, cancel anytime',
+      '100% online consultation with a licensed provider',
+      'Free shipping with 1–2 day delivery',
+      'HSA/FSA eligible',
+      'Also offers an injectable format if you want to switch routes later',
+    ],
+    cons: [
+      'No flat monthly subscription price — cost is per dose',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $84 per dose',
+    bestFor: 'Patients who want a needle-free nasal spray without committing to a recurring monthly membership',
+    faq: [
+      {
+        question: 'How much does ReadyRx\'s nasal spray cost?',
+        answer: 'ReadyRx prices its glutathione nasal spray at $84 per dose, with no recurring monthly membership fee. You can cancel anytime.',
+      },
+      {
+        question: 'Does ReadyRx\'s nasal spray require a subscription?',
+        answer: 'No. ReadyRx prices the spray per dose rather than as a flat monthly subscription, so you pay $84 each time rather than committing to a recurring membership.',
+      },
+      {
+        question: 'How fast does ReadyRx ship the nasal spray?',
+        answer: 'ReadyRx includes free shipping with 1–2 day delivery on every order once a licensed provider approves your consultation.',
+      },
+      {
+        question: 'Is ReadyRx\'s glutathione nasal spray FDA-approved?',
+        answer: 'No. ReadyRx sources compounded glutathione from a licensed U.S. pharmacy; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients. A 100% online consultation with a licensed provider is required before anything ships.',
       },
     ],
   },

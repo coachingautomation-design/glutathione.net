@@ -16,12 +16,12 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 
 /**
  * /best-glutathione-nasal-spray/ — a format-specific spotlight page on the
- * same EdHubPage template and GLUTATHIONE_HUB_THEME as the homepage
- * (`/`), featuring AgelessRx's nasal spray (ReadyRx also lists a nasal
- * spray on the main comparison, but this spotlight page is AgelessRx's).
- * Single-provider, so the restated "Best Overall Pick" block and the
+ * same EdHubPage template and GLUTATHIONE_HUB_THEME as the homepage (`/`),
+ * comparing the two providers that publish a nasal-spray format: AgelessRx
+ * (top-ranked, matching its position on the main comparison) and ReadyRx.
+ * With only two rows, the restated "Best Overall Pick" block and the
  * offer-banner interstitial are both switched off — repeating (or
- * interrupting) a one-row list adds nothing.
+ * interrupting) a two-row list adds nothing.
  */
 
 const VERTICAL_SLUG = 'glutathione-nasal-spray';
@@ -129,9 +129,9 @@ export default function GlutathioneNasalSprayPage() {
               and mental clarity rather than the whole-body framing its injection gets.
             </EdGuideText>
             <EdGuideText>
-              AgelessRx is the provider on this page selling a spray alongside its injection and patch. ReadyRx also
-              lists a nasal spray in our main comparison, priced per dose rather than as a monthly subscription — see
-              how the two stack up in{' '}
+              AgelessRx sells a spray alongside its injection and patch, priced as a monthly subscription. ReadyRx
+              also offers a spray, priced per dose with no recurring membership instead. Both also sell an injectable
+              format — see how the full formularies stack up in{' '}
               <EdGuideLink href="/">our full glutathione comparison</EdGuideLink>.
             </EdGuideText>
 
@@ -147,9 +147,10 @@ export default function GlutathioneNasalSprayPage() {
             <EdGuideHeading id="cost">What it costs, per day</EdGuideHeading>
             <EdGuideText first>
               AgelessRx prices the spray at $90 for the first month, then $110/month. Spread across a 30-day month
-              that's roughly $3/day to start, stepping up to about $3.67/day once the introductory rate ends —
-              useful to compare against a per-dose or per-quarter price rather than the raw monthly figure alone. The
-              online medical evaluation and shipping are already inside both numbers.
+              that's roughly $3/day to start, stepping up to about $3.67/day once the introductory rate ends. ReadyRx
+              instead prices its spray at $84 per dose with no recurring membership — cheaper per dose if you use it
+              less than roughly daily, but worth comparing against your actual usage rather than the flat monthly
+              figure alone. The online medical evaluation and shipping are already inside every number here.
             </EdGuideText>
 
             <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} enableVialFlip={false} />
@@ -186,7 +187,9 @@ export default function GlutathioneNasalSprayPage() {
           </>
         ),
       }}
-      faqs={glutathioneNasalSprayProviders[0].faq.map((item) => ({ q: item.question, a: item.answer }))}
+      faqs={glutathioneNasalSprayProviders.flatMap((provider) =>
+        provider.faq.map((item) => ({ q: item.question, a: item.answer }))
+      )}
       faqHeading="Glutathione Nasal Spray FAQs"
     />
   );

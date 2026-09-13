@@ -22,9 +22,9 @@ export const glutathionePatchProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Iontophoresis, absorbed through the skin',
-      'Whole-body support, no needles',
-      'One patch a week',
+      'Iontophoresis moves it through skin',
+      'Whole-body support',
+      '$180 per kit, billed quarterly',
     ],
     pros: [
       'Completely needle-free — no injection, no daily spray',
