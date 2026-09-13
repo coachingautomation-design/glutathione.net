@@ -243,7 +243,7 @@ export default function GlutathioneHomePage() {
               rows={FORMAT_TABLE.map((row) => [row.method, row.bioavailability, row.home, row.note])}
             />
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="what-separates">What separates a good programme from a cheap one</EdGuideHeading>
             <EdGuideText first>
@@ -276,7 +276,7 @@ export default function GlutathioneHomePage() {
               into Arkansas, California, Louisiana, Mississippi or South Carolina.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} />
 
             <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
             <EdGuideText first>

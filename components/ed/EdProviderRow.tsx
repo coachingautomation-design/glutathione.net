@@ -203,17 +203,28 @@ export function EdProviderRow({
    * the format the page is actually about.
    */
   enableVialFlip = true,
+  /**
+   * The card as it repeats inside the long-form guide, interrupting body
+   * copy every few paragraphs. There, the rank chip and provider name read
+   * as filler on the third or fourth repeat, so the header bar is replaced
+   * with a plain centered "Featured Provider" label and the card gets a
+   * little breathing room from the paragraph above it. Distinct from
+   * `duplicate` (which only drops the anchor id) because `EdBestOverallPick`
+   * also sets `duplicate` but keeps the normal rank/name header.
+   */
+  guideCard = false,
 }: {
   provider: EdHubProvider;
   duplicate?: boolean;
   /** Tracking vertical for this page — every ED hub reuses this row. */
   vertical?: string;
   enableVialFlip?: boolean;
+  guideCard?: boolean;
 }) {
   return (
     <div
       {...(duplicate ? {} : { id: `provider-${provider.slug}` })}
-      className="group relative scroll-mt-24 bg-white shadow-[3px_3px_12px_rgba(0,0,0,0.4)] transition-shadow duration-200 hover:shadow-[3px_3px_22px_rgba(0,0,0,0.55)]"
+      className={`group relative scroll-mt-24 bg-white shadow-[3px_3px_12px_rgba(0,0,0,0.4)] transition-shadow duration-200 hover:shadow-[3px_3px_22px_rgba(0,0,0,0.55)]${guideCard ? ' mt-6' : ''}`}
       style={{ borderRadius: ED_CARD_RADIUS, overflow: 'hidden' }}
     >
       {/* Whole-card affiliate link. It sits beneath the Visit Site buttons
@@ -229,20 +240,31 @@ export function EdProviderRow({
 
       {/* Header bar: black rank chip, then the provider name on the blue bar.
           Only the top pick (and its restatement below the list) gets the dark
-          blue; the rest of the list runs on the lighter tone. */}
+          blue; the rest of the list runs on the lighter tone. The guide's
+          repeated card (`guideCard`) drops the rank/name — repeating "#1
+          AgelessRx" down a guide reads as filler — and centers a plain
+          "Featured Provider" label instead. */}
       <div
-        className="flex items-center"
+        className={`flex items-center${guideCard ? ' justify-center' : ''}`}
         style={{ backgroundColor: provider.rank === 1 ? ED_HEADING : ED_CARD_HEADER, height: 32 }}
       >
-        <p
-          className="m-0 tabular-nums"
-          style={{ backgroundColor: ED_RANK_CHIP, color: '#fff', fontSize: 16, padding: '4px 16px', lineHeight: 1.5 }}
-        >
-          {String(provider.rank).padStart(2, '0')}
-        </p>
-        <p className="m-0 truncate" style={{ color: '#fff', fontSize: 16, fontWeight: 500, padding: '0 16px' }}>
-          {provider.name}
-        </p>
+        {guideCard ? (
+          <p className="m-0" style={{ color: '#fff', fontSize: 14, fontWeight: 600, letterSpacing: '0.02em' }}>
+            Featured Provider
+          </p>
+        ) : (
+          <>
+            <p
+              className="m-0 tabular-nums"
+              style={{ backgroundColor: ED_RANK_CHIP, color: '#fff', fontSize: 16, padding: '4px 16px', lineHeight: 1.5 }}
+            >
+              {String(provider.rank).padStart(2, '0')}
+            </p>
+            <p className="m-0 truncate" style={{ color: '#fff', fontSize: 16, fontWeight: 500, padding: '0 16px' }}>
+              {provider.name}
+            </p>
+          </>
+        )}
       </div>
 
       {/* Body: 25 / 50 / 25 on desktop; stacked on mobile with the logo and the

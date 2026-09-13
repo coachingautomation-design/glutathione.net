@@ -152,7 +152,7 @@ export default function GlutathioneNasalSprayPage() {
               online medical evaluation and shipping are already inside both numbers.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="compounded">Compounded nasal sprays and the FDA</EdGuideHeading>
             <EdGuideText first>
@@ -165,7 +165,7 @@ export default function GlutathioneNasalSprayPage() {
               worth confirming, not just the clinician's.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideList
               columns={1}

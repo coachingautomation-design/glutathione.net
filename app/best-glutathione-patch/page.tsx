@@ -147,7 +147,7 @@ export default function GlutathionePatchPage() {
               actually runs per week. The online medical evaluation and shipping are already inside that figure.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideHeading id="compounded">Compounded patches and the FDA</EdGuideHeading>
             <EdGuideText first>
@@ -161,7 +161,7 @@ export default function GlutathionePatchPage() {
               prescriber's.
             </EdGuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate vertical={VERTICAL_SLUG} enableVialFlip={false} />
+            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} enableVialFlip={false} />
 
             <EdGuideList
               columns={1}
