@@ -24,9 +24,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Starting at $69 for your first month (regularly $133)',
-      '2000mg monthly injectable supply, injection supplies included',
-      '20% off a Rythm blood test, 2-day temp-controlled shipping',
+      '2000mg monthly supply, injection supplies included',
+      '20% off a Rythm blood test',
+      '2-day temperature-controlled shipping, no clinic visit',
     ],
     pros: [
       'Lowest entry price at $69 for your first month (down from $133)',
@@ -83,9 +83,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Three formats: weekly injection, daily nasal spray, or once-weekly patch',
-      'Starting at $90/month, 100% online medical evaluation',
-      'Free shipping from a US-licensed pharmacy, 197,000+ customers served',
+      'Choose injection, nasal spray, or patch',
+      '100% online medical evaluation',
+      '197,000+ customers served, US-licensed pharmacy',
     ],
     pros: [
       'Three delivery formats, choose injection, nasal spray, or needle-free patch',
@@ -147,9 +147,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Comprehensive labs included in program',
-      'Personalized glutathione protocol with clinician oversight',
-      'Expert medical support and ongoing monitoring',
+      'Labs assess oxidative stress, liver function',
+      'Ongoing monitoring adjusts protocol over time',
+      'Ideal for complex health histories',
     ],
     pros: [
       'Comprehensive lab testing included, not a separate add-on',
@@ -206,9 +206,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '20% off your first month, auto-applied',
-      'Health coaching included. Not an add-on.',
-      '5-minute signup. Same-day shipping.',
+      '5-minute signup, same-day shipping',
+      'Mobile-friendly platform, phone-based access',
+      'Flexible month-to-month, cancel anytime',
     ],
     pros: [
       '20% first-month discount applied automatically at signup',
@@ -265,9 +265,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Flat $99/month, glutathione in stock. Save $100 every month in the summer sale.',
-      '100% online medical visit with personalized dosing from 200mg to 2000mg.',
-      'Prescription & telemed visit included, no insurance required. Free shipping arrives in 1-2 days.',
+      'Save $100/month during the summer sale',
+      'Personalized dosing from 200mg to 2000mg',
+      'No insurance required, telemed visit included',
     ],
     pros: [
       'Flat, fixed $99/month pricing with no first-month bait-and-switch',
@@ -324,9 +324,8 @@ export const glutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Affordable clinician-prescribed glutathione',
-      'Free shipping on every order',
-      'Licensed U.S. compounding pharmacy',
+      'Licensed U.S. compounding pharmacy sourcing',
+      'Simple online prescription, no complexity',
       'Not available in AR, CA, LA, MS, SC',
     ],
     pros: [
@@ -387,9 +386,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Injection or nasal spray, your choice',
-      '$84 per dose, no monthly membership required',
-      'Free 1–2 day shipping, cancel anytime',
+      '100% online consultation with licensed provider',
+      'Free 1–2 day shipping',
+      'HSA/FSA eligible, cancel anytime',
     ],
     pros: [
       'Choice of injectable or nasal spray format',
@@ -441,8 +440,8 @@ export const glutathioneProviders: Provider[] = [
     },
     features: [
       'No insurance required, HSA/FSA eligible',
-      '200mg/mL (5mL per bottle)',
-      'Shipped from licensed US pharmacy',
+      '200mg/mL dose, 5mL per bottle',
+      'Ships from licensed US pharmacy',
     ],
     pros: [
       'Low first-month price at $79',
@@ -487,9 +486,9 @@ export const glutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'From $69/month with subscribe & save, or $86/month one-time',
-      '1–2 subcutaneous injections per week, 15-week supply',
-      '1:1 health coaching and unlimited care-team messaging included',
+      '1–2 injections weekly, 15-week supply',
+      'Board-certified clinician consultation required',
+      'Unlimited care-team messaging included',
     ],
     pros: [
       'Lowest ongoing subscription price in this comparison at $69/month',
