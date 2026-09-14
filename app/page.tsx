@@ -264,12 +264,12 @@ export default function GlutathioneHomePage() {
               Entry prices on this page run from $69 to about $99 for a first month, and ongoing monthly costs across
               the category typically sit between $69 and $200 depending on format and dose. System is the lowest
               verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
-              three formats; Hone Health and Embody both sit around $99/month, the first with comprehensive labs
-              included and the second as a flat rate with free 1–2 day delivery. Joi + Blokes' $69/month subscribe-and-save
-              rate is the lowest recurring monthly price on the page, and bundles in health coaching, though it's
-              dosed 1–2 times a week rather than once. Taurus opens at a similarly low $79 first month but is the
-              highest ongoing price here at $179/month, and ReadyRx skips a monthly figure entirely, pricing injection
-              or spray at a flat $84 per dose with no membership.
+              three formats; ReadyRx skips a monthly figure entirely, pricing injection or spray at a flat $84 per
+              dose with no membership. Hone Health and Embody both sit around $99/month, the first with comprehensive
+              labs included and the second as a flat rate with free 1–2 day delivery. Joi + Blokes' $69/month
+              subscribe-and-save rate is the lowest recurring monthly price on the page, and bundles in health
+              coaching, though it's dosed 1–2 times a week rather than once. Taurus opens at a similarly low $79
+              first month but is the highest ongoing price here at $179/month.
             </EdGuideText>
             <EdGuideText>
               The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
@@ -295,21 +295,22 @@ export default function GlutathioneHomePage() {
               System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
               clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
               ranks second as the most established platform here, and the only one offering three formats — weekly
-              injection, daily nasal spray or a needle-free patch — from $90/month. Hone Health is third for anyone who
-              wants the protocol set against their own bloodwork, with comprehensive labs from around $99/month.
+              injection, daily nasal spray or a needle-free patch — from $90/month. ReadyRx is third, the only other
+              provider here offering a nasal spray alongside its injection, priced per dose at $84 with no monthly
+              membership to cancel.
             </EdGuideText>
             <EdGuideText>
-              Below those, Shed opens at 20% off the first month with health coaching in the base plan, Embody runs a
-              flat $99/month with personalised 200mg–2000mg dosing and free 1–2 day shipping, and bmiMD is the
-              no-frills value pick with free shipping in the states it serves.
+              Below those, Hone Health is the pick for anyone who wants the protocol set against their own bloodwork,
+              with comprehensive labs from around $99/month. Shed opens at 20% off the first month with health
+              coaching in the base plan, Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
+              1–2 day shipping, and bmiMD is the no-frills value pick with free shipping in the states it serves.
             </EdGuideText>
             <EdGuideText>
-              The last three round out the page with different trade-offs rather than a straight step down in quality.
-              ReadyRx is the only other provider here offering a nasal spray alongside its injection, priced per dose
-              at $84 with no monthly membership to cancel. Taurus undercuts everyone on entry price at $79 for the
-              first month, but its $179/month renewal is the highest ongoing price on the page. Joi + Blokes bundles
-              1:1 health coaching into a $69/month subscribe-and-save plan — the lowest recurring monthly price here —
-              dosed slightly more often, at 1–2 injections a week.
+              The last two round out the page with different trade-offs rather than a straight step down in quality.
+              Taurus undercuts everyone on entry price at $79 for the first month, but its $179/month renewal is the
+              highest ongoing price on the page. Joi + Blokes bundles 1:1 health coaching into a $69/month
+              subscribe-and-save plan — the lowest recurring monthly price here — dosed slightly more often, at 1–2
+              injections a week.
             </EdGuideText>
 
             <EdGuideHeading id="getting-started">How to get started</EdGuideHeading>

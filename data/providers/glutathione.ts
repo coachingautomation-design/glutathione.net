@@ -133,12 +133,63 @@ export const glutathioneProviders: Provider[] = [
     ],
   },
   {
+    slug: 'readyrx',
+    name: 'ReadyRx',
+    logoText: 'ReadyRx',
+    logoUrl: 'https://readyhealth.everflowclient.io/logo.png',
+    rating: 9.74,
+    stars: 4.87,
+    tagline: 'From $84 per dose, injection or nasal spray. No membership.',
+    shortDescription: 'ReadyRx offers clinician-prescribed glutathione in your choice of injection or nasal spray, priced per dose at $84 with no recurring monthly membership required. Every order includes a 100% online consultation with a licensed provider and free 1–2 day shipping, and you can cancel anytime.',
+    badges: ['Format Choice', 'No Membership'],
+    affiliate: {
+      url: 'https://www.dpy84ben.com/6MW5NB/SL1HB/',
+      network: 'everflow',
+    },
+    features: [
+      '100% online consultation with licensed provider',
+      'Free 1–2 day shipping',
+      'HSA/FSA eligible, cancel anytime',
+    ],
+    pros: [
+      'Choice of injectable or nasal spray format',
+      'No recurring monthly membership — pay per dose, cancel anytime',
+      '100% online consultation with a licensed provider',
+      'Free shipping with 1–2 day delivery',
+      'HSA/FSA eligible',
+    ],
+    cons: [
+      'No flat monthly subscription price — cost is per dose',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $84 per dose',
+    bestFor: 'Patients who want a choice of format (injection or nasal spray) without committing to a recurring monthly membership',
+    faq: [
+      {
+        question: 'What glutathione formats does ReadyRx offer?',
+        answer: 'ReadyRx offers both injectable and nasal spray glutathione, both listed at $84 per dose. You choose the format at intake.',
+      },
+      {
+        question: 'Does ReadyRx require a monthly membership?',
+        answer: 'No. ReadyRx prices glutathione per dose at $84 with no recurring monthly membership fee, and you can cancel anytime.',
+      },
+      {
+        question: 'How fast does ReadyRx ship?',
+        answer: 'ReadyRx includes free shipping with 1–2 day delivery on every order once a licensed provider approves your consultation.',
+      },
+      {
+        question: 'Is ReadyRx glutathione FDA-approved?',
+        answer: 'No. ReadyRx sources compounded glutathione from a licensed U.S. pharmacy; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients. A 100% online consultation with a licensed provider is required before anything ships.',
+      },
+    ],
+  },
+  {
     slug: 'hone',
     name: 'Hone Health',
     logoText: 'Hone Health',
     logoUrl: 'https://www.exploretreatments.com/images/Logo_Lock_Up_Black.png',
-    rating: 9.74,
-    stars: 4.87,
+    rating: 9.61,
+    stars: 4.81,
     tagline: 'Comprehensive labs included. Personalized glutathione protocol.',
     shortDescription: 'Hone Health brings clinical depth to glutathione therapy that few telehealth providers can match, comprehensive lab testing is included in the program, giving your clinician the data needed to design a personalized protocol. For patients who want more than a one-size-fits-all prescription, Hone Health delivers the monitoring and expert oversight that translates glutathione therapy into targeted, measurable results.',
     badges: ['Best Personalized Care'],
@@ -170,7 +221,7 @@ export const glutathioneProviders: Provider[] = [
       howItWorks: 'Hone Health\'s process starts with a comprehensive health intake and lab work, both included in the program. A licensed clinician reviews your labs alongside your health history to design a glutathione protocol matched to your goals. You receive your compounded glutathione from a licensed pharmacy with clinician-directed dosing instructions. Ongoing monitoring is built in so your protocol can be adjusted as your labs and goals evolve.',
       whoIsItFor: 'Hone Health is the right choice for patients who want more than a basic glutathione prescription. If you have complex health goals, heavy metal detox, chronic oxidative stress, anti-aging optimization, or recovery from serious illness, the clinical depth of Hone\'s lab-informed approach delivers a materially better starting point than a generic protocol. It\'s also ideal for patients already using Hone for hormone health who want to integrate glutathione into a comprehensive wellness plan.',
       pricingDetails: 'Hone Health\'s glutathione program starts at approximately $99/month with comprehensive lab testing included. The full program pricing is confirmed during the intake process based on your personalized protocol. Labs are bundled into the program, not charged separately, which is a notable value distinction compared to providers who bill lab fees on top of program costs.',
-      ourVerdict: 'Hone Health earns the #3 position by delivering what matters to the most serious glutathione patients: lab-informed protocols, clinical depth, and real personalization. The $69 System entry point remains the best for patients who want to start affordably, but for patients who want their therapy built around their actual biomarkers, Hone Health delivers a meaningfully superior clinical experience.',
+      ourVerdict: 'Hone Health earns the #4 position by delivering what matters to the most serious glutathione patients: lab-informed protocols, clinical depth, and real personalization. The $69 System entry point remains the best for patients who want to start affordably, but for patients who want their therapy built around their actual biomarkers, Hone Health delivers a meaningfully superior clinical experience.',
     },
     faq: [
       {
@@ -196,8 +247,8 @@ export const glutathioneProviders: Provider[] = [
     name: 'Shed',
     logoText: 'Shed',
     logoUrl: 'https://www.exploretreatments.com/images/shedrx-logo.avif',
-    rating: 9.61,
-    stars: 4.81,
+    rating: 9.55,
+    stars: 4.77,
     tagline: '20% off first month. Health coaching included.',
     shortDescription: 'Shed combines speed with value, their 5-minute signup and same-day shipping on approved orders gets your glutathione therapy started faster than any other platform. New patients receive 20% off their first month, and health coaching is included in every plan at no extra cost. For patients who want to move quickly and get lifestyle support alongside treatment, Shed delivers.',
     badges: ['Fastest Approval'],
@@ -255,8 +306,8 @@ export const glutathioneProviders: Provider[] = [
     name: 'Embody',
     logoText: 'Embody',
     logoUrl: 'https://www.exploretreatments.com/images/embody_nad.png',
-    rating: 9.55,
-    stars: 4.77,
+    rating: 9.48,
+    stars: 4.74,
     tagline: 'Flat $99/month. Free 1-2 day shipping.',
     shortDescription: 'Embody offers clinician-prescribed glutathione therapy at a flat, fixed rate of $99 per month, no introductory pricing that jumps later. Every plan includes a 100% online medical visit, personalized dosing from 200mg to 2000mg, and the prescription itself, with no insurance required. For patients who want transparent, predictable pricing and fast free shipping that arrives in 1-2 days, Embody is a standout choice.',
     badges: ['Flat-Rate Pricing'],
@@ -314,8 +365,8 @@ export const glutathioneProviders: Provider[] = [
     name: 'bmiMD',
     logoText: 'bmiMD',
     logoUrl: 'https://assets.explorets.com/bmimd.svg',
-    rating: 9.48,
-    stars: 4.74,
+    rating: 9.28,
+    stars: 4.64,
     tagline: 'Affordable clinician-prescribed glutathione. Free shipping.',
     shortDescription: 'bmiMD offers clinician-prescribed glutathione therapy at one of the most competitive ongoing price points in this market, with free shipping and sourcing from a licensed U.S. compounding pharmacy. For patients in eligible states who want a straightforward, affordable monthly glutathione program, bmiMD is a reliable option. Not available in AR, CA, LA, MS, or SC.',
     badges: ['Best Budget Option'],
@@ -348,7 +399,7 @@ export const glutathioneProviders: Provider[] = [
       howItWorks: 'Getting started with bmiMD is straightforward: complete an online health intake, receive a licensed clinician review, and if approved, your glutathione ships free from a licensed compounding pharmacy. The process is fully online with no in-person visits required. Free shipping is included on every order.',
       whoIsItFor: 'bmiMD is the right choice for patients in eligible states, not available in AR, CA, LA, MS, or SC, who want affordable glutathione therapy without the complexity of lab-inclusive programs or the introductory pricing strings of first-month promotional offers. It is particularly well-suited for patients who are already familiar with compounded glutathione and simply want a reliable, cost-competitive ongoing supply.',
       pricingDetails: 'bmiMD offers glutathione therapy at competitive ongoing monthly pricing with free shipping included. Pricing is confirmed during the intake process. Not available to patients in AR, CA, LA, MS, or SC, patients in these states should consider System or Hone Health instead.',
-      ourVerdict: 'bmiMD earns the #6 position as a solid budget-focused glutathione option for eligible state patients. It won\'t match the personalization depth of Hone Health or the entry-price advantage of System, but for patients in eligible states who want a reliable, affordable ongoing supply from a licensed pharmacy with free shipping, bmiMD delivers exactly what it promises.',
+      ourVerdict: 'bmiMD earns the #7 position as a solid budget-focused glutathione option for eligible state patients. It won\'t match the personalization depth of Hone Health or the entry-price advantage of System, but for patients in eligible states who want a reliable, affordable ongoing supply from a licensed pharmacy with free shipping, bmiMD delivers exactly what it promises.',
     },
     faq: [
       {
@@ -366,59 +417,6 @@ export const glutathioneProviders: Provider[] = [
       {
         question: 'Is bmiMD glutathione from a licensed U.S. pharmacy?',
         answer: 'Yes. bmiMD sources all compounded medications including glutathione from licensed U.S. compounding pharmacies. As with all compounded glutathione, it is a prescription compounded medication, not an FDA-approved finished product, prepared at a licensed pharmacy.',
-      },
-    ],
-  },
-  {
-    // Rating/stars follow the shared position-based scale (lib/ratings.ts
-    // RATING_MAP position 7), not a hand-picked number.
-    slug: 'readyrx',
-    name: 'ReadyRx',
-    logoText: 'ReadyRx',
-    logoUrl: 'https://readyhealth.everflowclient.io/logo.png',
-    rating: 8.96,
-    stars: 4.48,
-    tagline: 'From $84 per dose, injection or nasal spray. No membership.',
-    shortDescription: 'ReadyRx offers clinician-prescribed glutathione in your choice of injection or nasal spray, priced per dose at $84 with no recurring monthly membership required. Every order includes a 100% online consultation with a licensed provider and free 1–2 day shipping, and you can cancel anytime.',
-    badges: ['Format Choice', 'No Membership'],
-    affiliate: {
-      url: 'https://www.dpy84ben.com/6MW5NB/SL1HB/',
-      network: 'everflow',
-    },
-    features: [
-      '100% online consultation with licensed provider',
-      'Free 1–2 day shipping',
-      'HSA/FSA eligible, cancel anytime',
-    ],
-    pros: [
-      'Choice of injectable or nasal spray format',
-      'No recurring monthly membership — pay per dose, cancel anytime',
-      '100% online consultation with a licensed provider',
-      'Free shipping with 1–2 day delivery',
-      'HSA/FSA eligible',
-    ],
-    cons: [
-      'No flat monthly subscription price — cost is per dose',
-      'Compounded glutathione, not an FDA-approved finished product',
-    ],
-    priceRange: 'From $84 per dose',
-    bestFor: 'Patients who want a choice of format (injection or nasal spray) without committing to a recurring monthly membership',
-    faq: [
-      {
-        question: 'What glutathione formats does ReadyRx offer?',
-        answer: 'ReadyRx offers both injectable and nasal spray glutathione, both listed at $84 per dose. You choose the format at intake.',
-      },
-      {
-        question: 'Does ReadyRx require a monthly membership?',
-        answer: 'No. ReadyRx prices glutathione per dose at $84 with no recurring monthly membership fee, and you can cancel anytime.',
-      },
-      {
-        question: 'How fast does ReadyRx ship?',
-        answer: 'ReadyRx includes free shipping with 1–2 day delivery on every order once a licensed provider approves your consultation.',
-      },
-      {
-        question: 'Is ReadyRx glutathione FDA-approved?',
-        answer: 'No. ReadyRx sources compounded glutathione from a licensed U.S. pharmacy; compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before reaching patients. A 100% online consultation with a licensed provider is required before anything ships.',
       },
     ],
   },
