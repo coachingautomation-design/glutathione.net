@@ -12,6 +12,11 @@ type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 const INPUT_CLASS =
   'mt-1 block w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200';
+// Fixed height so text inputs and the select line up; Safari otherwise renders
+// a native select shorter than the inputs, so drop its native styling and draw
+// our own chevron.
+const FIELD_CLASS = `${INPUT_CLASS} h-11`;
+const SELECT_CLASS = `${FIELD_CLASS} appearance-none pr-10`;
 
 export default function DomainInquiryForm() {
   const [status, setStatus] = useState<Status>('idle');
@@ -56,24 +61,34 @@ export default function DomainInquiryForm() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <label className="block text-sm font-medium text-neutral-800">
           Name
-          <input type="text" name="name" required autoComplete="name" className={INPUT_CLASS} />
+          <input type="text" name="name" required autoComplete="name" className={FIELD_CLASS} />
         </label>
         <label className="block text-sm font-medium text-neutral-800">
           Email
-          <input type="email" name="email" required autoComplete="email" className={INPUT_CLASS} />
+          <input type="email" name="email" required autoComplete="email" className={FIELD_CLASS} />
         </label>
         <label className="block text-sm font-medium text-neutral-800">
           Phone <span className="font-normal text-neutral-500">(optional)</span>
-          <input type="tel" name="phone" autoComplete="tel" className={INPUT_CLASS} />
+          <input type="tel" name="phone" autoComplete="tel" className={FIELD_CLASS} />
         </label>
         <label className="block text-sm font-medium text-neutral-800">
           Interested in
-          <select name="interest" defaultValue="Buy Now ($25,000)" className={INPUT_CLASS}>
-            <option>Buy Now ($25,000)</option>
-            <option>Lease to Own ($30,000 / 12 months)</option>
-            <option>Making an offer</option>
-            <option>Other question</option>
-          </select>
+          <span className="relative block">
+            <select name="interest" defaultValue="Buy Now ($25,000)" className={SELECT_CLASS}>
+              <option>Buy Now ($25,000)</option>
+              <option>Lease to Own ($30,000 / 12 months)</option>
+              <option>Making an offer</option>
+              <option>Other question</option>
+            </select>
+            <svg
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              className="pointer-events-none absolute right-3 top-1/2 mt-0.5 h-5 w-5 -translate-y-1/2 text-neutral-500"
+            >
+              <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z" />
+            </svg>
+          </span>
         </label>
       </div>
 
