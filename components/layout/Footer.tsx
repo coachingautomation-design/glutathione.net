@@ -14,6 +14,7 @@ const COMPANY_LINKS = [
   { href: '/contact', label: 'Contact' },
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Use' },
+  { href: '/buy-this-domain', label: 'Buy This Domain' },
 ];
 
 /**
