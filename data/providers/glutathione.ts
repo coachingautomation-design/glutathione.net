@@ -79,7 +79,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'AgelessRx is the most established name on this list, a research-led longevity platform that has served 197,000+ customers and offers glutathione in three distinct delivery formats: a weekly injection, a daily nasal spray made for mental clarity, and a needle-free once-weekly patch. Starting at $90 a month with a 100% online medical evaluation and free shipping, AgelessRx lets you match the delivery method to your routine and your goals instead of forcing a single product on everyone.',
     badges: ['Most Established', '3 Delivery Formats'],
     affiliate: {
-      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=glutathione&utm_term=aff11&_ef_transaction_id=&oid=6&affid=11&sub1=1896&sub5=&oid2=6004&affid2=1896',
+      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=glutathione&utm_term=aff10&_ef_transaction_id=&oid=6&affid=10',
       network: 'everflow',
     },
     features: [
