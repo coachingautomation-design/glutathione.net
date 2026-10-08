@@ -9,8 +9,10 @@ export const metadata: Metadata = generateBaseMetadata({
   canonical: '/buy-this-domain',
 });
 
-const BUY_NOW_URL = 'https://www.spaceship.com/s/buy/glutathione.net/CwjlJRdYeT5sfyhr';
-const LEASE_TO_OWN_URL = 'https://www.spaceship.com/s/buy/glutathione.net/kk8GwBYCPGxOKeJ5';
+const BUY_NOW_URL = 'https://www.spaceship.com/s/buy/glutathione.net/GmGgiDBH3T3i9lKK';
+const CONTACT_EMAIL = 'glutathione@exploretreatments.com';
+const buyNowMailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Glutathione.net: Buy Now')}`;
+const leaseMailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Glutathione.net: Lease to Own')}`;
 
 const HIGHLIGHTS = [
   'Exact-match .net for "glutathione", a widely searched wellness and longevity ingredient',
@@ -29,8 +31,7 @@ export default function BuyThisDomainPage() {
             Glutathione<span className="text-primary-600">.net</span> is for sale
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-700">
-            Buy this domain outright, or spread the cost with a 12-month lease-to-own plan. Both options check out
-            through Spaceship.
+            Buy this domain outright through Spaceship, or email us to buy now or set up a 12-month lease-to-own plan.
           </p>
         </div>
 
@@ -60,6 +61,12 @@ export default function BuyThisDomainPage() {
             >
               Buy Now for $25,000
             </a>
+            <a
+              href={buyNowMailto}
+              className="mt-3 block text-center text-sm font-medium text-primary-700 underline hover:text-primary-800"
+            >
+              Or email us to buy now
+            </a>
           </section>
 
           <section
@@ -80,12 +87,10 @@ export default function BuyThisDomainPage() {
               <li>Ownership transfers once the plan is paid in full</li>
             </ul>
             <a
-              href={LEASE_TO_OWN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={leaseMailto}
               className="mt-auto block rounded-lg border-2 border-primary-600 bg-white px-5 py-3 text-center text-base font-semibold text-primary-700 transition-colors hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-300"
             >
-              Start Lease to Own
+              Email Us About Lease to Own
             </a>
           </section>
         </div>
@@ -114,7 +119,7 @@ export default function BuyThisDomainPage() {
         </section>
 
         <p className="mt-10 text-xs leading-relaxed text-neutral-500">
-          Prices are in US dollars. Payment, escrow and transfer are handled by Spaceship under its terms.
+          Prices are in US dollars. Buy Now payment, escrow and transfer are handled by Spaceship under its terms; lease-to-own terms are arranged by email.
         </p>
       </div>
     </div>
