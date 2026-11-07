@@ -312,7 +312,7 @@ export const glutathioneProviders: Provider[] = [
     shortDescription: 'Embody offers clinician-prescribed glutathione therapy at a flat, fixed rate of $99 per month, no introductory pricing that jumps later. Every plan includes a 100% online medical visit, personalized dosing from 200mg to 2000mg, and the prescription itself, with no insurance required. For patients who want transparent, predictable pricing and fast free shipping that arrives in 1-2 days, Embody is a standout choice.',
     badges: ['Flat-Rate Pricing'],
     affiliate: {
-      url: 'https://track.revoffers.com/aff_c?offer_id=1548&aff_id=10248&url_id=12310',
+      url: 'https://track.revoffers.com/aff_c?offer_id=1740&aff_id=13692',
       network: 'custom',
     },
     features: [
