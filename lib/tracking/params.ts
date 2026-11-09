@@ -72,8 +72,8 @@ export function mergeQueryParams(
 }
 
 /**
- * Embody affiliate links (RevOffers offer_id=1548, across GLP-1, NAD+, Rodeo,
- * Sermorelin and Glutathione) get a dynamic `source` stamped with the current
+ * Embody affiliate links (RevOffers offer_id=1548 across GLP-1, NAD+, Rodeo,
+ * Sermorelin; offer_id=1740 for Glutathione) get a dynamic `source` stamped with the current
  * page slug, so click attribution reflects the page the click came from. This
  * overrides any static `source` baked into the URL. No-op on the server and for
  * every non-Embody URL.
@@ -81,7 +81,7 @@ export function mergeQueryParams(
 export function withEmbodyPageSource(url: string): string {
   if (typeof window === 'undefined') return url;
   try {
-    if (!/revoffers\.com/.test(url) || !/[?&]offer_id=1548(?:&|$)/.test(url)) return url;
+    if (!/revoffers\.com/.test(url) || !/[?&]offer_id=(?:1548|1740)(?:&|$)/.test(url)) return url;
     const urlObj = new URL(url);
     const path = window.location.pathname.replace(/^\/+|\/+$/g, '');
     urlObj.searchParams.set('source', path === '' ? 'home' : path.replace(/\//g, '_'));
