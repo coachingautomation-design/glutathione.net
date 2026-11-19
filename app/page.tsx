@@ -1,30 +1,24 @@
 import {
-  EdAuthorityLink,
-  EdGuideCallout,
-  EdGuideContents,
-  EdGuideHeading,
-  EdGuideList,
-  EdGuideTable,
-  EdGuideText,
-} from '@/components/ed/EdGuide';
-import { EdHubPage } from '@/components/ed/EdHubPage';
-import { EdProviderRow } from '@/components/ed/EdProviderRow';
-import { GLUTATHIONE_HUB_THEME } from '@/components/ed/theme';
+  AuthorityLink,
+  GuideCallout,
+  GuideContents,
+  GuideHeading,
+  GuideList,
+  GuideTable,
+  GuideText,
+} from '@/components/hub/HubGuide';
+import { HubPage } from '@/components/hub/HubPage';
+import { HubProviderRow } from '@/components/hub/HubProviderRow';
 import { glutathioneProviders } from '@/data/providers/glutathione';
 import { hubProvidersFromProviders } from '@/data/providers/hub-cards';
 import { generateBaseMetadata } from '@/lib/seo-schema';
-import { GLUTATHIONE_FAQS } from './faqs';
+import { GLUTATHIONE_FAQS } from '@/data/faqs/glutathione';
 
 /**
- * Glutathione.net homepage — the site's one hub page, carried over from
- * exploretreatments.com's `/glutathione/` (same `EdHubPage` template as
- * `/best-ed-providers/`, same theme, same roster and copy). See this repo's
- * CLAUDE.md-equivalent context for what changed on the way over: the site
- * chrome (Header/Footer) was rebranded and trimmed to links that resolve on
- * this single-page site, and two inline guide links that pointed at
- * exploretreatments.com verticals this site doesn't have (`/NAD-treatments/`,
- * `/best-at-home-biomarker-test/`, `/agelessrx-glutathione-reviews/`) were
- * converted to plain text rather than left as dead links.
+ * Glutathione.net homepage, in the bestnadtreatments.com editorial design
+ * (`HubPage`). Same roster, positioning lines, guide copy and FAQs as before;
+ * the previous EdHubPage version of this page is frozen at /home-v1/ (and /v1/),
+ * see app/v1/page.tsx.
  */
 
 const VERTICAL_SLUG = 'glutathione';
@@ -160,26 +154,20 @@ export default function GlutathioneHomePage() {
   });
 
   return (
-    <EdHubPage
+    <HubPage
       vertical={VERTICAL_SLUG}
-      pageEvent={{ name: 'vertical_page_viewed', payload: { vertical: 'glutathione' } }}
-      theme={GLUTATHIONE_HUB_THEME}
       canonical={CANONICAL}
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Glutathione Injections 2026"
       intro="Compare best & affordable glutathione injections telehealth providers."
-      trustStrip={[
+      trustPoints={[
         'Licensed Clinician Review',
         'Injection, Oral, Spray & Patch',
         'Free Shipping Options',
         'Transparent Monthly Pricing',
       ]}
-      // Colour-only band: a generic wellness stock image would say nothing
-      // about glutathione specifically.
-      heroImageUrl={null}
       providers={providers}
-      showMore={null}
       schema={{
         medicalCondition: 'Glutathione Therapy',
         breadcrumbName: 'Glutathione Therapy',
@@ -187,7 +175,7 @@ export default function GlutathioneHomePage() {
         itemListDescription:
           'Online glutathione therapy providers compared on format, price, clinician oversight and pharmacy sourcing',
       }}
-      treatmentTypes={{
+      options={{
         heading: 'Which Glutathione Programme Is Right for Me?',
         intro:
           'Every provider on this page dispenses the same molecule. What differs is the route it takes into you, how much clinical work sits inside the price, and — in one case — whether the provider ships to your state at all. Those three questions narrow six providers to two fairly quickly. Whether glutathione is appropriate for you is a question for a licensed clinician who has your full medical history.',
@@ -197,61 +185,53 @@ export default function GlutathioneHomePage() {
           body: 'Compounded glutathione is a prescription medication prepared by licensed compounding pharmacies; it is not an FDA-approved finished product and is not approved to treat, cure or prevent any disease. It is a wellness protocol, and no provider on this page — or this page itself — can tell you what it will do for you. Disclose your full medical history and every medication and supplement you take at intake.',
         },
       }}
-      methodology={null}
       guide={{
         heading: 'The Complete Guide to Glutathione Therapy in 2026',
-        moreGuides: [
-          { href: '/best-glutathione-nasal-spray/', label: 'Best glutathione nasal spray' },
-          { href: '/best-glutathione-patch/', label: 'Best glutathione patch providers' },
-        ],
-        moreGuidesHeading: 'More glutathione formats',
         children: (
           <>
-            <EdGuideContents items={GUIDE_CONTENTS} />
+            <GuideContents items={GUIDE_CONTENTS} />
 
-            <EdGuideHeading id="what-is-glutathione">What glutathione is</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="what-is-glutathione">What glutathione is</GuideHeading>
+            <GuideText>
               Glutathione is an antioxidant your body makes on its own, in every cell, described by the{' '}
-              <EdAuthorityLink href="https://pubchem.ncbi.nlm.nih.gov/compound/Glutathione">
+              <AuthorityLink href="https://pubchem.ncbi.nlm.nih.gov/compound/Glutathione">
                 NIH&apos;s PubChem database
-              </EdAuthorityLink>{' '}
+              </AuthorityLink>{' '}
               as the most abundant of its kind. Unlike vitamin C or E, you can&apos;t meaningfully get more of it from
               food — which is the whole reason a therapy category built around topping it up exists.
-            </EdGuideText>
-            <EdGuideText>
+            </GuideText>
+            <GuideText>
               What it does inside the body is well established: it neutralises the oxidative damage that builds up
               from age, alcohol, illness and everyday environmental exposure, and supports the liver&apos;s own
               detox process. What a course of it will do for you personally is a separate question — one this page
               doesn&apos;t answer and no provider on it should claim to either.
-            </EdGuideText>
+            </GuideText>
 
-            <EdGuideHeading id="why-levels-fall">Why glutathione levels fall</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="why-levels-fall">Why glutathione levels fall</GuideHeading>
+            <GuideText>
               Endogenous production declines with age, and several ordinary exposures deplete it faster than the body
               replaces it:
-            </EdGuideText>
-            <EdGuideList items={DEPLETION_FACTORS} />
+            </GuideText>
+            <GuideList items={DEPLETION_FACTORS} />
 
-            <EdGuideHeading id="formats">Delivery formats compared</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="formats">Delivery formats compared</GuideHeading>
+            <GuideText>
               Oral glutathione has an absorption problem — your digestive system breaks most of it down before it
               reaches your bloodstream — which is why almost every clinician-supervised programme uses a route that
               bypasses it. Liposomal formulations improve on standard oral considerably; injection improves on both.
-            </EdGuideText>
-            <EdGuideTable
+            </GuideText>
+            <GuideTable
               headers={['Method', 'Bioavailability', 'At home?', 'What to know']}
               rows={FORMAT_TABLE.map((row) => [row.method, row.bioavailability, row.home, row.note])}
             />
 
-            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} />
+            <HubProviderRow provider={providers[0]} vertical={VERTICAL_SLUG} guideCard />
 
-            <EdGuideHeading id="what-separates">What separates a good programme from a cheap one</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="what-separates">What separates a good programme from a cheap one</GuideHeading>
+            <GuideText>
               Four things, all visible before you pay. A low headline price attached to none of them is not a saving:
-            </EdGuideText>
-            <EdGuideList
-              columns={1}
-              items={[
+            </GuideText>
+            <GuideList items={[
                 'A licensed clinician reviews your intake, and is reachable again when a dose needs changing.',
                 'The compounding pharmacy is named and state-licensed.',
                 'The consultation and shipping sit inside the published monthly price rather than arriving at checkout.',
@@ -259,8 +239,8 @@ export default function GlutathioneHomePage() {
               ]}
             />
 
-            <EdGuideHeading id="cost">What glutathione therapy costs online</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="cost">What glutathione therapy costs online</GuideHeading>
+            <GuideText>
               Entry prices on this page run from $69 to about $99 for a first month, and ongoing monthly costs across
               the category typically sit between $69 and $200 depending on format and dose. System is the lowest
               verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
@@ -270,53 +250,51 @@ export default function GlutathioneHomePage() {
               subscribe-and-save rate is the lowest recurring monthly price on the page, and bundles in health
               coaching, though it's dosed 1–2 times a week rather than once. Taurus opens at a similarly low $79
               first month but is the highest ongoing price here at $179/month.
-            </EdGuideText>
-            <EdGuideText>
+            </GuideText>
+            <GuideText>
               The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
               into Arkansas, California, Louisiana, Mississippi or South Carolina.
-            </EdGuideText>
+            </GuideText>
 
-            <EdProviderRow provider={providers[0]} duplicate guideCard vertical={VERTICAL_SLUG} />
+            <HubProviderRow provider={providers[0]} vertical={VERTICAL_SLUG} guideCard />
 
-            <EdGuideHeading id="compounded">Compounded glutathione and the FDA</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="compounded">Compounded glutathione and the FDA</GuideHeading>
+            <GuideText>
               Injectable and nasal glutathione are compounded preparations — made by a licensed pharmacy against an
               individual prescription rather than manufactured as an approved finished product. As the{' '}
-              <EdAuthorityLink href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">
+              <AuthorityLink href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">
                 FDA explains
-              </EdAuthorityLink>
+              </AuthorityLink>
               , compounded drugs are not FDA-approved and are not reviewed for safety or effectiveness before they reach
               patients. That is the reason the prescriber and the pharmacy are the two things to verify, and why every
               provider ranked here routes your intake through a licensed clinician before anything ships.
-            </EdGuideText>
+            </GuideText>
 
-            <EdGuideHeading id="how-they-compare">How the ranked providers compare</EdGuideHeading>
-            <EdGuideText first>
+            <GuideHeading id="how-they-compare">How the ranked providers compare</GuideHeading>
+            <GuideText>
               System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
               clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
               ranks second as the most established platform here, and the only one offering three formats — weekly
               injection, daily nasal spray or a needle-free patch — from $90/month. ReadyRx is third, the only other
               provider here offering a nasal spray alongside its injection, priced per dose at $84 with no monthly
               membership to cancel.
-            </EdGuideText>
-            <EdGuideText>
+            </GuideText>
+            <GuideText>
               Below those, Hone Health is the pick for anyone who wants the protocol set against their own bloodwork,
               with comprehensive labs from around $99/month. Shed opens at 20% off the first month with health
               coaching in the base plan, Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
               1–2 day shipping, and bmiMD is the no-frills value pick with free shipping in the states it serves.
-            </EdGuideText>
-            <EdGuideText>
+            </GuideText>
+            <GuideText>
               The last two round out the page with different trade-offs rather than a straight step down in quality.
               Taurus undercuts everyone on entry price at $79 for the first month, but its $179/month renewal is the
               highest ongoing price on the page. Joi + Blokes bundles 1:1 health coaching into a $69/month
               subscribe-and-save plan — the lowest recurring monthly price here — dosed slightly more often, at 1–2
               injections a week.
-            </EdGuideText>
+            </GuideText>
 
-            <EdGuideHeading id="getting-started">How to get started</EdGuideHeading>
-            <EdGuideList
-              columns={1}
-              items={[
+            <GuideHeading id="getting-started">How to get started</GuideHeading>
+            <GuideList items={[
                 'Complete the provider’s online health questionnaire — typically five to ten minutes, no in-person visit.',
                 'A licensed clinician reviews your intake and history, usually within 24–48 hours, and prescribes only if it is appropriate.',
                 'Your compounded glutathione is prepared by a licensed U.S. pharmacy and shipped with protocol instructions.',
@@ -325,12 +303,12 @@ export default function GlutathioneHomePage() {
               ]}
             />
 
-            <EdGuideCallout title="Before you start treatment">
+            <GuideCallout title="Before you start treatment">
               Glutathione therapy is not FDA-approved to treat, cure or prevent any disease, and compounded glutathione
               is not an FDA-approved finished product. Individual response varies and no outcome is promised here.
               Consult a licensed clinician before starting, particularly if you are pregnant or breastfeeding, managing a
               chronic condition, or taking medication that affects liver metabolism.
-            </EdGuideCallout>
+            </GuideCallout>
           </>
         ),
       }}

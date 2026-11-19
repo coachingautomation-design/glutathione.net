@@ -5,9 +5,41 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['var(--font-inter)', 'var(--font-inter-ext)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-fraunces)', 'var(--font-fraunces-ext)', 'ui-serif', 'Georgia', 'serif'],
+      },
+      maxWidth: {
+        content: '1110px',
       },
       colors: {
+        // Editorial palette shared with bestnadtreatments.com: copper calls to
+        // action, a very dark navy band, cream/sand surfaces. Values live as CSS
+        // variables in app/globals.css.
+        ink: 'var(--ink)',
+        inkMuted: 'var(--ink-muted)',
+        copper: {
+          DEFAULT: 'var(--copper)',
+          aa: 'var(--copper-aa)',
+          dark: 'var(--copper-dark)',
+          tint: 'var(--copper-tint)',
+        },
+        teal: {
+          DEFAULT: 'var(--teal)',
+          tint: 'var(--teal-tint)',
+          light: 'var(--teal-light)',
+        },
+        band: {
+          DEFAULT: 'var(--band)',
+          light: 'var(--band-light)',
+        },
+        amber: {
+          tint: 'var(--amber-tint)',
+        },
+        cream: 'var(--cream)',
+        sand: 'var(--sand)',
+        card: 'var(--card)',
+        border: 'var(--border)',
+        gold: 'var(--gold)',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',

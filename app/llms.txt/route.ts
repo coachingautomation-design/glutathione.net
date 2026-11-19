@@ -24,6 +24,11 @@ clinical trials, test medication, or collect patient outcome data.
 ## Pages
 
 - [Best glutathione injections 2026](${SITE_CONFIG.domain}/): Ranked comparison of ${roster}, plus a guide to glutathione therapy formats, cost and FAQs.
+- [Best glutathione injections](${SITE_CONFIG.domain}/best-glutathione-injections/): Injection-only comparison of the providers that publish a subcutaneous format, with dose, supply and monthly price.
+- [Top ranked glutathione injections](${SITE_CONFIG.domain}/top-ranked-glutathione-injections/): Injection providers by editorial score, with the standout and trade-off behind each position.
+- [Affordable glutathione injections](${SITE_CONFIG.domain}/affordable-glutathione-injections/): Injection providers ranked by six-month cost at published prices.
+- [Cheapest glutathione injections](${SITE_CONFIG.domain}/cheapest-glutathione-injections/): Injection providers sorted by lowest published first-month price, with renewal prices.
+- [Best sites to get glutathione injections](${SITE_CONFIG.domain}/best-sites-to-get-glutathione-injections/): Where to get glutathione injections online safely, and how to vet a site.
 - [Best glutathione nasal spray](${SITE_CONFIG.domain}/best-glutathione-nasal-spray/): AgelessRx's needle-free intranasal spray format, format-specific pricing, guide and FAQs.
 - [Best glutathione patch providers](${SITE_CONFIG.domain}/best-glutathione-patch/): AgelessRx's needle-free, once-weekly transdermal patch format, format-specific pricing, guide and FAQs.
 - [About](${SITE_CONFIG.domain}/about/): What this site is and how it's funded.

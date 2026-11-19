@@ -1,86 +1,91 @@
 import SmartLink from '@/components/SmartLink';
 import { currentYear } from '@/lib/utils';
 
-const ON_PAGE_LINKS = [
-  { href: '#rankings', label: 'Ranked Providers' },
-  { href: '#treatment-types', label: 'Which Programme Is Right for Me?' },
-  { href: '#education', label: 'Glutathione Therapy Guide' },
-  { href: '#faq', label: 'FAQs' },
+const COMPARE_LINKS = [
+  { href: '/', label: 'Glutathione Providers 2026' },
+  { href: '/best-glutathione-injections/', label: 'Best Glutathione Injections' },
+  { href: '/top-ranked-glutathione-injections/', label: 'Top Ranked Injections' },
+  { href: '/best-sites-to-get-glutathione-injections/', label: 'Best Sites to Get Injections' },
 ];
 
-const COMPANY_LINKS = [
-  { href: '/about', label: 'About Us' },
-  { href: '/advertising-disclosure', label: 'Advertising Disclosure' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/privacy', label: 'Privacy Policy' },
-  { href: '/terms', label: 'Terms of Use' },
-  { href: '/buy-this-domain', label: 'Buy This Domain' },
+const PRICE_LINKS = [
+  { href: '/affordable-glutathione-injections/', label: 'Affordable Injections' },
+  { href: '/cheapest-glutathione-injections/', label: 'Cheapest Injections' },
 ];
 
-/**
- * Site footer — carried over from exploretreatments.com's
- * `components/layout/Footer` (same grid layout, brand column, bottom bar),
- * trimmed for a single-page launch: the reference footer's "Treatment
- * Categories", "Top Reviews" and "Popular Guides" columns read from a
- * cross-vertical provider/guide registry this site does not have, and its
- * LegitScript badge and Discord invite are exploretreatments.com-specific.
- * Every link below resolves to a real section or page on this site.
- */
+const FORMAT_LINKS = [
+  { href: '/best-glutathione-nasal-spray/', label: 'Glutathione Nasal Spray' },
+  { href: '/best-glutathione-patch/', label: 'Glutathione Patch' },
+];
+
+const SITE_LINKS = [
+  { href: '/about/', label: 'About Us' },
+  { href: '/advertising-disclosure/', label: 'Advertising Disclosure' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/privacy/', label: 'Privacy Policy' },
+  { href: '/terms/', label: 'Terms of Use' },
+  { href: '/buy-this-domain/', label: 'Buy This Domain' },
+];
+
+const SECTIONS = [
+  { title: 'Compare', links: COMPARE_LINKS },
+  { title: 'Price', links: PRICE_LINKS },
+  { title: 'Formats', links: FORMAT_LINKS },
+  { title: 'Site', links: SITE_LINKS },
+];
+
+/** Site footer in the bestnadtreatments.com style: slate disclaimer strip, then an ink footer. */
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-50" aria-label="Site footer">
-      <div className="container-shell grid grid-cols-1 gap-8 py-10 sm:grid-cols-2 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <SmartLink href="/" className="text-xl font-bold text-neutral-900 hover:text-primary-600 transition-colors">
-            Glutathione<span className="text-primary-600">.net</span>
-          </SmartLink>
-          <p className="mt-2 text-sm text-neutral-600 max-w-xs leading-relaxed">
-            Independent comparison of clinician-prescribed glutathione therapy providers — format, pharmacy sourcing,
-            state availability and monthly pricing, compared side by side.
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">On This Page</p>
-          <ul className="space-y-2 text-sm text-neutral-700">
-            {ON_PAGE_LINKS.map((link) => (
-              <li key={link.href}>
-                <SmartLink href={link.href} className="hover:text-primary-600 transition-colors duration-200">
-                  {link.label}
-                </SmartLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="mb-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Company</p>
-          <ul className="space-y-2 text-sm text-neutral-700">
-            {COMPANY_LINKS.map((link) => (
-              <li key={link.href}>
-                <SmartLink href={link.href} className="hover:text-primary-600 transition-colors duration-200">
-                  {link.label}
-                </SmartLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-neutral-200 bg-white">
-        <div className="container-shell py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-xs text-neutral-500">
-            © {currentYear()} Glutathione.net. All rights reserved.
-          </p>
-          <p className="text-xs text-neutral-500 max-w-2xl leading-relaxed">
-            <strong>Medical Disclaimer:</strong> Content is educational only and does not constitute medical advice,
-            diagnosis, or treatment. Always consult a qualified healthcare provider. For emergencies, call 911.{' '}
-            <SmartLink href="/advertising-disclosure" className="underline hover:text-neutral-700">
-              Affiliate disclosure.
+    <>
+      <div className="bg-slate-900 text-[12.5px] leading-snug text-slate-100">
+        <p className="mx-auto max-w-content px-4 py-2 md:px-6 lg:px-0">
+          <strong className="font-semibold">Medical disclaimer:</strong> This site is for informational purposes only
+          and is not medical advice. Always consult a licensed healthcare provider before starting glutathione therapy.{' '}
+          <span className="text-slate-300">
+            We may earn a commission from partner links -{' '}
+            <SmartLink href="/advertising-disclosure/" className="underline hover:text-white">
+              see our affiliate disclosure
             </SmartLink>
-          </p>
-        </div>
+            .
+          </span>
+        </p>
       </div>
-    </footer>
+      <footer className="bg-ink text-white" aria-label="Site footer">
+        <div className="mx-auto max-w-content px-4 py-10 md:px-6 lg:px-0 lg:py-12">
+          <SmartLink href="/" className="font-serif text-[21px] font-bold tracking-tight">
+            Glutathione<span className="text-[#E2A682]">.net</span>
+          </SmartLink>
+          <p className="mt-3 max-w-sm text-sm text-white/70">
+            Independent comparison of clinician-prescribed glutathione therapy providers: format, price, shipping and
+            plan terms, side by side.
+          </p>
+
+          <div className="mt-7 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            {SECTIONS.map((section) => (
+              <div key={section.title}>
+                <p className="text-[12px] font-semibold uppercase tracking-wide text-white/60">{section.title}</p>
+                <ul className="mt-2.5 space-y-1.5 text-[13px] text-white/80">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <SmartLink href={link.href} className="transition-colors hover:text-white">
+                        {link.label}
+                      </SmartLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 border-t border-white/10 pt-6 text-[12.5px] leading-relaxed text-white/60">
+            Affiliate Disclosure: We may earn commissions from qualifying purchases. This does not influence our
+            reviews or rankings. Compounded glutathione is not an FDA-approved drug product. For emergencies, call 911.
+          </div>
+
+          <p className="mt-5 text-[12px] text-white/50">© {currentYear()} Glutathione.net. All rights reserved.</p>
+        </div>
+      </footer>
+    </>
   );
 }

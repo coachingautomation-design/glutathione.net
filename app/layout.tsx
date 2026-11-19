@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
+import localFont from 'next/font/local';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -8,6 +9,14 @@ import { TrackingParamsListener } from '@/components/tracking/TrackingParamsList
 import { TrackEventProvider } from '@/components/tracking/TrackEventProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+
+// Fraunces (headings) and Inter (body/UI), self-hosted as in
+// bestnadtreatments.com so builds never depend on fonts.gstatic.com. Each file is
+// the variable font; latin-ext is chained after latin in the font stacks.
+const fraunces = localFont({ src: './fonts/fraunces-latin.woff2', weight: '100 900', display: 'swap', variable: '--font-fraunces' });
+const frauncesExt = localFont({ src: './fonts/fraunces-latin-ext.woff2', weight: '100 900', display: 'swap', preload: false, variable: '--font-fraunces-ext' });
+const inter = localFont({ src: './fonts/inter-latin.woff2', weight: '100 900', display: 'swap', variable: '--font-inter' });
+const interExt = localFont({ src: './fonts/inter-latin-ext.woff2', weight: '100 900', display: 'swap', preload: false, variable: '--font-inter-ext' });
 
 export const metadata: Metadata = {
   ...generateBaseMetadata({
@@ -22,12 +31,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const organizationSchema = generateOrganizationSchema();
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={`${fraunces.variable} ${frauncesExt.variable} ${inter.variable} ${interExt.variable}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta name="theme-color" content="#0d9488" />
+        <meta name="theme-color" content="#0d172c" />
         <meta name="format-detection" content="telephone=no" />
 
         {/* AI / LLM discoverability */}
@@ -46,17 +55,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <TrackingParamsListener />
         <TrackEventProvider>
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-primary-700 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-semibold focus:border focus:border-primary-300"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:text-copper-dark focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-semibold focus:border focus:border-border"
           >
             Skip to main content
           </a>
           <Header />
-          <main id="main-content">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <Footer />
         </TrackEventProvider>
         <Suspense>
