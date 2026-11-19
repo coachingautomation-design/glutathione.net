@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '@/lib/seo-schema';
 import { glutathioneProviders } from '@/data/providers/glutathione';
 import { glutathioneNasalSprayProviders } from '@/data/providers/glutathione-nasal-spray';
 import { glutathionePatchProviders } from '@/data/providers/glutathione-patch';
-import { GLUTATHIONE_FAQS } from '../faqs';
+import { GLUTATHIONE_FAQS } from '@/data/faqs/glutathione';
 
 export const dynamic = 'force-static';
 

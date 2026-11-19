@@ -1,74 +1,77 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import SmartLink from '@/components/SmartLink';
 
-type HeaderNavItem = { label: string; href: string };
-
-const DEFAULT_NAV: HeaderNavItem[] = [
-  { label: 'Glutathione Spray', href: '/best-glutathione-nasal-spray/' },
-  { label: 'Glutathione Patch', href: '/best-glutathione-patch/' },
+const NAV_LINKS = [
+  { href: '/best-glutathione-injections/', label: 'Best Injections' },
+  { href: '/cheapest-glutathione-injections/', label: 'Cheapest' },
+  { href: '/best-glutathione-nasal-spray/', label: 'Nasal Spray' },
+  { href: '/best-glutathione-patch/', label: 'Patch' },
+  { href: '/about/', label: 'About Us' },
 ];
 
 /**
- * Site header — carried over from exploretreatments.com's
- * `components/layout/Header`, simplified for a single-page site: that
- * component's mega-menu ("Categories", "Am I Eligible?", multi-vertical nav
- * groups) reads from a cross-vertical registry this site does not have. The
- * on-page section nav below serves the same "get to what you want" purpose
- * for a one-hub site.
+ * Site header in the bestnadtreatments.com style: cream bar with a serif
+ * wordmark, copper accent and plain text links; a hamburger menu on phones.
  */
-export function Header({ navItems = DEFAULT_NAV }: { navItems?: HeaderNavItem[] }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export function Header() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const linkClass = (href: string) =>
+    `transition-colors hover:text-copper-dark ${pathname === href ? 'text-copper-dark' : 'text-ink'}`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white shadow-sm" aria-label="Site header">
-      <div className="container-shell py-2.5 sm:py-4">
-        <div className="flex items-center justify-between gap-4">
-          <SmartLink href="/" className="text-xl sm:text-2xl font-bold text-neutral-900 select-none">
-            Glutathione<span className="text-primary-600">.net</span>
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-[rgba(250,246,240,0.95)] backdrop-blur" aria-label="Site header">
+      <div className="mx-auto max-w-content px-4 md:px-6 lg:px-0">
+        <div className="relative flex h-[52px] items-center justify-between md:h-[58px]">
+          <SmartLink href="/" className="shrink-0 font-serif text-[20px] font-bold tracking-tight text-ink md:text-[24px]">
+            Glutathione<span className="text-copper-dark">.net</span>
           </SmartLink>
 
-          <div className="flex items-center gap-2">
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-              {navItems.map((item) => (
-                <SmartLink
-                  key={item.href}
-                  href={item.href}
-                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors duration-200"
-                >
-                  {item.label}
-                </SmartLink>
-              ))}
-            </nav>
-
-            <button
-              type="button"
-              className="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md border border-neutral-300 text-neutral-700 hover:bg-neutral-50 transition-colors duration-200 lg:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle navigation menu"
-              aria-expanded={isMenuOpen}
-            >
-              <span className="text-xl">☰</span>
-            </button>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <nav className="mt-3 space-y-2 border-t border-neutral-200 pt-3 lg:hidden" aria-label="Mobile navigation">
-            {navItems.map((item) => (
-              <SmartLink
-                key={item.href}
-                href={item.href}
-                className="block rounded-md px-2 py-2 text-sm font-semibold text-neutral-700 hover:bg-neutral-100 hover:text-primary-600 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
+          <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
+            {NAV_LINKS.map((link) => (
+              <SmartLink key={link.href} href={link.href} className={`text-[16px] font-medium lg:text-[17px] ${linkClass(link.href)}`}>
+                {link.label}
               </SmartLink>
             ))}
           </nav>
-        )}
+
+          <button
+            type="button"
+            className="-mr-2 flex h-10 w-10 items-center justify-center rounded text-ink md:hidden"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {open && (
+        <nav id="mobile-menu" aria-label="Mobile" className="border-t border-border bg-cream md:hidden">
+          <ul className="mx-auto max-w-content px-4 py-2">
+            {[{ href: '/', label: 'Home' }, ...NAV_LINKS].map((link) => (
+              <li key={link.href} className="border-b border-border last:border-b-0">
+                <SmartLink href={link.href} className={`block py-3 text-[16px] font-medium ${linkClass(link.href)}`}>
+                  {link.label}
+                </SmartLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }

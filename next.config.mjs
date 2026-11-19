@@ -1,3 +1,9 @@
+// The original EdHubPage design of every landing page is kept under app/v1 and
+// served at the page's own URL plus "-v1" (/best-glutathione-patch-v1/,
+// /best-glutathione-nasal-spray-v1/; the homepage at /v1/ and /home-v1/).
+// None of those URLs may be indexed.
+const NOINDEX = [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Required by @opennextjs/cloudflare, which packages this standalone
@@ -39,6 +45,17 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      { source: '/v1', headers: NOINDEX },
+      { source: '/v1/:path*', headers: NOINDEX },
+      { source: '/home-v1', headers: NOINDEX },
+      { source: '/:slug-v1', headers: NOINDEX },
+    ];
+  },
+
+  async rewrites() {
+    return [
+      { source: '/home-v1', destination: '/v1/' },
+      { source: '/:slug-v1', destination: '/v1/:slug/' },
     ];
   },
 };
