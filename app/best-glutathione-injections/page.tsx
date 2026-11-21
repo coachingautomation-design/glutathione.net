@@ -87,8 +87,6 @@ export default function BestGlutathioneInjectionsPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Glutathione Injections"
-      intro="Clinician-prescribed glutathione injections you take at home, compared on dose, supply, what ships in the box and what you pay each month."
-      trustPoints={['Licensed Clinician Review', 'Shipped From U.S. Pharmacies', 'Injection Kits Compared', 'Published Prices Only']}
       providers={providers}
       faqs={FAQS}
       faqHeading="Glutathione Injection FAQs"

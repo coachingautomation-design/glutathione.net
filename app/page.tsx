@@ -160,13 +160,6 @@ export default function GlutathioneHomePage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Glutathione Injections 2026"
-      intro="Compare best & affordable glutathione injections telehealth providers."
-      trustPoints={[
-        'Licensed Clinician Review',
-        'Injection, Oral, Spray & Patch',
-        'Free Shipping Options',
-        'Transparent Monthly Pricing',
-      ]}
       providers={providers}
       schema={{
         medicalCondition: 'Glutathione Therapy',

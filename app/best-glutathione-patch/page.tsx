@@ -49,13 +49,6 @@ export default function GlutathionePatchPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Glutathione Patch Providers"
-      intro="We've compared the top glutathione patch providers online. Find affordable, trusted US glutathione providers."
-      trustPoints={[
-        'Licensed Clinician Review',
-        'Once-Weekly, Needle-Free',
-        'Whole-Body Support',
-        'Transparent Quarterly Pricing',
-      ]}
       providers={providers}
       offerBannerAfterIndex={null}
       bestOverallHeading={null}

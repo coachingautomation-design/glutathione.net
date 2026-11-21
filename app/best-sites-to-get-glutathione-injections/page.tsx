@@ -86,8 +86,6 @@ export default function BestSitesToGetGlutathioneInjectionsPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Sites to Get Glutathione Injections"
-      intro="Where to get glutathione injections online with a licensed clinician and a U.S. pharmacy behind every order, and how to spot the sites that skip both."
-      trustPoints={['Prescription Required', 'Licensed U.S. Pharmacies', 'Shipped to Your Door', 'Published Prices Only']}
       providers={providers}
       topBadge="Best Site"
       bestOverallHeading="Best Site Overall"

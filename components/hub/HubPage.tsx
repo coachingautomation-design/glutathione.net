@@ -44,8 +44,6 @@ export type HubPageProps = {
   metaDescription: string;
   /** H1. Defaults to `metaTitle`. */
   heading?: string;
-  intro?: string;
-  trustPoints?: string[];
 
   /** Already ordered; rank is the position in this array. */
   providers: EdHubProvider[];
@@ -109,8 +107,6 @@ export function HubPage({
   metaTitle,
   metaDescription,
   heading,
-  intro,
-  trustPoints,
   providers,
   offerBannerAfterIndex = 1,
   bestOverallHeading = 'Best Overall Pick',
@@ -164,7 +160,7 @@ export function HubPage({
       <PageEvent eventName="vertical_page_viewed" payload={{ vertical }} />
 
       {/* 1. Hero */}
-      <HubHero title={h1} intro={intro} trustPoints={trustPoints} />
+      <HubHero title={h1} />
 
       {/* 2. Top picks and ranked rows on the navy band */}
       <div className="bg-band">
