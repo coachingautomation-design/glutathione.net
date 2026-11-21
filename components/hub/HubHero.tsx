@@ -8,7 +8,7 @@
  *
  * The trust points are site-wide claims, so both must hold for every provider:
  * every intake is clinician-reviewed, and free shipping is offered by most of the
- * roster (HSA/FSA, bestnad's second pill, is only published by two providers here).
+ * roster (HSA/FSA, bestnad's second pill, is only published by a few providers here).
  */
 
 const UPDATED_DATE = () =>

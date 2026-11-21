@@ -49,6 +49,7 @@ const POSITIONING: Record<string, string> = {
   taurus: '$79 first month, then $179',
   readyrx: '$84 per dose, no membership',
   agelessrx: '$99 first month, then $149',
+  eden: '$95 first month, FSA/HSA eligible',
   embody: 'Flat $99 every month',
   shed: '20% off the first month',
   bmimd: 'Price not published',
@@ -73,7 +74,7 @@ const FAQS = [
   },
   {
     q: 'Can I use HSA or FSA funds for glutathione injections?',
-    a: 'ReadyRx and Taurus both state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
+    a: 'ReadyRx, Taurus and Eden all state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
   },
   {
     q: 'Why not buy glutathione vials from a cheaper website?',
@@ -155,7 +156,7 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideTiers
               items={[
                 { title: 'Under $80 to start', figure: '$69–$79 first month', body: 'System and Taurus. Check the renewal: $133/month and $179/month respectively.' },
-                { title: 'Flat or per-dose', figure: '$84–$99', body: 'ReadyRx at $84 per dose with no membership, and Embody at a flat $99 every month.' },
+                { title: '$84–$99 to start', figure: '$84–$99', body: 'ReadyRx at $84 per dose with no membership, Eden at $95 for the first month, and Embody at a flat $99 every month.' },
                 { title: 'Established platform', figure: '$99 first month, $149 after', body: 'AgelessRx’s weekly injection, with the option to switch to its spray or patch later.' },
               ]}
             />
@@ -163,7 +164,7 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideHeading id="save">Ways to pay less</GuideHeading>
             <GuideList
               items={[
-                { title: 'Use pre-tax money', body: 'ReadyRx and Taurus state their plans are HSA/FSA eligible.' },
+                { title: 'Use pre-tax money', body: 'ReadyRx, Taurus and Eden state their plans are HSA/FSA eligible.' },
                 { title: 'Take the first-month offer, then reassess', body: 'System, Taurus and AgelessRx all discount month one; set a reminder before the renewal date.' },
                 { title: 'Count what is included', body: 'System includes injection supplies and 20% off a Rythm blood test; several others include free 1–2 day shipping.' },
               ]}

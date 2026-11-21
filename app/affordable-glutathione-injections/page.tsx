@@ -55,6 +55,7 @@ const POSITIONING: Record<string, string> = {
   taurus: sixMonthLabel('taurus') ?? '',
   readyrx: '$84 per dose, no membership',
   shed: '20% off month one, coaching included',
+  eden: '$95 first month, renewal not published',
   bmimd: 'Free shipping, price not published',
 };
 
@@ -77,7 +78,7 @@ const FAQS = [
   },
   {
     q: 'Does insurance cover glutathione injections?',
-    a: 'Compounded glutathione is generally an out-of-pocket wellness treatment. ReadyRx and Taurus state that their plans are HSA/FSA eligible, which lets you pay with pre-tax money; check with your plan administrator.',
+    a: 'Compounded glutathione is generally an out-of-pocket wellness treatment. ReadyRx, Taurus and Eden state that their plans are HSA/FSA eligible, which lets you pay with pre-tax money; check with your plan administrator.',
   },
   {
     q: 'What makes a glutathione provider good value rather than just cheap?',
@@ -198,7 +199,7 @@ export default function AffordableGlutathioneInjectionsPage() {
             <GuideList
               items={[
                 { title: 'Pick the plan for the length you expect', body: 'Flat rates for a protocol, first-month offers for a trial.' },
-                { title: 'Use pre-tax money where you can', body: 'ReadyRx and Taurus state their plans are HSA/FSA eligible.' },
+                { title: 'Use pre-tax money where you can', body: 'ReadyRx, Taurus and Eden state their plans are HSA/FSA eligible.' },
                 { title: 'Diarise the renewal', body: 'Set a reminder a few days before an introductory month ends, so the step-up is a decision, not a surprise.' },
               ]}
             />

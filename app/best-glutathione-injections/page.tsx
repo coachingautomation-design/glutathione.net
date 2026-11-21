@@ -40,6 +40,7 @@ const POSITIONING: Record<string, string> = {
   agelessrx: 'Weekly injection, most established',
   readyrx: 'Pay per dose, no membership',
   shed: '20% off month one, coaching included',
+  eden: '$95 first month, FSA/HSA eligible',
   embody: 'Flat $99/month, 200–2000mg dosing',
   bmimd: 'Free shipping, five states excluded',
   taurus: '$79 first month, $10.75/shot',
@@ -182,7 +183,7 @@ export default function BestGlutathioneInjectionsPage() {
               An injection programme is only as convenient as the kit that arrives with it. System states that injection
               supplies come with its 2000mg monthly supply and that it ships on 2-day temperature-controlled delivery.
               Taurus ships a home injection kit (a 5mL bottle at 200mg/mL) from a licensed U.S. pharmacy. ReadyRx and
-              Embody both publish free 1–2 day shipping, and Shed ships the same day on approved orders.
+              Embody both publish free 1–2 day shipping, Eden ships free on expedited delivery, and Shed ships the same day on approved orders.
             </GuideText>
             <GuideText>
               If a provider does not say whether needles, syringes and alcohol swabs are included, ask before you pay.

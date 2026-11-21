@@ -302,6 +302,62 @@ const allGlutathioneProviders: Provider[] = [
     ],
   },
   {
+    // Added Nov 2026. Every figure below is from Eden's own glutathione page
+    // (eden.health/treatment/glutathione): "$95 first month", free expedited
+    // shipping, FSA/HSA eligible, cancel anytime, no-cost follow-up consults.
+    // Eden does not publish a renewal price or a dose on that page.
+    slug: 'eden',
+    name: 'Eden',
+    logoText: 'Eden',
+    logoUrl: '/eden-logo.png',
+    rating: 9.51,
+    stars: 4.76,
+    tagline: 'Glutathione injections from $95 your first month. Free expedited shipping.',
+    shortDescription: 'Eden offers clinician-prescribed glutathione injections starting at $95 for the first month, with a 100% online consultation, personalised dosing, free expedited shipping and no long-term contract. Plans are FSA/HSA eligible, include no-cost follow-up consultations and 24/7 support, and can be cancelled at any time.',
+    badges: ['FSA/HSA Eligible', 'Free Expedited Shipping'],
+    affiliate: {
+      url: 'https://track.revoffers.com/aff_c?offer_id=1435&aff_id=10248&url_id=12848',
+      network: 'custom',
+    },
+    features: [
+      '100% online consultation with a licensed provider',
+      'Free expedited shipping, FSA/HSA eligible',
+      'No long-term contract, cancel anytime',
+    ],
+    pros: [
+      'Low first month at $95',
+      'Free expedited shipping on every order',
+      'FSA/HSA eligible',
+      'No-cost follow-up consultations and 24/7 support',
+      'Same price at every dose, no long-term contract',
+    ],
+    cons: [
+      'Renewal price after the first month is not published on its glutathione page',
+      'Dose and supply are not published before the consultation',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $95 first month',
+    bestFor: 'Patients who want a low first month, free expedited shipping and the option to pay with FSA/HSA funds',
+    faq: [
+      {
+        question: 'How much does Eden glutathione cost?',
+        answer: 'Eden lists glutathione injections from $95 for the first month and states the same price applies at every dose. It does not publish the renewal price on its glutathione page, so confirm the ongoing rate during your consultation.',
+      },
+      {
+        question: 'What is included with Eden glutathione?',
+        answer: 'A 100% online consultation with a licensed provider, personalised dosing, free expedited shipping, no-cost follow-up consultations and 24/7 support. Plans are a subscription you can cancel at any time.',
+      },
+      {
+        question: 'Can I use FSA or HSA funds with Eden?',
+        answer: 'Eden states that its glutathione plans are FSA/HSA eligible. Check eligibility with your plan administrator before you pay.',
+      },
+      {
+        question: 'Is Eden glutathione FDA-approved?',
+        answer: 'No. Eden\'s glutathione is a compounded medication; compounded drugs are not FDA-approved and are not reviewed by the FDA for safety or effectiveness before reaching patients. A licensed provider reviews your intake before anything ships.',
+      },
+    ],
+  },
+  {
     slug: 'embody',
     name: 'Embody',
     logoText: 'Embody',

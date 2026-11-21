@@ -54,6 +54,7 @@ const POSITIONING: Record<string, string> = {
   agelessrx: 'Three formats from $90/month',
   hone: 'Comprehensive labs included',
   shed: '20% off month one, coaching included',
+  eden: 'From $95, FSA/HSA eligible',
   embody: 'Flat $99/month, 1–2 day shipping',
   bmimd: 'Value pick, five states excluded',
   readyrx: 'Injection or spray, no membership',

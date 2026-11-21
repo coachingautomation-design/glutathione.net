@@ -52,6 +52,10 @@ const REASONS: Record<string, { standout: string; tradeOff: string }> = {
     standout: 'Five-minute signup, same-day shipping, coaching included',
     tradeOff: 'Plan price not published before signup',
   },
+  eden: {
+    standout: '$95 first month, free expedited shipping, FSA/HSA eligible',
+    tradeOff: 'Renewal price not published',
+  },
   embody: {
     standout: 'Flat $99/month with 200–2000mg dosing',
     tradeOff: 'Sale pricing is time-limited',
@@ -169,8 +173,9 @@ export default function TopRankedGlutathioneInjectionsPage() {
 
             <GuideHeading id="rest">The rest of the list</GuideHeading>
             <GuideText>
-              Shed and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and same-day
-              shipping, but does not publish its plan price before signup. Embody is the most predictable, a flat
+              Shed, Eden and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and
+              same-day shipping, but does not publish its plan price before signup. Eden opens at $95 with free
+              expedited shipping and FSA/HSA eligibility, but likewise leaves its renewal price unpublished. Embody is the most predictable, a flat
               $99/month with personalised dosing. bmiMD is a straightforward value option held back by state
               availability. Taurus closes the list with a real trade-off rather than weaker care: it is cheap to start
               but the dearest to keep.

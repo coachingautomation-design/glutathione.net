@@ -39,6 +39,7 @@ const POSITIONING: Record<string, string> = {
   agelessrx: 'Best for format choice',
   readyrx: 'Best without a membership',
   shed: 'Fastest signup and shipping',
+  eden: 'Best for FSA/HSA payment',
   embody: 'Best flat monthly price',
   bmimd: 'Simple online prescription',
   taurus: 'Low-cost first month',
@@ -63,7 +64,7 @@ const FAQS = [
   },
   {
     q: 'Which sites ship glutathione injections fastest?',
-    a: 'Shed ships the same day on approved orders. ReadyRx and Embody publish free 1–2 day shipping, and System ships on 2-day temperature-controlled delivery.',
+    a: 'Shed ships the same day on approved orders. ReadyRx and Embody publish free 1–2 day shipping, Eden offers free expedited shipping, and System ships on 2-day temperature-controlled delivery.',
   },
   {
     q: 'Do these sites ship to every state?',
