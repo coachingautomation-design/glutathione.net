@@ -20,8 +20,7 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 /**
  * /best-glutathione-injections/ — the injection-only view of the comparison.
  * Same editorial order as the homepage, narrowed to the providers that publish a
- * subcutaneous injection format (Hone Health does not state its format, so it is
- * left out here). The guide is about the injection itself: dose and supply,
+ * subcutaneous injection format, capped at seven (MAX_INJECTION_PROVIDERS). The guide is about the injection itself: dose and supply,
  * what ships in the box, frequency and site care.
  */
 
@@ -43,8 +42,6 @@ const POSITIONING: Record<string, string> = {
   eden: '$95 first month, FSA/HSA eligible',
   lttl: '$79/month, same price every dose',
   embody: 'Flat $99/month, 200–2000mg dosing',
-  bmimd: 'Free shipping, five states excluded',
-  taurus: '$79 first month, $10.75/shot',
 };
 
 const FAQS = [
@@ -54,7 +51,7 @@ const FAQS = [
   },
   {
     q: 'Do glutathione injection providers send the needles and syringes?',
-    a: 'System states that injection supplies are included with its monthly supply, and Taurus ships a home injection kit. Other providers on this page ship the medication with protocol instructions; confirm what is in the box at checkout before your first order.',
+    a: 'System states that injection supplies are included with its monthly supply. Other providers on this page ship the medication with protocol instructions; confirm what is in the box at checkout before your first order.',
   },
   {
     q: 'How often are glutathione injections dosed?',
@@ -66,7 +63,7 @@ const FAQS = [
   },
   {
     q: 'How much do glutathione injections cost per month?',
-    a: 'Published first-month injection prices on this page run from $69 (System) to $99 (AgelessRx, Embody). After the first month, published monthly rates range from $79 (LTTL, same price at every dose) to $179 (Taurus). ReadyRx prices per dose at $84 with no membership.',
+    a: 'Published first-month injection prices on this page run from $69 (System) to $99 (AgelessRx, Embody). After the first month, published monthly rates range from $79 (LTTL, same price at every dose) to $149 (AgelessRx). ReadyRx prices per dose at $84 with no membership.',
   },
   {
     q: 'Are glutathione injections FDA-approved?',
@@ -125,7 +122,7 @@ export default function BestGlutathioneInjectionsPage() {
           {
             name: 'A low first month',
             body: 'A discounted month to try injections before the standard rate starts. Compare the renewal price, not just the opener.',
-            onPage: 'Taurus opens at $79, then $179/month; System opens at $69, then $133/month.',
+            onPage: 'System opens at $69, then $133/month; AgelessRx opens at $99, then $149/month.',
           },
           {
             name: 'More than one format',
@@ -183,8 +180,7 @@ export default function BestGlutathioneInjectionsPage() {
             <GuideText>
               An injection programme is only as convenient as the kit that arrives with it. System states that injection
               supplies come with its 2000mg monthly supply and that it ships on 2-day temperature-controlled delivery.
-              Taurus ships a home injection kit (a 5mL bottle at 200mg/mL) from a licensed U.S. pharmacy. ReadyRx,
-              Embody and LTTL all publish free 1–2 day shipping, Eden ships free on expedited delivery, and Shed ships the same day on approved orders.
+              ReadyRx, Embody and LTTL all publish free 1–2 day shipping, Eden ships free on expedited delivery, and Shed ships the same day on approved orders.
             </GuideText>
             <GuideText>
               If a provider does not say whether needles, syringes and alcohol swabs are included, ask before you pay.

@@ -64,14 +64,6 @@ const REASONS: Record<string, { standout: string; tradeOff: string }> = {
     standout: 'Flat $99/month with 200–2000mg dosing',
     tradeOff: 'Sale pricing is time-limited',
   },
-  bmimd: {
-    standout: 'Simple online prescription, free shipping',
-    tradeOff: 'Not available in AR, CA, LA, MS or SC',
-  },
-  taurus: {
-    standout: '$79 first month, about $10.75 a shot',
-    tradeOff: 'Highest ongoing price at $179/month',
-  },
 };
 
 const POSITIONING: Record<string, string> = Object.fromEntries(
@@ -93,7 +85,7 @@ const FAQS = [
   },
   {
     q: 'Why is the cheapest provider not ranked first?',
-    a: 'Price is one criterion of four. LTTL has the lowest flat monthly price ($79) but ranks sixth overall, and Taurus’s $79 first month renews at the page’s highest rate ($179/month). The top three combine a competitive price with clear terms and strong clinical oversight.',
+    a: 'Price is one criterion of four. LTTL has the lowest flat monthly price ($79) but ranks sixth overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
   },
   {
     q: 'How often are the rankings updated?',
@@ -177,13 +169,11 @@ export default function TopRankedGlutathioneInjectionsPage() {
 
             <GuideHeading id="rest">The rest of the list</GuideHeading>
             <GuideText>
-              Shed, Eden and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and
+              Shed, Eden, LTTL and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and
               same-day shipping, but does not publish its plan price before signup. Eden opens at $95 with free
               expedited shipping and FSA/HSA eligibility, but likewise leaves its renewal price unpublished. LTTL
-              has the lowest flat price on the page, $79 a month at every dose, but does not state the monthly supply. Embody is the most predictable, a flat
-              $99/month with personalised dosing. bmiMD is a straightforward value option held back by state
-              availability. Taurus closes the list with a real trade-off rather than weaker care: it is cheap to start
-              but the dearest to keep.
+              has the lowest flat price on the page, $79 a month at every dose, but does not state the monthly supply. Embody closes the list as the most
+              predictable, a flat $99/month with personalised dosing.
             </GuideText>
             <GuideNote title="Ranking by price instead?">
               See the <GuideLink href="/cheapest-glutathione-injections/">cheapest glutathione injections</GuideLink> for

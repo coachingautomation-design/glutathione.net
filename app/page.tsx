@@ -45,14 +45,11 @@ export async function generateMetadata() {
 const POSITIONING: Record<string, string> = {
   system: 'Lowest entry price at $69',
   agelessrx: 'Three formats from $90/month',
-  hone: 'Comprehensive labs included',
   shed: '20% off month one, coaching included',
   eden: 'From $95, FSA/HSA eligible',
   lttl: 'From $79/month, same price every dose',
   embody: 'Flat $99/month, 1–2 day shipping',
-  bmimd: 'Value pick, five states excluded',
   readyrx: 'Injection or spray, no membership',
-  taurus: '$79 first month, $10.75/shot',
 };
 
 const GUIDE_CONTENTS = [
@@ -70,7 +67,7 @@ const PROGRAMME_TYPES = [
   {
     name: 'Subcutaneous injection',
     body: 'A small self-administered injection that bypasses the digestive tract entirely. It is the highest-bioavailability route available for at-home use and the format most of these programmes are built around.',
-    onPage: 'The default format at System, Shed, Embody and bmiMD, and one of the three AgelessRx offers.',
+    onPage: 'The default format at System, Shed, Eden, LTTL and Embody, and one of the three AgelessRx offers.',
   },
   {
     name: 'Needle-free formats',
@@ -80,7 +77,7 @@ const PROGRAMME_TYPES = [
   {
     name: 'Labs-included protocols',
     body: 'Baseline bloodwork before the first dose, and monitoring after it, so the protocol is set against your own numbers rather than a standard plan. The price is higher because the clinical work is inside it.',
-    onPage: 'Hone Health starts at roughly $99/month with comprehensive labs and personalised clinician oversight.',
+    onPage: 'None of the providers ranked here bundles full lab work into the plan; System includes 20% off a Rythm blood test.',
   },
   {
     name: 'Flat monthly pricing',
@@ -95,7 +92,7 @@ const PROGRAMME_TYPES = [
   {
     name: 'Coaching and support bundles',
     body: 'Health coaching or 24/7 clinical messaging folded into the plan rather than sold separately. Worth checking whether it is a real service or a chatbot before it factors into the price you accept.',
-    onPage: 'Shed includes health coaching in the base plan; bmiMD keeps the price low but does not ship to AR, CA, LA, MS or SC.',
+    onPage: 'Shed includes health coaching in the base plan; Eden includes no-cost follow-up consultations and 24/7 support.',
   },
 ];
 
@@ -239,14 +236,14 @@ export default function GlutathioneHomePage() {
               the category typically sit between $90 and $200 depending on format and dose. System is the lowest
               verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
               three formats; ReadyRx skips a monthly figure entirely, pricing injection or spray at a flat $84 per
-              dose with no membership. Hone Health and Embody both sit around $99/month, the first with comprehensive
-              labs included and the second as a flat rate with free 1–2 day delivery. Eden opens at $95 for the first
+              dose with no membership. Embody charges a flat $99/month with free 1–2 day delivery. Eden opens at $95 for the first
               month with free expedited shipping and FSA/HSA eligibility, though it does not publish its renewal price.
-              LTTL charges from $79 a month at the same price for every dose, with free 1–2 day shipping. Taurus opens at a similarly low $79 first month but is the highest ongoing price here at $179/month.
+              LTTL charges from $79 a month at the same price for every dose, with free 1–2 day shipping.
             </GuideText>
             <GuideText>
-              The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
-              into Arkansas, California, Louisiana, Mississippi or South Carolina.
+              Check the price you will pay from month two, not just the opening offer: System&apos;s $69 becomes
+              $133/month and AgelessRx&apos;s $99 injection becomes $149/month, while LTTL and Embody charge the same
+              every month.
             </GuideText>
 
             <HubProviderRow provider={providers[0]} vertical={VERTICAL_SLUG} guideCard />
@@ -273,14 +270,9 @@ export default function GlutathioneHomePage() {
               membership to cancel.
             </GuideText>
             <GuideText>
-              Below those, Hone Health is the pick for anyone who wants the protocol set against their own bloodwork,
-              with comprehensive labs from around $99/month. Shed opens at 20% off the first month with health
-              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges from $79 a month at every dose, Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
-              1–2 day shipping, and bmiMD is the no-frills value pick with free shipping in the states it serves.
-            </GuideText>
-            <GuideText>
-              Taurus rounds out the page with a trade-off rather than a straight step down in quality: a low $79
-              first month, but a $179/month renewal that is the highest ongoing price on the page.
+              Below those, Shed opens at 20% off the first month with health
+              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges from $79 a month at every dose, and Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
+              1–2 day shipping.
             </GuideText>
 
             <GuideHeading id="getting-started">How to get started</GuideHeading>

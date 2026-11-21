@@ -185,6 +185,8 @@ const allGlutathioneProviders: Provider[] = [
   },
   {
     slug: 'hone',
+    // Hidden from every listing by request; the entry is kept for direct lookups.
+    hidden: true,
     name: 'Hone Health',
     logoText: 'Hone Health',
     logoUrl: '/logos/hone.png',
@@ -473,6 +475,8 @@ const allGlutathioneProviders: Provider[] = [
   },
   {
     slug: 'bmimd',
+    // Hidden from every listing by request; the entry is kept for direct lookups.
+    hidden: true,
     name: 'bmiMD',
     logoText: 'bmiMD',
     logoUrl: '/logos/bmimd.svg',
@@ -535,6 +539,8 @@ const allGlutathioneProviders: Provider[] = [
     // Rating/stars follow the shared position-based scale (lib/ratings.ts
     // RATING_MAP position 8), not a hand-picked number.
     slug: 'taurus',
+    // Hidden from every listing by request; the entry is kept for direct lookups.
+    hidden: true,
     name: 'Taurus',
     logoText: 'Taurus',
     logoUrl: '/logos/taurus.svg',

@@ -46,24 +46,22 @@ const byEntryPrice = [...injectionProviders].sort((a, b) => {
 
 const POSITIONING: Record<string, string> = {
   system: '$69 first month, then $133',
-  taurus: '$79 first month, then $179',
   readyrx: '$84 per dose, no membership',
   agelessrx: '$99 first month, then $149',
   lttl: '$79/month, same price every dose',
   eden: '$95 first month, FSA/HSA eligible',
   embody: 'Flat $99 every month',
   shed: '20% off the first month',
-  bmimd: 'Price not published',
 };
 
 const FAQS = [
   {
     q: 'What are the cheapest glutathione injections online?',
-    a: 'The lowest published first-month price for injectable glutathione on this page is $69 from System (a 2000mg monthly supply with injection supplies, then $133/month). LTTL follows at $79 a month at every dose, Taurus at $79 for the first month, and ReadyRx charges $84 per dose with no membership.',
+    a: 'The lowest published first-month price for injectable glutathione on this page is $69 from System (a 2000mg monthly supply with injection supplies, then $133/month). LTTL follows at $79 a month at every dose, and ReadyRx charges $84 per dose with no membership.',
   },
   {
     q: 'Which glutathione injection stays cheapest after the first month?',
-    a: 'LTTL. It charges from $79 a month at the same price for every dose, with no first-month step-up. Embody charges a flat $99/month, AgelessRx’s injection renews at $149/month, System to $133/month and Taurus to $179/month after their discounted first months.',
+    a: 'LTTL. It charges from $79 a month at the same price for every dose, with no first-month step-up. Embody charges a flat $99/month, AgelessRx’s injection renews at $149/month and System at $133/month after their discounted first months.',
   },
   {
     q: 'Is a $69 first month a good deal?',
@@ -75,7 +73,7 @@ const FAQS = [
   },
   {
     q: 'Can I use HSA or FSA funds for glutathione injections?',
-    a: 'ReadyRx, Taurus and Eden all state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
+    a: 'ReadyRx and Eden both state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
   },
   {
     q: 'Why not buy glutathione vials from a cheaper website?',
@@ -144,7 +142,7 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideHeading id="first-vs-ongoing">First-month price vs. what you keep paying</GuideHeading>
             <GuideText>
               Most low prices in this category are introductory. System&apos;s $69 first month renews at $133/month, and
-              Taurus&apos;s $79 opener renews at $179/month, the highest ongoing rate on the page. LTTL and Embody
+              AgelessRx&apos;s $99 injection renews at $149/month, the highest ongoing rate on the page. LTTL and Embody
               are the exceptions: $79 and $99 a month respectively, the same every month rather than a one-off.
             </GuideText>
             <GuideNote title="The quick rule">
@@ -156,7 +154,7 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideHeading id="price-bands">The three price bands</GuideHeading>
             <GuideTiers
               items={[
-                { title: 'Under $80 to start', figure: '$69–$79 first month', body: 'System, LTTL and Taurus. Check the renewal: LTTL stays at $79/month, System rises to $133 and Taurus to $179.' },
+                { title: 'Under $80 to start', figure: '$69–$79 first month', body: 'System and LTTL. Check the renewal: LTTL stays at $79/month, System rises to $133.' },
                 { title: '$84–$99 to start', figure: '$84–$99', body: 'ReadyRx at $84 per dose with no membership, Eden at $95 for the first month, and Embody at a flat $99 every month.' },
                 { title: 'Established platform', figure: '$99 first month, $149 after', body: 'AgelessRx’s weekly injection, with the option to switch to its spray or patch later.' },
               ]}
@@ -165,8 +163,8 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideHeading id="save">Ways to pay less</GuideHeading>
             <GuideList
               items={[
-                { title: 'Use pre-tax money', body: 'ReadyRx, Taurus and Eden state their plans are HSA/FSA eligible.' },
-                { title: 'Take the first-month offer, then reassess', body: 'System, Taurus and AgelessRx all discount month one; set a reminder before the renewal date.' },
+                { title: 'Use pre-tax money', body: 'ReadyRx and Eden state their plans are HSA/FSA eligible.' },
+                { title: 'Take the first-month offer, then reassess', body: 'System and AgelessRx both discount month one; set a reminder before the renewal date.' },
                 { title: 'Count what is included', body: 'System includes injection supplies and 20% off a Rythm blood test; several others include free 1–2 day shipping.' },
               ]}
             />

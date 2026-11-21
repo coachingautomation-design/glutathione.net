@@ -197,8 +197,13 @@ export function factsFor(slug: string): GlutathioneFacts {
   return facts;
 }
 
-/** Providers that publish a subcutaneous injection format, in editorial order. */
-export const injectionProviders: Provider[] = glutathioneProviders.filter((p) => factsFor(p.slug).injection);
+/** The injection pages list at most this many providers. */
+export const MAX_INJECTION_PROVIDERS = 7;
+
+/** Providers that publish a subcutaneous injection format, in editorial order, capped at MAX_INJECTION_PROVIDERS. */
+export const injectionProviders: Provider[] = glutathioneProviders
+  .filter((p) => factsFor(p.slug).injection)
+  .slice(0, MAX_INJECTION_PROVIDERS);
 
 /**
  * Six months of the injection format at the published rates: the entry price
