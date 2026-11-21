@@ -100,8 +100,6 @@ export default function AffordableGlutathioneInjectionsPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Affordable Glutathione Injections"
-      intro="Glutathione injection providers ranked by what six months really costs at their published prices, so a cheap first month does not hide an expensive second one."
-      trustPoints={['Ranked by Six-Month Cost', 'Flat-Rate Plans Compared', 'Licensed Clinician Review', 'HSA/FSA Options']}
       providers={providers}
       topBadge="Best Value"
       bestOverallHeading="Most Affordable Over Six Months"

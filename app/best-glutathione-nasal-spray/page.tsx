@@ -53,13 +53,6 @@ export default function GlutathioneNasalSprayPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Best Glutathione Nasal Spray"
-      intro="We've compared the top glutathione nasal spray providers online. Find affordable, trusted US glutathione providers."
-      trustPoints={[
-        'Licensed Clinician Review',
-        'Needle-Free Nasal Spray',
-        'Simple Daily Routine',
-        'Transparent Monthly Pricing',
-      ]}
       providers={providers}
       offerBannerAfterIndex={null}
       bestOverallHeading={null}

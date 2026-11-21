@@ -96,8 +96,6 @@ export default function CheapestGlutathioneInjectionsPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Cheapest Glutathione Injections"
-      intro="Glutathione injection providers sorted by the lowest price you can start at, with the renewal price beside every offer so the cheapest start is not mistaken for the cheapest plan."
-      trustPoints={['Sorted by Entry Price', 'Renewal Prices Shown', 'Licensed Clinician Review', 'Free Shipping Options']}
       providers={providers}
       topBadge="Lowest Price"
       bestOverallHeading="Lowest Entry Price"

@@ -111,8 +111,6 @@ export default function TopRankedGlutathioneInjectionsPage() {
       metaTitle={META_TITLE}
       metaDescription={META_DESCRIPTION}
       heading="Top Ranked Glutathione Injections"
-      intro="Every glutathione injection provider we track, in order of editorial score, with the standout and the trade-off behind each position."
-      trustPoints={['Scored on Four Criteria', 'Published Figures Only', 'No Paid Placement', 'Licensed Clinician Review']}
       providers={providers}
       topBadge="Top Ranked"
       bestOverallHeading="Highest Ranked Provider"
