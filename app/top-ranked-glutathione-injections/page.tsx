@@ -42,11 +42,11 @@ const REASONS: Record<string, { standout: string; tradeOff: string }> = {
   },
   agelessrx: {
     standout: 'Most established platform (197,000+ customers), three formats',
-    tradeOff: 'Injection renews at $149/month',
+    tradeOff: 'Spray and patch priced separately from the injection',
   },
   readyrx: {
-    standout: 'Injection or spray at $84 per dose, no membership',
-    tradeOff: 'No flat monthly figure to budget against',
+    standout: '2,000mg injection at $99/month, locked in forever',
+    tradeOff: 'Black Friday pricing; confirm before you order',
   },
   shed: {
     standout: 'Five-minute signup, same-day shipping, coaching included',
@@ -57,12 +57,12 @@ const REASONS: Record<string, { standout: string; tradeOff: string }> = {
     tradeOff: 'Renewal price not published',
   },
   lttl: {
-    standout: 'From $79/month at every dose, free 1–2 day shipping',
-    tradeOff: 'Monthly supply not published before the consultation',
+    standout: '$89 first month, home injection kit, unlimited doctor consults',
+    tradeOff: 'Renews at $119/month',
   },
   embody: {
-    standout: 'Flat $99/month with 200–2000mg dosing',
-    tradeOff: 'Sale pricing is time-limited',
+    standout: '$49 first month, then $99, with 200–2,000mg dosing',
+    tradeOff: 'The $49 first month is a limited-time sale',
   },
 };
 
@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     q: 'Why is the cheapest provider not ranked first?',
-    a: 'Price is one criterion of four. LTTL has the lowest flat monthly price ($79) but ranks sixth overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
+    a: 'Price is one criterion of four. Embody has the lowest first month ($49) but ranks seventh overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
   },
   {
     q: 'How often are the rankings updated?',
@@ -163,8 +163,8 @@ export default function TopRankedGlutathioneInjectionsPage() {
               System, AgelessRx and ReadyRx all score above 9.7, and each earns it differently. System leads on what it
               costs to start, $69 for a 2000mg monthly supply with the injection supplies in the box. AgelessRx is the
               most established name here, with 197,000+ customers and the only lineup that runs from a weekly injection
-              to a nasal spray and a patch. ReadyRx is the pick for anyone who does not want a membership at all: $84
-              per dose, free 1–2 day shipping and HSA/FSA eligibility.
+              to a nasal spray and a patch, with the injection locked in at $99/month. ReadyRx matches that price with a
+              2,000mg injection at $99/month locked in forever, plus free 1–2 day shipping and HSA/FSA eligibility.
             </GuideText>
 
             <GuideHeading id="rest">The rest of the list</GuideHeading>
@@ -172,8 +172,9 @@ export default function TopRankedGlutathioneInjectionsPage() {
               Shed, Eden, LTTL and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and
               same-day shipping, but does not publish its plan price before signup. Eden opens at $95 with free
               expedited shipping and FSA/HSA eligibility, but likewise leaves its renewal price unpublished. LTTL
-              has the lowest flat price on the page, $79 a month at every dose, but does not state the monthly supply. Embody closes the list as the most
-              predictable, a flat $99/month with personalised dosing.
+              charges $89 for the first month with a home injection kit and unlimited doctor consults, then $119/month.
+              Embody closes the list with the lowest first month on the page, $49, then $99/month with personalised
+              dosing.
             </GuideText>
             <GuideNote title="Ranking by price instead?">
               See the <GuideLink href="/cheapest-glutathione-injections/">cheapest glutathione injections</GuideLink> for

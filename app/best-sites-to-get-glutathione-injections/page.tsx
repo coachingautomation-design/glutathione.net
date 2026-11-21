@@ -37,11 +37,11 @@ export async function generateMetadata() {
 const POSITIONING: Record<string, string> = {
   system: 'Best overall site, from $69',
   agelessrx: 'Best for format choice',
-  readyrx: 'Best without a membership',
+  readyrx: 'Best locked-in price, $99/mo',
   shed: 'Fastest signup and shipping',
   eden: 'Best for FSA/HSA payment',
-  lttl: 'Lowest flat monthly price',
-  embody: 'Flat $99 every month',
+  lttl: 'Most support included',
+  embody: 'Lowest first month, $49',
 };
 
 const FAQS = [

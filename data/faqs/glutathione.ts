@@ -19,7 +19,7 @@ export const GLUTATHIONE_FAQS = [
   },
   {
     q: 'What does glutathione therapy cost?',
-    a: 'System is the lowest verified entry price in this comparison at $69 for the first month, rising to $133/month afterward. AgelessRx starts at $90/month across three formats, and Embody charges a flat $99/month with free 1–2 day shipping. Shed opens with 20% off the first month and includes health coaching, Eden starts at $95 for the first month with free expedited shipping, and LTTL charges from $79 a month at the same price for every dose. Ongoing monthly costs across the category typically run $90–$200+ depending on format and dose.',
+    a: 'Embody has the lowest first month in this comparison at $49 during its pre-Black Friday sale, then $99/month. System starts at $69, rising to $133/month. AgelessRx and ReadyRx both lock their injection at $99/month. LTTL charges $89 for the first month, then $119/month, with plans from $79/month. Eden starts at $95 for the first month with free expedited shipping, and Shed opens with 20% off the first month. Ongoing monthly costs for the injection plans that publish one run $99–$133.',
   },
   {
     q: 'Is compounded glutathione FDA-approved?',

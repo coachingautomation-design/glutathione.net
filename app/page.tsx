@@ -43,13 +43,13 @@ export async function generateMetadata() {
  * publishes.
  */
 const POSITIONING: Record<string, string> = {
-  system: 'Lowest entry price at $69',
-  agelessrx: 'Three formats from $90/month',
+  system: '$69 first month, pause or cancel anytime',
+  agelessrx: '$99/mo locked in, three formats',
   shed: '20% off month one, coaching included',
   eden: 'From $95, FSA/HSA eligible',
-  lttl: 'From $79/month, same price every dose',
-  embody: 'Flat $99/month, 1–2 day shipping',
-  readyrx: 'Injection or spray, no membership',
+  lttl: '$89 first month, injection kit included',
+  embody: '$49 first month, then $99',
+  readyrx: '$99/mo, locked in forever',
 };
 
 const GUIDE_CONTENTS = [
@@ -82,12 +82,12 @@ const PROGRAMME_TYPES = [
   {
     name: 'Flat monthly pricing',
     body: 'One published figure every month, with the consultation and shipping inside it. Nothing to recalculate at renewal and nothing added at checkout.',
-    onPage: 'Embody charges a flat $99/month with personalised dosing and free 1–2 day shipping.',
+    onPage: 'AgelessRx and ReadyRx both lock their injection at $99/month; Embody is $99/month after a $49 first month.',
   },
   {
     name: 'Low-cost entry',
     body: 'A discounted or low first month to get started, then the standard rate. Useful for trying a provider — the figure to compare across the page is still the ongoing monthly price.',
-    onPage: 'System opens at $69 for the first month (reg. $133), the lowest verified entry price here; Shed opens with 20% off and includes health coaching.',
+    onPage: 'Embody opens at $49 for the first month (then $99), the lowest entry price here; System opens at $69 (then $133); Shed opens with 20% off.',
   },
   {
     name: 'Coaching and support bundles',
@@ -232,18 +232,18 @@ export default function GlutathioneHomePage() {
 
             <GuideHeading id="cost">What glutathione therapy costs online</GuideHeading>
             <GuideText>
-              Entry prices on this page run from $69 to about $99 for a first month, and ongoing monthly costs across
-              the category typically sit between $90 and $200 depending on format and dose. System is the lowest
-              verified entry at $69, rising to $133/month after the first month; AgelessRx starts at $90/month across
-              three formats; ReadyRx skips a monthly figure entirely, pricing injection or spray at a flat $84 per
-              dose with no membership. Embody charges a flat $99/month with free 1–2 day delivery. Eden opens at $95 for the first
-              month with free expedited shipping and FSA/HSA eligibility, though it does not publish its renewal price.
-              LTTL charges from $79 a month at the same price for every dose, with free 1–2 day shipping.
+              First-month prices on this page run from $49 to $99, and ongoing monthly costs sit between $99 and $133
+              for the injection plans that publish one. Embody has the lowest entry at $49 for the first month during
+              its pre-Black Friday sale, then $99/month. System opens at $69, rising to $133/month. LTTL charges $89 for
+              the first month, then $119/month, with plans from $79/month and a home injection kit included. AgelessRx
+              and ReadyRx both lock their injection at $99/month, so the price does not rise after month one. Eden opens
+              at $95 for the first month with free expedited shipping and FSA/HSA eligibility, though it does not
+              publish its renewal price.
             </GuideText>
             <GuideText>
               Check the price you will pay from month two, not just the opening offer: System&apos;s $69 becomes
-              $133/month and AgelessRx&apos;s $99 injection becomes $149/month, while LTTL and Embody charge the same
-              every month.
+              $133/month, LTTL&apos;s $89 becomes $119/month and Embody&apos;s $49 becomes $99/month, while AgelessRx
+              and ReadyRx keep the injection at $99/month.
             </GuideText>
 
             <HubProviderRow provider={providers[0]} vertical={VERTICAL_SLUG} guideCard />
@@ -265,14 +265,15 @@ export default function GlutathioneHomePage() {
               System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
               clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
               ranks second as the most established platform here, and the only one offering three formats — weekly
-              injection, daily nasal spray or a needle-free patch — from $90/month. ReadyRx is third, the only other
-              provider here offering a nasal spray alongside its injection, priced per dose at $84 with no monthly
-              membership to cancel.
+              injection, daily nasal spray or a needle-free patch — with the injection locked in at $99/month. ReadyRx
+              is third, with a Black Friday price of $99/month locked in forever for a 2,000mg injection, and a nasal
+              spray alongside it.
             </GuideText>
             <GuideText>
               Below those, Shed opens at 20% off the first month with health
-              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges from $79 a month at every dose, and Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
-              1–2 day shipping.
+              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges $89 for the
+              first month with a home injection kit and unlimited doctor consults, and Embody opens at $49 (then
+              $99/month) with personalised 200mg–2,000mg dosing and free 1–2 day shipping.
             </GuideText>
 
             <GuideHeading id="getting-started">How to get started</GuideHeading>
