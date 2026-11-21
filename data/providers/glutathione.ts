@@ -8,12 +8,12 @@ import type { Provider } from './types';
  * /[vertical]/reviews/[provider]/ route — so registering the slug in the
  * provider map would spawn thin templated review pages we do not want.
  */
-export const glutathioneProviders: Provider[] = [
+const allGlutathioneProviders: Provider[] = [
   {
     slug: 'system',
     name: 'System',
     logoText: 'System',
-    logoUrl: 'https://assets.explorets.com/system.svg',
+    logoUrl: '/logos/system.svg',
     rating: 9.87,
     stars: 4.94,
     tagline: 'Injectable glutathione from $69 your first month (reg. $133).',
@@ -72,7 +72,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'agelessrx',
     name: 'AgelessRx',
     logoText: 'AgelessRx',
-    logoUrl: 'https://assets.explorets.com/agelessrx-logo.svg',
+    logoUrl: '/logos/agelessrx.svg',
     rating: 9.78,
     stars: 4.9,
     tagline: 'Three ways to take it, starting at $90/mo. Free shipping.',
@@ -136,7 +136,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'readyrx',
     name: 'ReadyRx',
     logoText: 'ReadyRx',
-    logoUrl: 'https://readyhealth.everflowclient.io/logo.png',
+    logoUrl: '/logos/readyrx.svg',
     rating: 9.74,
     stars: 4.87,
     tagline: 'From $84 per dose, injection or nasal spray. No membership.',
@@ -187,7 +187,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'hone',
     name: 'Hone Health',
     logoText: 'Hone Health',
-    logoUrl: 'https://www.exploretreatments.com/images/Logo_Lock_Up_Black.png',
+    logoUrl: '/logos/hone.png',
     rating: 9.61,
     stars: 4.81,
     tagline: 'Comprehensive labs included. Personalized glutathione protocol.',
@@ -246,7 +246,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'shed',
     name: 'Shed',
     logoText: 'Shed',
-    logoUrl: 'https://www.exploretreatments.com/images/shedrx-logo.avif',
+    logoUrl: '/logos/shed.avif',
     rating: 9.55,
     stars: 4.77,
     tagline: '20% off first month. Health coaching included.',
@@ -302,10 +302,121 @@ export const glutathioneProviders: Provider[] = [
     ],
   },
   {
+    // Added Nov 2026. Every figure below is from Eden's own glutathione page
+    // (eden.health/treatment/glutathione): "$95 first month", free expedited
+    // shipping, FSA/HSA eligible, cancel anytime, no-cost follow-up consults.
+    // Eden does not publish a renewal price or a dose on that page.
+    slug: 'eden',
+    name: 'Eden',
+    logoText: 'Eden',
+    logoUrl: '/logos/eden.svg',
+    rating: 9.51,
+    stars: 4.76,
+    tagline: 'Glutathione injections from $95 your first month. Free expedited shipping.',
+    shortDescription: 'Eden offers clinician-prescribed glutathione injections starting at $95 for the first month, with a 100% online consultation, personalised dosing, free expedited shipping and no long-term contract. Plans are FSA/HSA eligible, include no-cost follow-up consultations and 24/7 support, and can be cancelled at any time.',
+    badges: ['FSA/HSA Eligible', 'Free Expedited Shipping'],
+    affiliate: {
+      url: 'https://track.revoffers.com/aff_c?offer_id=1435&aff_id=10248&url_id=12848',
+      network: 'custom',
+    },
+    features: [
+      '100% online consultation with a licensed provider',
+      'Free expedited shipping, FSA/HSA eligible',
+      'No long-term contract, cancel anytime',
+    ],
+    pros: [
+      'Low first month at $95',
+      'Free expedited shipping on every order',
+      'FSA/HSA eligible',
+      'No-cost follow-up consultations and 24/7 support',
+      'Same price at every dose, no long-term contract',
+    ],
+    cons: [
+      'Renewal price after the first month is not published on its glutathione page',
+      'Dose and supply are not published before the consultation',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $95 first month',
+    bestFor: 'Patients who want a low first month, free expedited shipping and the option to pay with FSA/HSA funds',
+    faq: [
+      {
+        question: 'How much does Eden glutathione cost?',
+        answer: 'Eden lists glutathione injections from $95 for the first month and states the same price applies at every dose. It does not publish the renewal price on its glutathione page, so confirm the ongoing rate during your consultation.',
+      },
+      {
+        question: 'What is included with Eden glutathione?',
+        answer: 'A 100% online consultation with a licensed provider, personalised dosing, free expedited shipping, no-cost follow-up consultations and 24/7 support. Plans are a subscription you can cancel at any time.',
+      },
+      {
+        question: 'Can I use FSA or HSA funds with Eden?',
+        answer: 'Eden states that its glutathione plans are FSA/HSA eligible. Check eligibility with your plan administrator before you pay.',
+      },
+      {
+        question: 'Is Eden glutathione FDA-approved?',
+        answer: 'No. Eden\'s glutathione is a compounded medication; compounded drugs are not FDA-approved and are not reviewed by the FDA for safety or effectiveness before reaching patients. A licensed provider reviews your intake before anything ships.',
+      },
+    ],
+  },
+  {
+    // Added Nov 2026. Figures are from LTTL's own glutathione page
+    // (lttl.com/glutathione): 200mg injections "starting at $79 a month",
+    // "same price, every dose", free 1-2 day shipping, prescription and online
+    // visit included, cancel anytime. Rating follows new-design-next's 9.50.
+    slug: 'lttl',
+    name: 'LTTL',
+    logoText: 'LTTL',
+    logoUrl: '/logos/lttl.png',
+    rating: 9.5,
+    stars: 4.75,
+    tagline: 'Glutathione injections from $79 a month. Same price at every dose.',
+    shortDescription: 'LTTL is a doctor-led telehealth provider offering compounded glutathione injections (200mg) starting at $79 a month, at the same price at every dose. A 100% online medical visit and the prescription are included, shipping is free and arrives in 1–2 days, and you can cancel anytime.',
+    badges: ['Same Price Every Dose', 'Free 1–2 Day Shipping'],
+    affiliate: {
+      url: 'https://track.revoffers.com/aff_c?offer_id=1619&aff_id=10248&url_id=12510',
+      network: 'custom',
+    },
+    features: [
+      '200mg injections, same price at every dose',
+      '100% online visit, prescription included',
+      'Free shipping, arrives in 1–2 days',
+    ],
+    pros: [
+      'Low published monthly price, from $79 a month',
+      'Same price at every dose, no hidden fees',
+      'Online medical visit and prescription included, no insurance required',
+      'Free shipping that arrives in 1–2 days',
+      'Cancel anytime',
+    ],
+    cons: [
+      'Monthly supply and injection frequency are not published before the consultation',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $79/month',
+    bestFor: 'Patients who want a low, flat monthly price and fast free shipping',
+    faq: [
+      {
+        question: 'How much does LTTL glutathione cost?',
+        answer: 'LTTL lists glutathione injections starting at $79 a month and charges the same price at every dose. The online medical visit and prescription are included, with no insurance required.',
+      },
+      {
+        question: 'What format and dose does LTTL offer?',
+        answer: 'LTTL offers compounded glutathione injections, with 200mg injections available. Your clinician sets the dose and schedule after reviewing your intake.',
+      },
+      {
+        question: 'How fast does LTTL ship?',
+        answer: 'LTTL states that shipping is free and arrives in 1–2 days.',
+      },
+      {
+        question: 'Is LTTL glutathione FDA-approved?',
+        answer: 'No. LTTL states that its compounded medications are produced in FDA-registered facilities but are not FDA-approved. Compounded drugs are not reviewed by the FDA for safety or effectiveness before reaching patients.',
+      },
+    ],
+  },
+  {
     slug: 'embody',
     name: 'Embody',
     logoText: 'Embody',
-    logoUrl: 'https://www.exploretreatments.com/images/embody_nad.png',
+    logoUrl: '/logos/embody.png',
     rating: 9.48,
     stars: 4.74,
     tagline: 'Flat $99/month. Free 1-2 day shipping.',
@@ -364,7 +475,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'bmimd',
     name: 'bmiMD',
     logoText: 'bmiMD',
-    logoUrl: 'https://assets.explorets.com/bmimd.svg',
+    logoUrl: '/logos/bmimd.svg',
     rating: 9.28,
     stars: 4.64,
     tagline: 'Affordable clinician-prescribed glutathione. Free shipping.',
@@ -426,7 +537,7 @@ export const glutathioneProviders: Provider[] = [
     slug: 'taurus',
     name: 'Taurus',
     logoText: 'Taurus',
-    logoUrl: 'https://taurusmeds.com/images/taurus-logo-red.svg',
+    logoUrl: '/logos/taurus.svg',
     rating: 8.74,
     stars: 4.37,
     tagline: 'Powerful antioxidant peptide from $79/mo.',
@@ -471,6 +582,8 @@ export const glutathioneProviders: Provider[] = [
     // Rating/stars follow the shared position-based scale (lib/ratings.ts
     // RATING_MAP position 9), not a hand-picked number.
     slug: 'joi-plus-blokes',
+    // Hidden from every listing by request; the entry is kept for direct lookups.
+    hidden: true,
     name: 'Joi + Blokes',
     logoText: 'Joi + Blokes',
     logoUrl: 'https://assets.explorets.com/Joi%20%2B%20Blokes%20logo-Black.png',
@@ -520,3 +633,6 @@ export const glutathioneProviders: Provider[] = [
     ],
   },
 ];
+
+/** Every listed provider, in editorial order. Entries marked `hidden` are left out. */
+export const glutathioneProviders: Provider[] = allGlutathioneProviders.filter((p) => !p.hidden);

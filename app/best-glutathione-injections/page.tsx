@@ -40,10 +40,11 @@ const POSITIONING: Record<string, string> = {
   agelessrx: 'Weekly injection, most established',
   readyrx: 'Pay per dose, no membership',
   shed: '20% off month one, coaching included',
+  eden: '$95 first month, FSA/HSA eligible',
+  lttl: '$79/month, same price every dose',
   embody: 'Flat $99/month, 200–2000mg dosing',
   bmimd: 'Free shipping, five states excluded',
   taurus: '$79 first month, $10.75/shot',
-  'joi-plus-blokes': '$69/month with 1:1 coaching',
 };
 
 const FAQS = [
@@ -57,7 +58,7 @@ const FAQS = [
   },
   {
     q: 'How often are glutathione injections dosed?',
-    a: 'Your prescribing clinician sets the dose and frequency. Of the published schedules, AgelessRx describes a weekly injection, and Joi + Blokes doses 1–2 injections a week from a 15-week supply. Embody publishes a dosing range of 200mg to 2000mg rather than a fixed schedule.',
+    a: 'Your prescribing clinician sets the dose and frequency. Of the published schedules, AgelessRx describes a weekly injection. Embody publishes a dosing range of 200mg to 2000mg rather than a fixed schedule.',
   },
   {
     q: 'Are at-home glutathione injections subcutaneous or intramuscular?',
@@ -65,7 +66,7 @@ const FAQS = [
   },
   {
     q: 'How much do glutathione injections cost per month?',
-    a: 'Published first-month injection prices on this page run from $69 (System, Joi + Blokes) to $99 (AgelessRx, Embody). After the first month, published monthly rates range from $69 (Joi + Blokes, subscribe & save) to $179 (Taurus). ReadyRx prices per dose at $84 with no membership.',
+    a: 'Published first-month injection prices on this page run from $69 (System) to $99 (AgelessRx, Embody). After the first month, published monthly rates range from $79 (LTTL, same price at every dose) to $179 (Taurus). ReadyRx prices per dose at $84 with no membership.',
   },
   {
     q: 'Are glutathione injections FDA-approved?',
@@ -119,7 +120,7 @@ export default function BestGlutathioneInjectionsPage() {
           {
             name: 'Coaching bundled in',
             body: 'Lifestyle or health coaching inside the plan price rather than sold separately.',
-            onPage: 'Joi + Blokes ($69/month) and Shed (20% off month one) both include coaching.',
+            onPage: 'Shed includes health coaching and opens with 20% off the first month.',
           },
           {
             name: 'A low first month',
@@ -182,8 +183,8 @@ export default function BestGlutathioneInjectionsPage() {
             <GuideText>
               An injection programme is only as convenient as the kit that arrives with it. System states that injection
               supplies come with its 2000mg monthly supply and that it ships on 2-day temperature-controlled delivery.
-              Taurus ships a home injection kit (a 5mL bottle at 200mg/mL) from a licensed U.S. pharmacy. ReadyRx and
-              Embody both publish free 1–2 day shipping, and Shed ships the same day on approved orders.
+              Taurus ships a home injection kit (a 5mL bottle at 200mg/mL) from a licensed U.S. pharmacy. ReadyRx,
+              Embody and LTTL all publish free 1–2 day shipping, Eden ships free on expedited delivery, and Shed ships the same day on approved orders.
             </GuideText>
             <GuideText>
               If a provider does not say whether needles, syringes and alcohol swabs are included, ask before you pay.
