@@ -28,7 +28,7 @@ const VERTICAL_SLUG = 'glutathione-injections-affordable';
 const CANONICAL = '/affordable-glutathione-injections/';
 const META_TITLE = 'Affordable Glutathione Injections (2026): Six-Month Costs Compared';
 const META_DESCRIPTION =
-  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. From $69/month.';
+  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. Flat plans from $99/month.';
 
 export async function generateMetadata() {
   return generateBaseMetadata({ title: META_TITLE, description: META_DESCRIPTION, canonical: CANONICAL });
@@ -49,7 +49,6 @@ const sixMonthLabel = (slug: string) => {
 };
 
 const POSITIONING: Record<string, string> = {
-  'joi-plus-blokes': sixMonthLabel('joi-plus-blokes') ?? '',
   embody: sixMonthLabel('embody') ?? '',
   system: sixMonthLabel('system') ?? '',
   agelessrx: sixMonthLabel('agelessrx') ?? '',
@@ -62,7 +61,7 @@ const POSITIONING: Record<string, string> = {
 const FAQS = [
   {
     q: 'What is the most affordable glutathione injection online?',
-    a: `Over six months at published prices, Joi + Blokes is the most affordable injection on this page at ${usd(sixMonthInjectionCost('joi-plus-blokes'))} ($69/month on subscribe & save, with 1:1 health coaching included). Embody is next at ${usd(sixMonthInjectionCost('embody'))} on its flat $99/month plan.`,
+    a: `Over six months at published prices, Embody is the most affordable injection on this page at ${usd(sixMonthInjectionCost('embody'))} on its flat $99/month plan, with the telemed visit and free 1–2 day shipping included. System is next at ${usd(sixMonthInjectionCost('system'))} ($69 for the first month, then $133/month).`,
   },
   {
     q: 'Why rank by six-month cost instead of the first-month price?',
@@ -70,7 +69,7 @@ const FAQS = [
   },
   {
     q: 'How much does glutathione injection therapy cost per year?',
-    a: 'At published rates, twelve months ranges from about $828 on Joi + Blokes’ $69/month plan and $1,188 on Embody’s flat $99/month, to roughly $2,048 on Taurus ($79 first month, then $179/month). ReadyRx prices per dose, so its total depends on how often your clinician doses you.',
+    a: 'At published rates, twelve months ranges from $1,188 on Embody’s flat $99/month and $1,532 on System ($69, then $133/month), to roughly $2,048 on Taurus ($79 first month, then $179/month). ReadyRx prices per dose, so its total depends on how often your clinician doses you.',
   },
   {
     q: 'Is a flat monthly price better than a first-month discount?',
@@ -82,7 +81,7 @@ const FAQS = [
   },
   {
     q: 'What makes a glutathione provider good value rather than just cheap?',
-    a: 'What sits inside the price. System includes injection supplies and a blood-test discount, Embody includes the telemed visit and 1–2 day shipping, and Joi + Blokes and Shed include health coaching. A low price with none of that, or with no clinician review, is not a saving.',
+    a: 'What sits inside the price. System includes injection supplies and a blood-test discount, Embody includes the telemed visit and 1–2 day shipping, and Shed includes health coaching. A low price with none of that, or with no clinician review, is not a saving.',
   },
 ];
 
@@ -162,8 +161,8 @@ export default function AffordableGlutathioneInjectionsPage() {
 
             <GuideHeading id="flat-vs-intro">Flat rates vs. introductory offers</GuideHeading>
             <GuideText>
-              Two pricing models run through this market. Flat-rate plans, like Embody&apos;s $99/month and Joi +
-              Blokes&apos; $69/month subscribe &amp; save, charge the same every month. Introductory offers, like
+              Two pricing models run through this market. Flat-rate plans, like Embody&apos;s $99/month, charge the same
+              every month. Introductory offers, like
               System&apos;s $69 first month (then $133) and Taurus&apos;s $79 first month (then $179), are cheaper to
               start and dearer to keep.
             </GuideText>
@@ -199,7 +198,6 @@ export default function AffordableGlutathioneInjectionsPage() {
             <GuideList
               items={[
                 { title: 'Pick the plan for the length you expect', body: 'Flat rates for a protocol, first-month offers for a trial.' },
-                { title: 'Subscribe if you will reorder anyway', body: 'Joi + Blokes is $69/month on subscribe & save against $86/month one-time.' },
                 { title: 'Use pre-tax money where you can', body: 'ReadyRx and Taurus state their plans are HSA/FSA eligible.' },
                 { title: 'Diarise the renewal', body: 'Set a reminder a few days before an introductory month ends, so the step-up is a decision, not a surprise.' },
               ]}

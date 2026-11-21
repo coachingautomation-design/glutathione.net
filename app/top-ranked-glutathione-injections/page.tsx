@@ -64,10 +64,6 @@ const REASONS: Record<string, { standout: string; tradeOff: string }> = {
     standout: '$79 first month, about $10.75 a shot',
     tradeOff: 'Highest ongoing price at $179/month',
   },
-  'joi-plus-blokes': {
-    standout: 'Lowest recurring price ($69/month) with 1:1 coaching',
-    tradeOff: 'Dosed 1–2 times a week',
-  },
 };
 
 const POSITIONING: Record<string, string> = Object.fromEntries(
@@ -89,7 +85,7 @@ const FAQS = [
   },
   {
     q: 'Why is the cheapest provider not ranked first?',
-    a: 'Price is one criterion of four. Joi + Blokes has the lowest recurring price ($69/month), but doses more often, and Taurus’s $79 first month renews at the page’s highest rate ($179/month). The top three combine a competitive price with clear terms and strong clinical oversight.',
+    a: 'Price is one criterion of four. Embody has the lowest flat monthly price ($99) but ranks fifth overall, and Taurus’s $79 first month renews at the page’s highest rate ($179/month). The top three combine a competitive price with clear terms and strong clinical oversight.',
   },
   {
     q: 'How often are the rankings updated?',
@@ -176,8 +172,8 @@ export default function TopRankedGlutathioneInjectionsPage() {
               Shed and Embody score in the mid-9s. Shed is the fastest to start, with a five-minute signup and same-day
               shipping, but does not publish its plan price before signup. Embody is the most predictable, a flat
               $99/month with personalised dosing. bmiMD is a straightforward value option held back by state
-              availability. Taurus and Joi + Blokes close the list with real trade-offs rather than weaker care: Taurus
-              is cheap to start but the dearest to keep, and Joi + Blokes is the cheapest to keep but doses more often.
+              availability. Taurus closes the list with a real trade-off rather than weaker care: it is cheap to start
+              but the dearest to keep.
             </GuideText>
             <GuideNote title="Ranking by price instead?">
               See the <GuideLink href="/cheapest-glutathione-injections/">cheapest glutathione injections</GuideLink> for

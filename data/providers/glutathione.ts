@@ -8,7 +8,7 @@ import type { Provider } from './types';
  * /[vertical]/reviews/[provider]/ route — so registering the slug in the
  * provider map would spawn thin templated review pages we do not want.
  */
-export const glutathioneProviders: Provider[] = [
+const allGlutathioneProviders: Provider[] = [
   {
     slug: 'system',
     name: 'System',
@@ -471,6 +471,8 @@ export const glutathioneProviders: Provider[] = [
     // Rating/stars follow the shared position-based scale (lib/ratings.ts
     // RATING_MAP position 9), not a hand-picked number.
     slug: 'joi-plus-blokes',
+    // Hidden from every listing by request; the entry is kept for direct lookups.
+    hidden: true,
     name: 'Joi + Blokes',
     logoText: 'Joi + Blokes',
     logoUrl: 'https://assets.explorets.com/Joi%20%2B%20Blokes%20logo-Black.png',
@@ -520,3 +522,6 @@ export const glutathioneProviders: Provider[] = [
     ],
   },
 ];
+
+/** Every listed provider, in editorial order. Entries marked `hidden` are left out. */
+export const glutathioneProviders: Provider[] = allGlutathioneProviders.filter((p) => !p.hidden);

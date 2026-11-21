@@ -42,7 +42,6 @@ const POSITIONING: Record<string, string> = {
   embody: 'Best flat monthly price',
   bmimd: 'Simple online prescription',
   taurus: 'Low-cost first month',
-  'joi-plus-blokes': 'Best with coaching included',
 };
 
 const FAQS = [
