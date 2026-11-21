@@ -43,7 +43,7 @@ export const GLUTATHIONE_FACTS: Record<string, GlutathioneFacts> = {
     entryLabel: '$69 first month',
     ongoingLabel: '$133/month',
     ongoingPrice: 133,
-    included: '2000mg monthly supply, injection supplies, 20% off a Rythm blood test, 2-day cold-chain shipping',
+    included: '2,000mg monthly supply, injection supplies, 3rd-party lab tested, 20% off a Rythm blood test',
     watchOut: 'Price nearly doubles to $133/month after month one',
     injectionEntry: 69,
     injectionMonthly: 133,
@@ -54,28 +54,28 @@ export const GLUTATHIONE_FACTS: Record<string, GlutathioneFacts> = {
     formats: ['Injection', 'Nasal spray', 'Patch'],
     injection: true,
     entryPrice: 90,
-    entryLabel: 'From $90 (spray); injection $99 first month',
-    ongoingLabel: 'Injection $149/month; spray $110/month; patch $180/kit quarterly',
-    ongoingPrice: 110,
-    included: 'Online medical evaluation, free shipping, pause or cancel anytime',
-    watchOut: 'Injection renews at $149/month after the $99 first month',
+    entryLabel: 'Injection $99/month, locked in; spray from $90',
+    ongoingLabel: 'Injection $99/month locked in; spray $110/month; patch $180/kit quarterly',
+    ongoingPrice: 99,
+    included: 'Online medical evaluation, free shipping, HSA/FSA accepted, pause or cancel anytime',
+    watchOut: 'Nasal spray and patch are priced separately',
     injectionEntry: 99,
-    injectionMonthly: 149,
-    injectionDose: 'Weekly injection',
+    injectionMonthly: 99,
+    injectionDose: '100mg, up to 5 times a week',
   },
   readyrx: {
     slug: 'readyrx',
     formats: ['Injection', 'Nasal spray'],
     injection: true,
-    entryPrice: 84,
-    entryLabel: '$84 per dose',
-    ongoingLabel: '$84 per dose, no membership',
-    ongoingPrice: null,
+    entryPrice: 99,
+    entryLabel: '$99/month, locked in (Black Friday)',
+    ongoingLabel: '$99/month, locked in',
+    ongoingPrice: 99,
     included: 'Online consultation, free 1–2 day shipping, HSA/FSA eligible',
-    watchOut: 'Priced per dose, so the monthly total depends on your dosing',
-    injectionEntry: 84,
-    injectionMonthly: null,
-    injectionDose: 'Priced per dose; dosing set by your clinician',
+    watchOut: 'Black Friday price; confirm it before you order',
+    injectionEntry: 99,
+    injectionMonthly: 99,
+    injectionDose: '2,000mg glutathione injection',
   },
   hone: {
     slug: 'hone',
@@ -123,27 +123,27 @@ export const GLUTATHIONE_FACTS: Record<string, GlutathioneFacts> = {
     slug: 'lttl',
     formats: ['Injection'],
     injection: true,
-    entryPrice: 79,
-    entryLabel: 'From $79/month',
-    ongoingLabel: 'From $79/month, same price at every dose',
-    ongoingPrice: 79,
-    included: 'Online visit and prescription, free 1–2 day shipping, cancel anytime',
-    watchOut: 'Monthly supply and frequency not published before the consultation',
-    injectionEntry: 79,
-    injectionMonthly: 79,
-    injectionDose: '200mg injections; schedule set by your clinician',
+    entryPrice: 89,
+    entryLabel: '$89 first month; plans from $79/mo',
+    ongoingLabel: '$119/month; plans from $79/mo',
+    ongoingPrice: 119,
+    included: 'Online visit and prescription, home injection kit, 24/7 support, unlimited doctor consults',
+    watchOut: 'Month-to-month price is $119 after the first month',
+    injectionEntry: 89,
+    injectionMonthly: 119,
+    injectionDose: '200mg injections, home injection kit included',
   },
   embody: {
     slug: 'embody',
     formats: ['Injection'],
     injection: true,
-    entryPrice: 99,
-    entryLabel: 'Flat $99/month',
-    ongoingLabel: 'Flat $99/month',
+    entryPrice: 49,
+    entryLabel: '$49 first month (sale)',
+    ongoingLabel: '$99/month',
     ongoingPrice: 99,
-    included: 'Telemed visit and prescription, 200mg–2000mg dosing, free 1–2 day shipping',
-    watchOut: 'Sale pricing is time-limited',
-    injectionEntry: 99,
+    included: 'Telemed visit and prescription, 200mg–2,000mg dosing, free 1–2 day shipping, no membership fees',
+    watchOut: 'The $49 first month is a limited-time sale',
+    injectionEntry: 49,
     injectionMonthly: 99,
     injectionDose: 'Personalised dosing from 200mg to 2000mg',
   },
@@ -197,8 +197,13 @@ export function factsFor(slug: string): GlutathioneFacts {
   return facts;
 }
 
-/** Providers that publish a subcutaneous injection format, in editorial order. */
-export const injectionProviders: Provider[] = glutathioneProviders.filter((p) => factsFor(p.slug).injection);
+/** The injection pages list at most this many providers. */
+export const MAX_INJECTION_PROVIDERS = 7;
+
+/** Providers that publish a subcutaneous injection format, in editorial order, capped at MAX_INJECTION_PROVIDERS. */
+export const injectionProviders: Provider[] = glutathioneProviders
+  .filter((p) => factsFor(p.slug).injection)
+  .slice(0, MAX_INJECTION_PROVIDERS);
 
 /**
  * Six months of the injection format at the published rates: the entry price

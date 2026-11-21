@@ -28,7 +28,7 @@ const VERTICAL_SLUG = 'glutathione-injections-affordable';
 const CANONICAL = '/affordable-glutathione-injections/';
 const META_TITLE = 'Affordable Glutathione Injections (2026): Six-Month Costs Compared';
 const META_DESCRIPTION =
-  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. Flat plans from $79/month.';
+  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. Locked-in plans from $99/month.';
 
 export async function generateMetadata() {
   return generateBaseMetadata({ title: META_TITLE, description: META_DESCRIPTION, canonical: CANONICAL });
@@ -53,37 +53,35 @@ const POSITIONING: Record<string, string> = {
   embody: sixMonthLabel('embody') ?? '',
   system: sixMonthLabel('system') ?? '',
   agelessrx: sixMonthLabel('agelessrx') ?? '',
-  taurus: sixMonthLabel('taurus') ?? '',
-  readyrx: '$84 per dose, no membership',
+  readyrx: sixMonthLabel('readyrx') ?? '',
   shed: '20% off month one, coaching included',
   eden: '$95 first month, renewal not published',
-  bmimd: 'Free shipping, price not published',
 };
 
 const FAQS = [
   {
     q: 'What is the most affordable glutathione injection online?',
-    a: `Over six months at published prices, LTTL is the most affordable injection on this page at ${usd(sixMonthInjectionCost('lttl'))}: $79 a month at the same price for every dose, with the online visit, prescription and free 1–2 day shipping included. Embody is next at ${usd(sixMonthInjectionCost('embody'))} on its flat $99/month plan.`,
+    a: `Over six months at published prices, Embody is the most affordable injection on this page at ${usd(sixMonthInjectionCost('embody'))}: $49 for the first month during its pre-Black Friday sale, then $99/month, with free 1–2 day shipping and no membership fees. AgelessRx and ReadyRx follow at ${usd(sixMonthInjectionCost('agelessrx'))} each, locked in at $99/month.`,
   },
   {
     q: 'Why rank by six-month cost instead of the first-month price?',
-    a: 'Because first-month discounts are where the prices in this category differ least and change most. System opens at $69 and Taurus at $79, but they renew at $133 and $179 a month. Six months at the published rates shows what a protocol actually costs once the introductory offer is gone.',
+    a: 'Because first-month discounts are where the prices in this category differ least and change most. System opens at $69 and LTTL at $89, but they renew at $133 and $119 a month. Six months at the published rates shows what a protocol actually costs once the introductory offer is gone.',
   },
   {
     q: 'How much does glutathione injection therapy cost per year?',
-    a: 'At published rates, twelve months ranges from $948 on LTTL ($79/month) and $1,188 on Embody’s flat $99/month, to roughly $2,048 on Taurus ($79 first month, then $179/month). ReadyRx prices per dose, so its total depends on how often your clinician doses you.',
+    a: 'At published rates, twelve months ranges from $1,138 on Embody ($49, then $99/month) and $1,188 on AgelessRx or ReadyRx ($99/month locked in), to $1,532 on System ($69, then $133/month).',
   },
   {
     q: 'Is a flat monthly price better than a first-month discount?',
-    a: 'If you plan to stay on a protocol for more than two or three months, usually yes. Embody’s $99/month never changes, which on our six-month figures works out cheaper than System’s $69 opener followed by $133/month.',
+    a: 'If you plan to stay on a protocol for more than two or three months, usually yes. AgelessRx and ReadyRx lock the injection at $99/month, which over six months works out cheaper than System’s $69 opener followed by $133/month.',
   },
   {
     q: 'Does insurance cover glutathione injections?',
-    a: 'Compounded glutathione is generally an out-of-pocket wellness treatment. ReadyRx, Taurus and Eden state that their plans are HSA/FSA eligible, which lets you pay with pre-tax money; check with your plan administrator.',
+    a: 'Compounded glutathione is generally an out-of-pocket wellness treatment. ReadyRx, AgelessRx and Eden state that their plans are HSA/FSA eligible, which lets you pay with pre-tax money; check with your plan administrator.',
   },
   {
     q: 'What makes a glutathione provider good value rather than just cheap?',
-    a: 'What sits inside the price. System includes injection supplies and a blood-test discount, Embody includes the telemed visit and 1–2 day shipping, and Shed includes health coaching. A low price with none of that, or with no clinician review, is not a saving.',
+    a: 'What sits inside the price. System includes injection supplies and a blood-test discount, Embody includes the telemed visit and 1–2 day shipping, LTTL includes a home injection kit and unlimited doctor consults, and Shed includes health coaching. A low price with none of that, or with no clinician review, is not a saving.',
   },
 ];
 
@@ -139,9 +137,9 @@ export default function AffordableGlutathioneInjectionsPage() {
                 const f = factsFor(p.slug);
                 return [
                   p.name,
-                  f.slug === 'shed' ? '20% off' : f.slug === 'readyrx' ? '$84 per dose' : usd(f.injectionEntry),
-                  f.injectionMonthly != null ? `${usd(f.injectionMonthly)}/month` : f.slug === 'readyrx' ? '$84 per dose' : 'Not published',
-                  usd(sixMonthInjectionCost(p.slug), f.slug === 'readyrx' ? 'Depends on dosing' : 'Not published'),
+                  f.slug === 'shed' ? '20% off' : usd(f.injectionEntry),
+                  f.injectionMonthly != null ? `${usd(f.injectionMonthly)}/month` : 'Not published',
+                  usd(sixMonthInjectionCost(p.slug), 'Not published'),
                 ];
               })}
             />
@@ -163,10 +161,10 @@ export default function AffordableGlutathioneInjectionsPage() {
 
             <GuideHeading id="flat-vs-intro">Flat rates vs. introductory offers</GuideHeading>
             <GuideText>
-              Two pricing models run through this market. Flat-rate plans, like LTTL&apos;s $79/month and Embody&apos;s
-              $99/month, charge the same every month. Introductory offers, like
-              System&apos;s $69 first month (then $133) and Taurus&apos;s $79 first month (then $179), are cheaper to
-              start and dearer to keep.
+              Two pricing models run through this market. Locked-in plans, like AgelessRx&apos;s and ReadyRx&apos;s
+              $99/month injections, charge the same every month. Introductory offers, like Embody&apos;s $49 first
+              month (then $99), LTTL&apos;s $89 (then $119) and System&apos;s $69 (then $133), are cheaper to start and
+              dearer to keep.
             </GuideText>
             <GuideNote title="Where the lines cross">
               On published prices, a $99 flat plan overtakes a $69-then-$133 plan from the second month, and the gap
@@ -200,7 +198,7 @@ export default function AffordableGlutathioneInjectionsPage() {
             <GuideList
               items={[
                 { title: 'Pick the plan for the length you expect', body: 'Flat rates for a protocol, first-month offers for a trial.' },
-                { title: 'Use pre-tax money where you can', body: 'ReadyRx, Taurus and Eden state their plans are HSA/FSA eligible.' },
+                { title: 'Use pre-tax money where you can', body: 'ReadyRx, AgelessRx and Eden state their plans are HSA/FSA eligible.' },
                 { title: 'Diarise the renewal', body: 'Set a reminder a few days before an introductory month ends, so the step-up is a decision, not a surprise.' },
               ]}
             />

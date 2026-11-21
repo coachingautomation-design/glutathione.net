@@ -37,13 +37,11 @@ export async function generateMetadata() {
 const POSITIONING: Record<string, string> = {
   system: 'Best overall site, from $69',
   agelessrx: 'Best for format choice',
-  readyrx: 'Best without a membership',
+  readyrx: 'Best locked-in price, $99/mo',
   shed: 'Fastest signup and shipping',
   eden: 'Best for FSA/HSA payment',
-  lttl: 'Lowest flat monthly price',
-  embody: 'Flat $99 every month',
-  bmimd: 'Simple online prescription',
-  taurus: 'Low-cost first month',
+  lttl: 'Most support included',
+  embody: 'Lowest first month, $49',
 };
 
 const FAQS = [
@@ -69,7 +67,7 @@ const FAQS = [
   },
   {
     q: 'Do these sites ship to every state?',
-    a: 'Not all of them. bmiMD does not prescribe into Arkansas, California, Louisiana, Mississippi or South Carolina. Confirm your state on the provider’s own site before you complete an intake.',
+    a: 'Availability can vary by state, and pharmacy dispensing rules differ from state to state. Confirm your state on the provider’s own site before you complete an intake.',
   },
 ];
 
@@ -158,7 +156,7 @@ export default function BestSitesToGetGlutathioneInjectionsPage() {
             <GuideHeading id="ordering">What ordering from a telehealth site looks like</GuideHeading>
             <GuideSteps
               items={[
-                { label: 'Step 1', body: 'Choose a site and confirm it serves your state (bmiMD, for example, excludes five states).' },
+                { label: 'Step 1', body: 'Choose a site and confirm it serves your state; availability can vary.' },
                 { label: 'Step 2', body: 'Complete the online intake, usually five to ten minutes, with your full health history and current medications.' },
                 { label: 'Step 3', body: 'A licensed clinician reviews it, typically within 24–48 hours, and prescribes only if glutathione is appropriate.' },
                 { label: 'Step 4', body: 'A licensed pharmacy compounds your prescription and ships it; several sites here publish 1–2 day or same-day shipping.' },

@@ -27,9 +27,9 @@ import { generateBaseMetadata } from '@/lib/seo-schema';
 
 const VERTICAL_SLUG = 'glutathione-injections-cheapest';
 const CANONICAL = '/cheapest-glutathione-injections/';
-const META_TITLE = 'Cheapest Glutathione Injections Online (2026): From $69';
+const META_TITLE = 'Cheapest Glutathione Injections Online (2026): From $49';
 const META_DESCRIPTION =
-  'The cheapest glutathione injections online, sorted by the lowest published first-month price. Compare $69, $79 and $84 offers, what they renew at, and what is included.';
+  'The cheapest glutathione injections online, sorted by the lowest published first-month price. Compare $49, $69 and $89 offers, what they renew at, and what is included.';
 
 export async function generateMetadata() {
   return generateBaseMetadata({ title: META_TITLE, description: META_DESCRIPTION, canonical: CANONICAL });
@@ -46,24 +46,22 @@ const byEntryPrice = [...injectionProviders].sort((a, b) => {
 
 const POSITIONING: Record<string, string> = {
   system: '$69 first month, then $133',
-  taurus: '$79 first month, then $179',
-  readyrx: '$84 per dose, no membership',
-  agelessrx: '$99 first month, then $149',
-  lttl: '$79/month, same price every dose',
+  readyrx: '$99/mo, locked in forever',
+  agelessrx: '$99/mo, never increases',
+  lttl: '$89 first month, then $119',
   eden: '$95 first month, FSA/HSA eligible',
-  embody: 'Flat $99 every month',
+  embody: '$49 first month, then $99',
   shed: '20% off the first month',
-  bmimd: 'Price not published',
 };
 
 const FAQS = [
   {
     q: 'What are the cheapest glutathione injections online?',
-    a: 'The lowest published first-month price for injectable glutathione on this page is $69 from System (a 2000mg monthly supply with injection supplies, then $133/month). LTTL follows at $79 a month at every dose, Taurus at $79 for the first month, and ReadyRx charges $84 per dose with no membership.',
+    a: 'The lowest published first-month price for injectable glutathione on this page is $49 from Embody during its pre-Black Friday sale (then $99/month). System follows at $69 (a 2,000mg monthly supply, then $133/month), then LTTL at $89 (then $119/month).',
   },
   {
     q: 'Which glutathione injection stays cheapest after the first month?',
-    a: 'LTTL. It charges from $79 a month at the same price for every dose, with no first-month step-up. Embody charges a flat $99/month, AgelessRx’s injection renews at $149/month, System to $133/month and Taurus to $179/month after their discounted first months.',
+    a: 'AgelessRx and ReadyRx, both at $99/month locked in, so the price does not rise after month one. Embody also renews at $99/month after its $49 first month, while LTTL renews at $119/month and System at $133/month.',
   },
   {
     q: 'Is a $69 first month a good deal?',
@@ -75,7 +73,7 @@ const FAQS = [
   },
   {
     q: 'Can I use HSA or FSA funds for glutathione injections?',
-    a: 'ReadyRx, Taurus and Eden all state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
+    a: 'ReadyRx, AgelessRx and Eden all state that their plans are HSA/FSA eligible. Check eligibility with your plan administrator before you pay.',
   },
   {
     q: 'Why not buy glutathione vials from a cheaper website?',
@@ -132,8 +130,8 @@ export default function CheapestGlutathioneInjectionsPage() {
               headers={['Provider', 'First month', 'After that', 'Included']}
               rows={byEntryPrice.map((p) => {
                 const f = factsFor(p.slug);
-                const after = f.injectionMonthly != null ? `${usd(f.injectionMonthly)}/month` : f.slug === 'readyrx' ? '$84 per dose' : 'Not published';
-                return [p.name, f.slug === 'shed' ? '20% off' : f.slug === 'readyrx' ? '$84 per dose' : usd(f.injectionEntry), after, f.included];
+                const after = f.injectionMonthly != null ? `${usd(f.injectionMonthly)}/month` : 'Not published';
+                return [p.name, f.slug === 'shed' ? '20% off' : usd(f.injectionEntry), after, f.included];
               })}
               minWidth="44rem"
             />
@@ -143,9 +141,9 @@ export default function CheapestGlutathioneInjectionsPage() {
 
             <GuideHeading id="first-vs-ongoing">First-month price vs. what you keep paying</GuideHeading>
             <GuideText>
-              Most low prices in this category are introductory. System&apos;s $69 first month renews at $133/month, and
-              Taurus&apos;s $79 opener renews at $179/month, the highest ongoing rate on the page. LTTL and Embody
-              are the exceptions: $79 and $99 a month respectively, the same every month rather than a one-off.
+              Most low prices in this category are introductory. Embody&apos;s $49 first month renews at $99/month,
+              LTTL&apos;s $89 at $119/month, and System&apos;s $69 at $133/month, the highest ongoing rate on the page.
+              AgelessRx and ReadyRx are the exceptions: their injections are locked in at $99/month from the start.
             </GuideText>
             <GuideNote title="The quick rule">
               If you only want to try injections for a month, sort by first-month price. If you expect to stay on a
@@ -156,17 +154,17 @@ export default function CheapestGlutathioneInjectionsPage() {
             <GuideHeading id="price-bands">The three price bands</GuideHeading>
             <GuideTiers
               items={[
-                { title: 'Under $80 to start', figure: '$69–$79 first month', body: 'System, LTTL and Taurus. Check the renewal: LTTL stays at $79/month, System rises to $133 and Taurus to $179.' },
-                { title: '$84–$99 to start', figure: '$84–$99', body: 'ReadyRx at $84 per dose with no membership, Eden at $95 for the first month, and Embody at a flat $99 every month.' },
-                { title: 'Established platform', figure: '$99 first month, $149 after', body: 'AgelessRx’s weekly injection, with the option to switch to its spray or patch later.' },
+                { title: 'Under $70 to start', figure: '$49–$69 first month', body: 'Embody and System. Check the renewal: Embody rises to $99/month, System to $133.' },
+                { title: '$89–$95 to start', figure: '$89–$95 first month', body: 'LTTL at $89 (then $119/month, plans from $79) and Eden at $95 (renewal not published).' },
+                { title: 'Locked in at $99', figure: '$99/month from day one', body: 'AgelessRx and ReadyRx: the injection price never rises after the first month.' },
               ]}
             />
 
             <GuideHeading id="save">Ways to pay less</GuideHeading>
             <GuideList
               items={[
-                { title: 'Use pre-tax money', body: 'ReadyRx, Taurus and Eden state their plans are HSA/FSA eligible.' },
-                { title: 'Take the first-month offer, then reassess', body: 'System, Taurus and AgelessRx all discount month one; set a reminder before the renewal date.' },
+                { title: 'Use pre-tax money', body: 'ReadyRx, AgelessRx and Eden state their plans are HSA/FSA eligible.' },
+                { title: 'Take the first-month offer, then reassess', body: 'Embody, System and LTTL all discount month one; set a reminder before the renewal date.' },
                 { title: 'Count what is included', body: 'System includes injection supplies and 20% off a Rythm blood test; several others include free 1–2 day shipping.' },
               ]}
             />
