@@ -28,7 +28,7 @@ const VERTICAL_SLUG = 'glutathione-injections-affordable';
 const CANONICAL = '/affordable-glutathione-injections/';
 const META_TITLE = 'Affordable Glutathione Injections (2026): Six-Month Costs Compared';
 const META_DESCRIPTION =
-  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. Flat plans from $99/month.';
+  'Affordable glutathione injections online, ranked by what six months actually costs at each provider’s published price, not just the first-month discount. Flat plans from $79/month.';
 
 export async function generateMetadata() {
   return generateBaseMetadata({ title: META_TITLE, description: META_DESCRIPTION, canonical: CANONICAL });
@@ -49,6 +49,7 @@ const sixMonthLabel = (slug: string) => {
 };
 
 const POSITIONING: Record<string, string> = {
+  lttl: sixMonthLabel('lttl') ?? '',
   embody: sixMonthLabel('embody') ?? '',
   system: sixMonthLabel('system') ?? '',
   agelessrx: sixMonthLabel('agelessrx') ?? '',
@@ -62,7 +63,7 @@ const POSITIONING: Record<string, string> = {
 const FAQS = [
   {
     q: 'What is the most affordable glutathione injection online?',
-    a: `Over six months at published prices, Embody is the most affordable injection on this page at ${usd(sixMonthInjectionCost('embody'))} on its flat $99/month plan, with the telemed visit and free 1–2 day shipping included. System is next at ${usd(sixMonthInjectionCost('system'))} ($69 for the first month, then $133/month).`,
+    a: `Over six months at published prices, LTTL is the most affordable injection on this page at ${usd(sixMonthInjectionCost('lttl'))}: $79 a month at the same price for every dose, with the online visit, prescription and free 1–2 day shipping included. Embody is next at ${usd(sixMonthInjectionCost('embody'))} on its flat $99/month plan.`,
   },
   {
     q: 'Why rank by six-month cost instead of the first-month price?',
@@ -70,7 +71,7 @@ const FAQS = [
   },
   {
     q: 'How much does glutathione injection therapy cost per year?',
-    a: 'At published rates, twelve months ranges from $1,188 on Embody’s flat $99/month and $1,532 on System ($69, then $133/month), to roughly $2,048 on Taurus ($79 first month, then $179/month). ReadyRx prices per dose, so its total depends on how often your clinician doses you.',
+    a: 'At published rates, twelve months ranges from $948 on LTTL ($79/month) and $1,188 on Embody’s flat $99/month, to roughly $2,048 on Taurus ($79 first month, then $179/month). ReadyRx prices per dose, so its total depends on how often your clinician doses you.',
   },
   {
     q: 'Is a flat monthly price better than a first-month discount?',
@@ -162,8 +163,8 @@ export default function AffordableGlutathioneInjectionsPage() {
 
             <GuideHeading id="flat-vs-intro">Flat rates vs. introductory offers</GuideHeading>
             <GuideText>
-              Two pricing models run through this market. Flat-rate plans, like Embody&apos;s $99/month, charge the same
-              every month. Introductory offers, like
+              Two pricing models run through this market. Flat-rate plans, like LTTL&apos;s $79/month and Embody&apos;s
+              $99/month, charge the same every month. Introductory offers, like
               System&apos;s $69 first month (then $133) and Taurus&apos;s $79 first month (then $179), are cheaper to
               start and dearer to keep.
             </GuideText>

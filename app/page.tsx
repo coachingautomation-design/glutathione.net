@@ -48,6 +48,7 @@ const POSITIONING: Record<string, string> = {
   hone: 'Comprehensive labs included',
   shed: '20% off month one, coaching included',
   eden: 'From $95, FSA/HSA eligible',
+  lttl: 'From $79/month, same price every dose',
   embody: 'Flat $99/month, 1–2 day shipping',
   bmimd: 'Value pick, five states excluded',
   readyrx: 'Injection or spray, no membership',
@@ -241,7 +242,7 @@ export default function GlutathioneHomePage() {
               dose with no membership. Hone Health and Embody both sit around $99/month, the first with comprehensive
               labs included and the second as a flat rate with free 1–2 day delivery. Eden opens at $95 for the first
               month with free expedited shipping and FSA/HSA eligibility, though it does not publish its renewal price.
-              Taurus opens at a similarly low $79 first month but is the highest ongoing price here at $179/month.
+              LTTL charges from $79 a month at the same price for every dose, with free 1–2 day shipping. Taurus opens at a similarly low $79 first month but is the highest ongoing price here at $179/month.
             </GuideText>
             <GuideText>
               The thing worth checking before the price is your state: bmiMD is the value option but does not prescribe
@@ -274,7 +275,7 @@ export default function GlutathioneHomePage() {
             <GuideText>
               Below those, Hone Health is the pick for anyone who wants the protocol set against their own bloodwork,
               with comprehensive labs from around $99/month. Shed opens at 20% off the first month with health
-              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
+              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges from $79 a month at every dose, Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
               1–2 day shipping, and bmiMD is the no-frills value pick with free shipping in the states it serves.
             </GuideText>
             <GuideText>

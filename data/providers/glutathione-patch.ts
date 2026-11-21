@@ -11,7 +11,7 @@ export const glutathionePatchProviders: Provider[] = [
     slug: 'agelessrx',
     name: 'AgelessRx',
     logoText: 'AgelessRx',
-    logoUrl: 'https://assets.explorets.com/agelessrx-logo.svg',
+    logoUrl: '/logos/agelessrx.svg',
     rating: 9.78,
     stars: 4.9,
     tagline: 'Once-weekly, and completely needle-free.',
