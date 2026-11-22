@@ -8,6 +8,13 @@ export type Provider = {
   name: string;
   logoText: string;
   logoUrl?: string;
+  /**
+   * Product shot of this provider's own glutathione vial. Shown on the back of
+   * the #1 pick's logo on hover and in the sidebar's top-pick module; a #1
+   * provider without one simply doesn't flip, so no page shows another brand's
+   * vial under the wrong name.
+   */
+  vialImageUrl?: string;
   rating: number;
   stars: number;
   shortDescription: string;

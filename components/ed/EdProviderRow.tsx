@@ -39,14 +39,6 @@ import type { EdHubProvider } from './types';
 /** Tracking vertical when a page does not pass its own. */
 const DEFAULT_VERTICAL = 'best-ed-providers';
 
-/**
- * Product shot for the #1 pick — shown on the back of the logo on hover in
- * the ranked row, and statically in the sidebar's "Editor's Top Pick" module
- * (see EdSidebar). Exported so both share one URL.
- */
-export const TOP_PICK_VIAL_IMAGE_URL =
-  'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png';
-
 function CheckMark() {
   return (
     <svg
@@ -98,7 +90,7 @@ function ProviderLogo({
     />
   );
 
-  if (!flip || provider.rank !== 1) return logo;
+  if (!flip || provider.rank !== 1 || !provider.vialImageUrl) return logo;
 
   // The #1 pick's logo flips on hover to reveal a product shot — scoped to
   // rank 1 (not this provider's slug) so it always follows whichever
@@ -117,7 +109,7 @@ function ProviderLogo({
         <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={TOP_PICK_VIAL_IMAGE_URL}
+            src={provider.vialImageUrl}
             alt={`${provider.name} product`}
             style={{ height: '100%', width: '100%', objectFit: 'contain' }}
             loading="eager"

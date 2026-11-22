@@ -1,5 +1,4 @@
 import type { EdHubProvider } from '@/components/ed/types';
-import { TOP_PICK_VIAL_IMAGE_URL } from '@/components/ed/EdProviderRow';
 import { HubStars } from './HubStars';
 import { HubCardOverlay, HubLink, type HubPlacement } from './HubLink';
 import {
@@ -93,7 +92,7 @@ function FlipLogo({ provider }: { provider: EdHubProvider }) {
         <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={TOP_PICK_VIAL_IMAGE_URL}
+            src={provider.vialImageUrl}
             alt={`${provider.name} product`}
             style={{ height: '100%', width: '100%', objectFit: 'contain' }}
             loading="eager"
@@ -265,7 +264,7 @@ export function HubProviderRow({
       {/* Tablet and desktop: logo / headline + bullets / score at 25 / 50 / 25, CTA underneath. */}
       <div className="hidden md:contents">
         <div className="flex items-center justify-center md:col-start-1 md:row-start-2 md:w-1/3" style={{ padding: 16 }}>
-          {vialFlip && provider.rank === 1 && provider.logoUrl ? <FlipLogo provider={provider} /> : <HubLogo provider={provider} />}
+          {vialFlip && provider.rank === 1 && provider.logoUrl && provider.vialImageUrl ? <FlipLogo provider={provider} /> : <HubLogo provider={provider} />}
         </div>
 
         <div className="flex flex-col items-center justify-center md:col-start-2 md:row-start-2" style={{ padding: '0 16px' }}>

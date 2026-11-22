@@ -1,6 +1,5 @@
 import OutboundLink from '@/components/OutboundLink';
 import SmartLink from '@/components/SmartLink';
-import { TOP_PICK_VIAL_IMAGE_URL } from './EdProviderRow';
 import type { EdHubProvider } from './types';
 import type { RelatedLink } from '@/lib/internal-links';
 
@@ -87,10 +86,10 @@ export function EdSidebar({
               )}
             </div>
 
-            {showVial && (
+            {showVial && topPick.vialImageUrl && (
               /* eslint-disable-next-line @next/next/no-img-element */
               <img
-                src={TOP_PICK_VIAL_IMAGE_URL}
+                src={topPick.vialImageUrl}
                 alt={`${topPick.name} product`}
                 className="mt-3"
                 style={{ height: 90, maxWidth: '100%', objectFit: 'contain' }}

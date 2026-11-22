@@ -17,6 +17,8 @@ export type EdHubProvider = {
   name: string;
   /** Empty string falls back to `logoText`. */
   logoUrl: string;
+  /** This provider's own vial shot; when absent the #1 logo doesn't flip. */
+  vialImageUrl?: string;
   logoText: string;
   /** Punchy one-liner: what it is, then the number that matters. */
   tagline: string;
