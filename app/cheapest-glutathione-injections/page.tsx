@@ -98,7 +98,6 @@ export default function CheapestGlutathioneInjectionsPage() {
       providers={providers}
       topBadge="Lowest Price"
       bestOverallHeading="Lowest Entry Price"
-      rankingNote="Sorted by lowest published first-month price for the injection format; ties go to the higher editorial score."
       faqs={FAQS}
       faqHeading="Cheap Glutathione Injection FAQs"
       schema={{

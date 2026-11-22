@@ -110,7 +110,6 @@ export default function TopRankedGlutathioneInjectionsPage() {
       providers={providers}
       topBadge="Top Ranked"
       bestOverallHeading="Highest Ranked Provider"
-      rankingNote="Sorted by editorial score out of 10."
       faqs={FAQS}
       faqHeading="Glutathione Ranking FAQs"
       schema={{
