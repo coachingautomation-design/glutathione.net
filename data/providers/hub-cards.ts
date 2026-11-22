@@ -90,6 +90,7 @@ export function hubProvidersFromProviders(
     slug: provider.slug,
     name: provider.name,
     logoUrl: provider.logoUrl ?? '',
+    vialImageUrl: provider.vialImageUrl,
     logoText: provider.logoText,
     tagline: headline(provider),
     bestFor: positioning[provider.slug] ?? shortBestFor(provider.bestFor, fallbackBestFor),
