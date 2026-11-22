@@ -102,7 +102,6 @@ export default function AffordableGlutathioneInjectionsPage() {
       providers={providers}
       topBadge="Best Value"
       bestOverallHeading="Most Affordable Over Six Months"
-      rankingNote="Sorted by six-month cost at published prices (first month plus five months at the renewal rate). Providers that do not publish both follow."
       faqs={FAQS}
       faqHeading="Affordable Glutathione Injection FAQs"
       schema={{

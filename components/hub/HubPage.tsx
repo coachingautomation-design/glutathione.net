@@ -57,8 +57,6 @@ export type HubPageProps = {
   initialVisibleCount?: number | null;
   /** #1 card's hover flip to the injection-vial photo. Off for nasal spray and patch pages. */
   showTopPickVial?: boolean;
-  /** Small line above the ranked list, e.g. "Sorted by lowest published entry price". */
-  rankingNote?: string;
 
   /** "Which option is right for me?" cards. */
   options?: {
@@ -112,7 +110,6 @@ export function HubPage({
   bestOverallHeading = 'Best Overall Pick',
   topBadge = 'Best Overall',
   initialVisibleCount = 7,
-  rankingNote,
   showTopPickVial = true,
   options,
   guide,
@@ -173,12 +170,6 @@ export function HubPage({
         )}
 
         <div className="relative z-10 mx-auto max-w-content px-4 pb-10 sm:pt-8 lg:px-0">
-          {rankingNote && (
-            <p className="mb-3 hidden text-[13px] text-white/70 sm:block">
-              <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-teal-light align-middle" aria-hidden="true" />
-              {rankingNote}
-            </p>
-          )}
           <section id="rankings" aria-label="Ranked providers" className="-mt-[14px] min-w-0 scroll-mt-16 sm:mt-0">
             {initialVisibleCount === null ? (
               <div className="space-y-4">{rows}</div>
