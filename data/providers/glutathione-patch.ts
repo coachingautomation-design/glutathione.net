@@ -22,10 +22,10 @@ export const glutathionePatchProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '$180 per kit, billed quarterly',
-      'Once weekly, zero needles',
+      'Billed quarterly',
       'Iontophoresis skin delivery',
       'Whole-body support',
+      'Free shipping, 100% online evaluation',
     ],
     pros: [
       'Completely needle-free — no injection, no daily spray',

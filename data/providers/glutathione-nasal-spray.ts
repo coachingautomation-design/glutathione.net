@@ -26,10 +26,10 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '$90 first month, then $110/mo',
-      'Intranasal, zero needles',
+      'Renews at $110/mo',
       'Studied for raising brain glutathione',
       'Simple once-daily routine',
+      'Free shipping, 100% online evaluation',
     ],
     pros: [
       'Needle-free — a spray, not an injection',
@@ -81,7 +81,6 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '$84 per dose, no membership',
       '100% online licensed consult',
       'Free 1–2 day shipping',
       'HSA/FSA eligible, cancel anytime',
