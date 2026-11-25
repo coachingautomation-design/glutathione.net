@@ -26,9 +26,9 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
+      'Pay only if approved, free shipping',
       'Studied for raising brain glutathione',
-      'Simple once-daily routine',
-      'Free shipping, 100% online evaluation',
+      'Trusted by 197,000+ customers',
     ],
     pros: [
       'Needle-free — a spray, not an injection',
@@ -79,9 +79,9 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
+      'Free 1–2 day shipping, HSA/FSA eligible',
+      'Switch to injections anytime',
       '100% online licensed consult',
-      'Free 1–2 day shipping',
-      'HSA/FSA eligible, cancel anytime',
     ],
     pros: [
       'No recurring monthly membership — pay per dose, cancel anytime',

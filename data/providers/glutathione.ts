@@ -25,9 +25,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      '2,000mg monthly supply, supplies included',
+      'Injection supplies included, nothing extra to buy',
+      '2,000mg monthly supply for brighter skin + energy',
       '3rd-party lab tested, LegitScript-approved',
-      'Brighter skin, more energy reported',
     ],
     pros: [
       'Low first month at $69 (then $133/month)',
@@ -84,9 +84,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Rx-grade 100mg, up to 5x/week',
-      'Also as patch or nasal spray',
       'Free shipping + HSA/FSA accepted',
+      'Injection, nasal spray or needle-free patch',
+      'Trusted by 197,000+ customers',
     ],
     pros: [
       'Injection price locked in at $99/month, never increases',
@@ -147,9 +147,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '2,000mg injection, 100% online care',
-      '4.8/5 rating, 10,000+ reviews',
       'Free 1–2 day shipping, HSA/FSA eligible',
+      '2,000mg injection, 100% online care',
+      'Rated 4.8/5 from 10,000+ reviews',
     ],
     pros: [
       'Black Friday price of $99/month, locked in forever',
@@ -200,9 +200,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Oxidative stress + liver function panels',
-      'Personalized protocol, built for complex histories',
-      'Ongoing monitoring, protocol adjusts',
+      'Comprehensive labs included, not an add-on',
+      'Protocol built around your biomarkers',
+      'Expert clinicians + ongoing monitoring',
     ],
     pros: [
       'Comprehensive lab testing included, not a separate add-on',
@@ -259,9 +259,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '5-min signup',
-      'Same-day shipping on approved orders',
-      'Month-to-month, cancel anytime',
+      '5-minute signup, same-day shipping',
+      'Health coaching in every plan',
+      'Month-to-month, no cancellation penalty',
     ],
     pros: [
       '20% first-month discount applied automatically at signup',
@@ -322,10 +322,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
+      'Same price at every dose, no contract',
+      'No-cost follow-ups + 24/7 support',
       '100% online licensed consult',
-      'No-cost follow-ups, 24/7 support',
-      'FSA/HSA eligible',
-      'No contract, cancel anytime',
     ],
     pros: [
       'Low first month at $95',
@@ -379,9 +378,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Online visit + prescription included',
-      '200mg injections + home kit included',
+      'Home injection kit included',
       'Unlimited free doctor consults, 24/7 support',
+      'Online visit + prescription included',
     ],
     pros: [
       '$89 first month, with plans from $79/month',
@@ -431,9 +430,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      '200mg–2,000mg personalized dosing',
-      'Free 1–2 day shipping, no membership fees',
-      'Cancel anytime',
+      'No membership fees, cancel anytime',
+      'Personalized dosing, 200mg–2,000mg',
+      'Free 1–2 day shipping to your door',
     ],
     pros: [
       '$100 off the first month: $49, then $99/month',
@@ -492,8 +491,8 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Licensed U.S. compounding pharmacy',
-      'Simple online prescription',
+      'No complex signup, fully online',
+      'Sourced from a licensed U.S. compounding pharmacy',
       'Not available: AR, CA, LA, MS, SC',
     ],
     pros: [
@@ -556,9 +555,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '200mg/mL, 5mL bottle, home kit',
-      'HSA/FSA eligible, no insurance needed',
-      'Ships from licensed US pharmacy',
+      'No insurance needed, HSA/FSA eligible',
+      '200mg/mL home injection kit',
+      'Ships from a licensed US pharmacy',
     ],
     pros: [
       'Low first-month price at $79',
@@ -604,10 +603,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '$86/mo one-time, no subscription',
+      'Lowest ongoing price on this list',
       '15-week supply, 1–2 shots weekly',
-      'Board-certified clinician consult',
-      'Unlimited care-team messaging',
+      'Board-certified clinicians + unlimited messaging',
     ],
     pros: [
       'Lowest ongoing subscription price in this comparison at $69/month',

@@ -22,9 +22,9 @@ export const glutathionePatchProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Iontophoresis skin delivery',
-      'Whole-body support',
-      'Free shipping, 100% online evaluation',
+      'Pay only if approved, free shipping',
+      'One patch a week, whole-body support',
+      'Trusted by 197,000+ customers',
     ],
     pros: [
       'Completely needle-free — no injection, no daily spray',
