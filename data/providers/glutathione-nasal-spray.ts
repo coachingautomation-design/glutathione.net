@@ -18,7 +18,7 @@ export const glutathioneNasalSprayProviders: Provider[] = [
     logoUrl: '/logos/agelessrx.svg',
     rating: 9.78,
     stars: 4.9,
-    tagline: 'From $90/mo, made for mental clarity.',
+    tagline: '$90 First Month — Needle-Free Mental Clarity',
     shortDescription: 'AgelessRx\'s glutathione nasal spray is a once-daily, needle-free intranasal formulation built for mental clarity and focus rather than injection. It starts at $90 for the first month, renewing at $110/month, with a 100% online medical evaluation and free shipping from a US-licensed pharmacy — you pay only if a licensed provider approves.',
     badges: ['Needle-Free', 'Daily Routine'],
     affiliate: {
@@ -26,9 +26,9 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Intranasal delivery, no needles',
+      'Pay only if approved, free shipping',
       'Studied for raising brain glutathione',
-      'Simple daily routine',
+      'Trusted by 197,000+ customers',
     ],
     pros: [
       'Needle-free — a spray, not an injection',
@@ -38,7 +38,6 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       'Backed by an established longevity platform with 197,000+ customers served',
     ],
     cons: [
-      'Renews at $110/month after the $90 first month',
       'Compounded glutathione, not an FDA-approved finished product',
       'Intranasal absorption differs from injection — a route trade, not a strict upgrade',
     ],
@@ -72,7 +71,7 @@ export const glutathioneNasalSprayProviders: Provider[] = [
     logoUrl: '/logos/readyrx.svg',
     rating: 8.96,
     stars: 4.48,
-    tagline: 'From $84 per dose. No membership.',
+    tagline: '$84 per Dose — No Membership',
     shortDescription: 'ReadyRx offers clinician-prescribed glutathione nasal spray priced per dose at $84, with no recurring monthly membership required. Every order includes a 100% online consultation with a licensed provider and free 1–2 day shipping, and you can cancel anytime.',
     badges: ['No Membership', 'Format Choice'],
     affiliate: {
@@ -80,9 +79,9 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '100% online consultation with licensed provider',
-      'Free 1–2 day shipping',
-      'HSA/FSA eligible, cancel anytime',
+      'Free 1–2 day shipping, HSA/FSA eligible',
+      'Switch to injections anytime',
+      '100% online licensed consult',
     ],
     pros: [
       'No recurring monthly membership — pay per dose, cancel anytime',
