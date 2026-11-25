@@ -26,7 +26,6 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Renews at $110/mo',
       'Studied for raising brain glutathione',
       'Simple once-daily routine',
       'Free shipping, 100% online evaluation',
@@ -39,7 +38,6 @@ export const glutathioneNasalSprayProviders: Provider[] = [
       'Backed by an established longevity platform with 197,000+ customers served',
     ],
     cons: [
-      'Renews at $110/month after the $90 first month',
       'Compounded glutathione, not an FDA-approved finished product',
       'Intranasal absorption differs from injection — a route trade, not a strict upgrade',
     ],

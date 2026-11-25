@@ -25,7 +25,6 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Renews at $133/mo',
       '2,000mg monthly supply, supplies included',
       '3rd-party lab tested, LegitScript-approved',
       'Brighter skin, more energy reported',
@@ -380,7 +379,7 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Renews at $119/mo month-to-month',
+      'Online visit + prescription included',
       '200mg injections + home kit included',
       'Unlimited free doctor consults, 24/7 support',
     ],
@@ -432,7 +431,6 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Renews at $99/mo',
       '200mg–2,000mg personalized dosing',
       'Free 1–2 day shipping, no membership fees',
       'Cancel anytime',
@@ -558,7 +556,6 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Renews at $179/mo',
       '200mg/mL, 5mL bottle, home kit',
       'HSA/FSA eligible, no insurance needed',
       'Ships from licensed US pharmacy',
@@ -569,7 +566,6 @@ const allGlutathioneProviders: Provider[] = [
       'No insurance required, HSA/FSA eligible',
     ],
     cons: [
-      'Renews at $179/month after the discounted first month — the highest ongoing price in this comparison',
       'Compounded glutathione, not an FDA-approved finished product',
     ],
     priceRange: 'From $79 first month, then $179/month',

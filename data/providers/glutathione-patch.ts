@@ -22,7 +22,6 @@ export const glutathionePatchProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Billed quarterly',
       'Iontophoresis skin delivery',
       'Whole-body support',
       'Free shipping, 100% online evaluation',
