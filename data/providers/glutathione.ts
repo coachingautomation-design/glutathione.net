@@ -25,9 +25,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Injection supplies included, nothing extra to buy',
-      '2,000mg monthly supply for brighter skin + energy',
-      '3rd-party lab tested, LegitScript-approved',
+      'At-home injection kit included, 2-day shipping',
+      'Brighter skin + more energy, per verified customers',
+      '3rd-party lab tested + blood test discounts',
     ],
     pros: [
       'Low first month at $69 (then $133/month)',
@@ -378,9 +378,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Home injection kit included',
-      'Unlimited free doctor consults, 24/7 support',
-      'Online visit + prescription included',
+      'Home injection kit + unlimited free doctor consults',
+      'Injections bypass the gut for faster absorption',
+      '24/7 support, online visit + Rx included',
     ],
     pros: [
       '$89 first month, with plans from $79/month',
@@ -430,8 +430,8 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'No membership fees, cancel anytime',
       'Personalized dosing, 200mg–2,000mg',
+      'No membership fees, cancel anytime',
       'Free 1–2 day shipping to your door',
     ],
     pros: [
