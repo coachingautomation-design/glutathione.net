@@ -17,7 +17,7 @@ const allGlutathioneProviders: Provider[] = [
     vialImageUrl: 'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png',
     rating: 9.87,
     stars: 4.94,
-    tagline: 'Get started for $69/mo, pause or cancel anytime',
+    tagline: '$69 First Month — Pause or Cancel Anytime',
     shortDescription: 'System offers injectable glutathione — a 2000mg monthly supply — starting at $69 for your first month (regularly $133), one of the lowest entry prices in the market. The plan includes injection supplies, 20% off a Rythm blood test and 2-day temperature-controlled shipping, with no clinic visit required. If you want an affordable, fully online path to injectable glutathione, System is the clear first choice.',
     badges: ['#1 Ranked', 'Best Value'],
     affiliate: {
@@ -25,9 +25,10 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Price: $69 for your first month, then $133/month',
-      'Medications: Glutathione injections (2,000mg), 3rd-party lab tested and LegitScript-approved',
-      'Results: Verified customers report brighter skin and more energy',
+      '$69 first month, then $133/mo',
+      '2,000mg monthly supply, supplies included',
+      '3rd-party lab tested, LegitScript-approved',
+      'Brighter skin, more energy reported',
     ],
     pros: [
       'Low first month at $69 (then $133/month)',
@@ -76,7 +77,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/agelessrx.svg',
     rating: 9.78,
     stars: 4.9,
-    tagline: 'Glutathione for $99/mo locked in, your price never increases',
+    tagline: '$99/mo Locked In — Price Never Rises',
     shortDescription: 'AgelessRx is a research-led longevity platform that has served 197,000+ customers. Its Rx-grade glutathione injections start at $99/month, locked in so the price never increases, dosed at 100mg up to five times a week, and glutathione is also available as a needle-free patch or nasal spray. Shipping is free and HSA/FSA payment is accepted at checkout.',
     badges: ['Most Established', '3 Delivery Formats'],
     affiliate: {
@@ -84,9 +85,10 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Price: Starting at $99/month',
-      'Medications: Rx-grade glutathione injections (100mg, up to 5x/week), also available as patch or nasal spray',
-      'Perks: Free shipping and HSA/FSA accepted at checkout',
+      '$99/mo, locked in for good',
+      'Rx-grade 100mg, up to 5x/week',
+      'Also as patch or nasal spray',
+      'Free shipping + HSA/FSA accepted',
     ],
     pros: [
       'Injection price locked in at $99/month, never increases',
@@ -139,7 +141,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/readyrx.svg',
     rating: 9.74,
     stars: 4.87,
-    tagline: 'Black Friday Sale: $99/mo, locked in forever',
+    tagline: 'Black Friday: $99/mo, Locked In Forever',
     shortDescription: 'ReadyRx is running a Black Friday price on clinician-prescribed glutathione: a 2,000mg glutathione injection at $99/month, locked in forever. Care is 100% online with a licensed provider, shipping is free and arrives in 1–2 days, and plans are HSA/FSA eligible and can be cancelled anytime.',
     badges: ['Format Choice', 'No Membership'],
     affiliate: {
@@ -147,9 +149,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Price: $99/mo, locked in forever',
-      'Medications: 2,000mg glutathione injection, 100% online care',
-      'Credibility: 4.8/5 patient rating with over 10,000 reviews',
+      '$99/mo, locked in forever',
+      '2,000mg injection, 100% online care',
+      '4.8/5 rating, 10,000+ reviews',
     ],
     pros: [
       'Black Friday price of $99/month, locked in forever',
@@ -192,7 +194,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/hone.png',
     rating: 9.61,
     stars: 4.81,
-    tagline: 'Comprehensive labs included. Personalized glutathione protocol.',
+    tagline: 'From $99/mo — Full Labs Included',
     shortDescription: 'Hone Health brings clinical depth to glutathione therapy that few telehealth providers can match, comprehensive lab testing is included in the program, giving your clinician the data needed to design a personalized protocol. For patients who want more than a one-size-fits-all prescription, Hone Health delivers the monitoring and expert oversight that translates glutathione therapy into targeted, measurable results.',
     badges: ['Best Personalized Care'],
     affiliate: {
@@ -200,9 +202,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Labs assess oxidative stress, liver function',
-      'Ongoing monitoring adjusts protocol over time',
-      'Ideal for complex health histories',
+      'From $99/mo, labs included',
+      'Oxidative stress + liver function panels',
+      'Ongoing monitoring, protocol adjusts',
     ],
     pros: [
       'Comprehensive lab testing included, not a separate add-on',
@@ -251,7 +253,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/shed.avif',
     rating: 9.55,
     stars: 4.77,
-    tagline: '20% off first month. Health coaching included.',
+    tagline: '20% Off First Month + Free Coaching',
     shortDescription: 'Shed combines speed with value, their 5-minute signup and same-day shipping on approved orders gets your glutathione therapy started faster than any other platform. New patients receive 20% off their first month, and health coaching is included in every plan at no extra cost. For patients who want to move quickly and get lifestyle support alongside treatment, Shed delivers.',
     badges: ['Fastest Approval'],
     affiliate: {
@@ -259,9 +261,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '5-minute signup, same-day shipping',
-      'Mobile-friendly platform, phone-based access',
-      'Flexible month-to-month, cancel anytime',
+      '20% off month one',
+      '5-min signup, same-day shipping',
+      'Month-to-month, cancel anytime',
     ],
     pros: [
       '20% first-month discount applied automatically at signup',
@@ -314,7 +316,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/eden.svg',
     rating: 9.51,
     stars: 4.76,
-    tagline: 'Glutathione injections from $95 your first month. Free expedited shipping.',
+    tagline: '$95 First Month + Free Expedited Shipping',
     shortDescription: 'Eden offers clinician-prescribed glutathione injections starting at $95 for the first month, with a 100% online consultation, personalised dosing, free expedited shipping and no long-term contract. Plans are FSA/HSA eligible, include no-cost follow-up consultations and 24/7 support, and can be cancelled at any time.',
     badges: ['FSA/HSA Eligible', 'Free Expedited Shipping'],
     affiliate: {
@@ -322,9 +324,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      '100% online consultation with a licensed provider',
+      '$95 first month',
       'Free expedited shipping, FSA/HSA eligible',
-      'No long-term contract, cancel anytime',
+      'No contract, cancel anytime',
     ],
     pros: [
       'Low first month at $95',
@@ -370,7 +372,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/lttl.png',
     rating: 9.5,
     stars: 4.75,
-    tagline: 'First month for $89, then $119/mo',
+    tagline: '$89 First Month — Plans From $79/mo',
     shortDescription: 'LTTL is a doctor-led telehealth provider offering 200mg compounded glutathione injections at $89 for the first month, then $119/month, with plans from $79/month. A home injection kit, 24/7 support and unlimited free doctor consultations are included, the prescription and online visit come with the plan, and you can cancel anytime.',
     badges: ['Same Price Every Dose', 'Free 1–2 Day Shipping'],
     affiliate: {
@@ -378,9 +380,10 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Price: $89 for your first month, then $119/month; plans from $79/mo',
-      'Medications: Glutathione injections (200mg) for detox and skin clarity, pairs well with longevity stacks',
-      'Perks: Home injection kit included, 24/7 support, unlimited free doctor consults',
+      '$89 first month, then $119/mo',
+      'Plans from $79/mo',
+      '200mg injections + home kit included',
+      'Unlimited free doctor consults, 24/7 support',
     ],
     pros: [
       '$89 first month, with plans from $79/month',
@@ -422,7 +425,7 @@ const allGlutathioneProviders: Provider[] = [
     vialImageUrl: '/vials/embody.webp',
     rating: 9.48,
     stars: 4.74,
-    tagline: 'Pre-Black Friday sale: $100 off your first month',
+    tagline: '$49 First Month — $100 Off, Pre-Black Friday',
     shortDescription: 'Embody is running a pre-Black Friday sale: $49 for the first month of clinician-prescribed glutathione injections, then $99/month. Every plan includes a 100% online medical visit, personalized dosing from 200mg to 2,000mg and the prescription, with free 1–2 day shipping, no membership fees and cancel-anytime terms.',
     badges: ['Flat-Rate Pricing'],
     affiliate: {
@@ -430,9 +433,10 @@ const allGlutathioneProviders: Provider[] = [
       network: 'custom',
     },
     features: [
-      'Price: $49 for your first month, then $99/month',
-      'Medications: Glutathione injections with personalized dosing (200mg–2,000mg)',
-      'Perks: Free 1-2 day shipping, no membership fees, cancel anytime',
+      '$49 first month, then $99/mo',
+      '200mg–2,000mg personalized dosing',
+      'Free 1–2 day shipping, no membership fees',
+      'Cancel anytime',
     ],
     pros: [
       '$100 off the first month: $49, then $99/month',
@@ -483,7 +487,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/bmimd.svg',
     rating: 9.28,
     stars: 4.64,
-    tagline: 'Affordable clinician-prescribed glutathione. Free shipping.',
+    tagline: 'Budget Rx Glutathione — Free Shipping',
     shortDescription: 'bmiMD offers clinician-prescribed glutathione therapy at one of the most competitive ongoing price points in this market, with free shipping and sourcing from a licensed U.S. compounding pharmacy. For patients in eligible states who want a straightforward, affordable monthly glutathione program, bmiMD is a reliable option. Not available in AR, CA, LA, MS, or SC.',
     badges: ['Best Budget Option'],
     affiliate: {
@@ -491,9 +495,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Licensed U.S. compounding pharmacy sourcing',
-      'Simple online prescription, no complexity',
-      'Not available in AR, CA, LA, MS, SC',
+      'Competitive monthly price, free shipping',
+      'Licensed U.S. compounding pharmacy',
+      'Not available: AR, CA, LA, MS, SC',
     ],
     pros: [
       'Competitive ongoing monthly pricing',
@@ -547,7 +551,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: '/logos/taurus.svg',
     rating: 8.74,
     stars: 4.37,
-    tagline: 'Powerful antioxidant peptide from $79/mo.',
+    tagline: '$79 First Month — ~$10.75 per Shot',
     shortDescription: 'Taurus ships a home injection kit of glutathione (200mg/mL, 5mL per bottle) from a licensed US pharmacy, working out to about $10.75 per shot at the discounted $79 first-month rate. No insurance is required and the plan is HSA/FSA eligible, though the price steps up to $179/month after the first month.',
     badges: ['Home Injection Kit'],
     affiliate: {
@@ -555,8 +559,9 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'No insurance required, HSA/FSA eligible',
-      '200mg/mL dose, 5mL per bottle',
+      '$79 first month, then $179/mo',
+      '200mg/mL, 5mL bottle, home kit',
+      'HSA/FSA eligible, no insurance needed',
       'Ships from licensed US pharmacy',
     ],
     pros: [
@@ -596,7 +601,7 @@ const allGlutathioneProviders: Provider[] = [
     logoUrl: 'https://assets.explorets.com/Joi%20%2B%20Blokes%20logo-Black.png',
     rating: 8.42,
     stars: 4.21,
-    tagline: 'From $69/month with 1:1 health coaching included.',
+    tagline: '$69/mo — 1:1 Coaching Included',
     shortDescription: 'Joi + Blokes prescribes subcutaneous glutathione injections, 1–2 times a week from a 15-week supply, starting at $69/month with subscribe & save (or $86/month one-time). A board-certified clinician consultation, 1:1 health coaching and unlimited care-team messaging are bundled into the plan rather than sold separately.',
     badges: ['Coaching Included'],
     affiliate: {
@@ -604,9 +609,10 @@ const allGlutathioneProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      '1–2 injections weekly, 15-week supply',
-      'Board-certified clinician consultation required',
-      'Unlimited care-team messaging included',
+      '$69/mo subscribe & save, $86 one-time',
+      '15-week supply, 1–2 shots weekly',
+      'Board-certified clinician consult',
+      'Unlimited care-team messaging',
     ],
     pros: [
       'Lowest ongoing subscription price in this comparison at $69/month',

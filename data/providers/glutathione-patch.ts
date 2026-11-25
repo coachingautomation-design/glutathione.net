@@ -14,7 +14,7 @@ export const glutathionePatchProviders: Provider[] = [
     logoUrl: '/logos/agelessrx.svg',
     rating: 9.78,
     stars: 4.9,
-    tagline: 'Once-weekly, and completely needle-free.',
+    tagline: '$180/Kit — Once-Weekly, Needle-Free',
     shortDescription: 'AgelessRx\'s glutathione patch is a once-weekly, needle-free transdermal option that uses iontophoresis to absorb through the skin. It\'s billed at $180 per kit, quarterly, with a 100% online medical evaluation and free shipping from a US-licensed pharmacy — you pay only if a licensed provider approves.',
     badges: ['Needle-Free', 'Once-Weekly'],
     affiliate: {
@@ -22,9 +22,10 @@ export const glutathionePatchProviders: Provider[] = [
       network: 'everflow',
     },
     features: [
-      'Iontophoresis moves it through skin',
-      'Whole-body support',
       '$180 per kit, billed quarterly',
+      'Once weekly, zero needles',
+      'Iontophoresis skin delivery',
+      'Whole-body support',
     ],
     pros: [
       'Completely needle-free — no injection, no daily spray',
