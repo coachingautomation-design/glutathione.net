@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'var(--font-inter-ext)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        merri: ['var(--font-merriweather)', 'var(--font-merriweather-ext)', 'ui-serif', 'Georgia', 'serif'],
         serif: ['var(--font-fraunces)', 'var(--font-fraunces-ext)', 'ui-serif', 'Georgia', 'serif'],
       },
       maxWidth: {
@@ -15,6 +16,14 @@ const config: Config = {
         // Editorial palette shared with bestnadtreatments.com: copper calls to
         // action, a very dark navy band, cream/sand surfaces. Values live as CSS
         // variables in app/globals.css.
+        // Comparison layout (components/hub): bestdebtoptions.com's structure in
+        // glutathione.net's brown-red palette.
+        brick: {
+          DEFAULT: '#7c2d12',
+          dark: '#5c200c',
+          cta: '#b0542a',
+        },
+        rule: '#d1d1d1',
         ink: 'var(--ink)',
         inkMuted: 'var(--ink-muted)',
         copper: {
