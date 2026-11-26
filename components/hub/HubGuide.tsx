@@ -4,7 +4,7 @@ import SmartLink from '@/components/SmartLink';
 /**
  * Building blocks for the long-form guide on a hub page, in the
  * bestdebtoptions.com editorial style: Merriweather headings, 16px body copy,
- * square bordered boxes and brown-red accents. Pages supply only the words.
+ * square bordered boxes and blue-and-red accents. Pages supply only the words.
  *
  * All server components.
  */
@@ -21,7 +21,7 @@ export function GuideContents({ items }: { items: { href: string; label: string 
             <span className="flex-none font-semibold text-gray-600">
               {i + 1}.
             </span>
-            <a href={item.href} className="text-brick hover:underline">
+            <a href={item.href} className="text-brand hover:underline">
               {item.label}
             </a>
           </li>
@@ -74,7 +74,7 @@ export function GuideSteps({ items }: { items: { label: string; body: string }[]
       {items.map((item) => (
         <div key={item.label} className="flex gap-4 border border-rule bg-white p-4">
           <div className="w-20 flex-shrink-0 text-center">
-            <span className="inline-block bg-brick px-2 py-1 text-xs font-bold text-white">{item.label}</span>
+            <span className="inline-block bg-brand px-2 py-1 text-xs font-bold text-white">{item.label}</span>
           </div>
           <p className="text-base leading-relaxed text-[#1a1a1a]">{item.body}</p>
         </div>
@@ -83,14 +83,14 @@ export function GuideSteps({ items }: { items: { label: string; body: string }[]
   );
 }
 
-/** Brown-red-topped tier cards, e.g. pricing bands. */
+/** Blue-and-red-topped tier cards, e.g. pricing bands. */
 export function GuideTiers({ items }: { items: { title: string; figure: string; body: string }[] }) {
   return (
     <div className={`mb-6 grid grid-cols-1 gap-4 ${items.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
       {items.map((t) => (
-        <div key={t.title} className="border border-t-4 border-rule border-t-brick bg-white p-4">
+        <div key={t.title} className="border border-t-4 border-rule border-t-brand bg-white p-4">
           <h4 className="mb-1 text-base text-black">{t.title}</h4>
-          <p className="mb-2 text-base font-semibold text-brick">{t.figure}</p>
+          <p className="mb-2 text-base font-semibold text-brand">{t.figure}</p>
           <p className="text-sm leading-relaxed text-[#1a1a1a]">{t.body}</p>
         </div>
       ))}
@@ -155,7 +155,7 @@ export function GuideTable({ headers, rows, minWidth = '40rem' }: { headers: str
     <div className="mb-6 overflow-x-auto border border-rule bg-white">
       <table className="w-full border-collapse text-left text-[13px]" style={{ minWidth }}>
         <thead>
-          <tr className="bg-brick text-white">
+          <tr className="bg-brand text-white">
             {headers.map((header) => (
               <th key={header} scope="col" className="px-2.5 py-3 font-semibold">
                 {header}
@@ -165,7 +165,7 @@ export function GuideTable({ headers, rows, minWidth = '40rem' }: { headers: str
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={row[0]} className={`border-t border-rule align-top ${i % 2 ? 'bg-brick/[0.03]' : 'bg-white'}`}>
+            <tr key={row[0]} className={`border-t border-rule align-top ${i % 2 ? 'bg-brand/[0.03]' : 'bg-white'}`}>
               <th scope="row" className="px-2.5 py-3 text-left font-semibold text-black">
                 {row[0]}
               </th>
@@ -182,10 +182,10 @@ export function GuideTable({ headers, rows, minWidth = '40rem' }: { headers: str
   );
 }
 
-/** Brown-red-ruled callout, for a named provider or a key point. */
+/** Blue-and-red-ruled callout, for a named provider or a key point. */
 export function GuideNote({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="mb-4 border-l-4 border-brick bg-gray-50 p-4">
+    <div className="mb-4 border-l-4 border-brand bg-gray-50 p-4">
       <span className="font-bold text-black">{title}</span>
       <p className="mt-1 text-base leading-relaxed text-[#1a1a1a]">{children}</p>
     </div>
@@ -204,13 +204,13 @@ export function GuideCallout({ title, children }: { title: string; children: Rea
 
 /** Small uppercase label above a featured card. */
 export function GuideCardLabel({ children }: { children: ReactNode }) {
-  return <p className="-mb-6 mt-8 text-[11px] font-bold uppercase tracking-widest text-brick">{children}</p>;
+  return <p className="-mb-6 mt-8 text-[11px] font-bold uppercase tracking-widest text-brand">{children}</p>;
 }
 
 /** Inline on-site link — SmartLink, so stored ad params survive the hop. */
 export function GuideLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <SmartLink href={href} className="font-medium text-brick hover:underline">
+    <SmartLink href={href} className="font-medium text-brand hover:underline">
       {children}
     </SmartLink>
   );
@@ -222,7 +222,7 @@ export function GuideLink({ href, children }: { href: string; children: ReactNod
  */
 export function AuthorityLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="font-medium text-brick hover:underline">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="font-medium text-brand hover:underline">
       {children}
     </a>
   );

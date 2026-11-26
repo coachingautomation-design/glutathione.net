@@ -115,7 +115,7 @@
    Comparison layout used by every live landing page (components/hub): the
    bestdebtoptions.com homepage structure — compact white hero, square
    ranked cards, sticky sidebar, Merriweather headings — in glutathione.net's
-   brown-red palette. Scoped to `.bdo` so the v1 archive is untouched. */
+   blue-and-red palette. Scoped to `.bdo` so the v1 archive is untouched. */
 .bdo {
   background: #ffffff;
   color: #0a0a0a;
@@ -150,7 +150,7 @@
 }
 .bdo .provider-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  border-color: rgba(124, 45, 18, 0.4);
+  border-color: rgba(30, 64, 175, 0.4);
   transform: translateY(-1px);
 }
 .bdo .provider-card:active {
@@ -175,7 +175,7 @@
 .bdo .prose-editorial ol { list-style: decimal; padding-left: 1.25rem; margin: 0 0 0.75rem; }
 .bdo .prose-editorial li { margin-bottom: 0.25rem; }
 .bdo .prose-editorial strong { font-weight: 600; color: #0a0a0a; }
-.bdo .prose-editorial a { color: #7c2d12; font-weight: 500; }
+.bdo .prose-editorial a { color: #1e40af; font-weight: 500; }
 .bdo .prose-editorial a:hover { text-decoration: underline; }
 @media (prefers-reduced-motion: no-preference) {
   .bdo .fade-in-up { animation: bdoFadeInUp 0.4s cubic-bezier(0.23, 1, 0.32, 1) both; }

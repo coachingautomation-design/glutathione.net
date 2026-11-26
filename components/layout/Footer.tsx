@@ -54,7 +54,7 @@ export function Footer() {
       <footer className="border-t border-rule bg-white text-black" aria-label="Site footer">
         <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 lg:px-8">
           <SmartLink href="/" className="font-merri text-base font-bold">
-            Glutathione<span className="text-brick">.net</span>
+            Glutathione<span className="text-brand">.net</span>
           </SmartLink>
           <p className="mt-2 max-w-sm text-xs text-gray-700">
             Independent comparison of clinician-prescribed glutathione therapy providers: format, price, shipping and
@@ -68,7 +68,7 @@ export function Footer() {
                 <ul className="mt-2.5 space-y-1.5 text-[13px]">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <SmartLink href={link.href} className="text-brick hover:underline">
+                      <SmartLink href={link.href} className="text-brand hover:underline">
                         {link.label}
                       </SmartLink>
                     </li>

@@ -5,7 +5,7 @@ import { HUB_CTA } from './theme';
 
 /**
  * Sticky sidebar and side-by-side table, as on the bestdebtoptions.com
- * homepage, in the brown-red palette.
+ * homepage, in the blue-and-red palette.
  */
 
 function Chevron() {
@@ -28,20 +28,20 @@ export function HubSidebar({
   const reviews = providers.filter((p) => p.reviewPath);
   return (
     <aside className="w-full flex-shrink-0 space-y-5 lg:sticky lg:top-20 lg:w-64 xl:w-72">
-      <div className="border border-brick/20 bg-brick/5 p-4">
+      <div className="border border-brand/20 bg-brand/5 p-4">
         <div className="mb-2 flex items-center gap-2">
-          <svg className="h-5 w-5 text-brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg className="h-5 w-5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             <path d="m9 12 2 2 4-4" />
           </svg>
-          <span className="text-base font-bold text-brick">Find Your Best Glutathione Provider</span>
+          <span className="text-base font-bold text-brand">Find Your Best Glutathione Provider</span>
         </div>
         <p className="mb-3 text-sm leading-relaxed text-gray-800">
           Every provider we list is clinician-prescribed and researched by the Glutathione.net editorial team.
         </p>
         <a
           href="#rankings"
-          className="block w-full bg-brick py-2 text-center text-base font-semibold text-white transition-colors hover:bg-brick-dark"
+          className="block w-full bg-brand py-2 text-center text-base font-semibold text-white transition-colors hover:bg-brand-dark"
         >
           See Our Rankings
         </a>
@@ -53,7 +53,7 @@ export function HubSidebar({
           <ul className="space-y-2.5">
             {guides.map((g) => (
               <li key={g.href}>
-                <SmartLink href={g.href} className="flex items-start gap-1.5 text-sm leading-snug text-brick hover:underline">
+                <SmartLink href={g.href} className="flex items-start gap-1.5 text-sm leading-snug text-brand hover:underline">
                   <Chevron />
                   {g.label}
                 </SmartLink>
@@ -69,7 +69,7 @@ export function HubSidebar({
           <ul className="space-y-2.5">
             {reviews.map((p) => (
               <li key={p.slug}>
-                <SmartLink href={p.reviewPath!} className="flex items-start gap-1.5 text-sm leading-snug text-brick hover:underline">
+                <SmartLink href={p.reviewPath!} className="flex items-start gap-1.5 text-sm leading-snug text-brand hover:underline">
                   <Chevron />
                   {p.name} Review
                 </SmartLink>
@@ -90,7 +90,7 @@ export function HubSidebar({
                 placement="sidebar"
                 className="group flex items-center justify-between text-sm text-gray-800 transition-colors hover:text-black"
               >
-                <span className="transition-colors group-hover:text-brick">{p.name}</span>
+                <span className="transition-colors group-hover:text-brand">{p.name}</span>
                 <span className="font-semibold text-black">{p.rating.toFixed(1)}</span>
               </HubLink>
             </li>
@@ -119,7 +119,7 @@ export function HubComparisonTable({ providers, vertical }: { providers: EdHubPr
               label={`Visit ${p.name}`}
               className="block border border-rule bg-white text-inherit transition-shadow hover:shadow-md active:scale-[0.99]"
             >
-              <span className="flex items-center justify-between gap-3 bg-brick px-3 py-2 text-white">
+              <span className="flex items-center justify-between gap-3 bg-brand px-3 py-2 text-white">
                 <span className="text-sm font-semibold">
                   {p.rank}. {p.name}
                 </span>
@@ -152,7 +152,7 @@ export function HubComparisonTable({ providers, vertical }: { providers: EdHubPr
       {/* Tablet and desktop: table */}
       <div className="relative hidden overflow-x-auto border border-rule sm:block">
         <table className="w-full min-w-[620px] text-[13px]">
-          <thead className="bg-brick text-left text-white">
+          <thead className="bg-brand text-left text-white">
             <tr>
               <th scope="col" className="px-2.5 py-3 font-semibold">Provider</th>
               <th scope="col" className="px-2.5 py-3 font-semibold">Our score</th>
@@ -163,7 +163,7 @@ export function HubComparisonTable({ providers, vertical }: { providers: EdHubPr
           </thead>
           <tbody>
             {providers.map((p, i) => (
-              <tr key={p.slug} className={`border-t border-rule align-top ${i % 2 ? 'bg-brick/[0.03]' : 'bg-white'}`}>
+              <tr key={p.slug} className={`border-t border-rule align-top ${i % 2 ? 'bg-brand/[0.03]' : 'bg-white'}`}>
                 <th scope="row" className="px-2.5 py-3 text-left font-semibold text-black">
                   <span className="mr-1.5 text-gray-600">{p.rank}.</span>
                   {p.name}

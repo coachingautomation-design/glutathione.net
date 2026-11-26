@@ -46,7 +46,7 @@ export function Header() {
   }, [pathname]);
 
   const linkClass = (href: string) =>
-    `transition-colors duration-150 hover:text-black ${pathname === href ? 'text-brick' : 'text-gray-800'}`;
+    `transition-colors duration-150 hover:text-black ${pathname === href ? 'text-brand' : 'text-gray-800'}`;
 
   return (
     <header className={`sticky top-0 z-50 w-full border-b border-rule bg-white transition-shadow duration-200 ${scrolled ? 'shadow-[0_1px_8px_rgba(0,0,0,0.08)]' : ''}`} aria-label="Site header">
@@ -54,11 +54,11 @@ export function Header() {
         <div className="relative flex h-14 items-center justify-between sm:h-16">
           <SmartLink href="/" className="flex shrink-0 items-center gap-2 font-merri text-base font-bold leading-tight text-black sm:text-lg">
             <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
-              <circle cx="16" cy="16" r="15" fill="#7c2d12" />
+              <circle cx="16" cy="16" r="15" fill="#1e40af" />
               <path d="M9 17.25 13.75 22 23.5 10.5" fill="none" stroke="#ffffff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>
-              Glutathione<span className="text-brick">.net</span>
+              Glutathione<span className="text-brand">.net</span>
             </span>
           </SmartLink>
 
@@ -72,7 +72,7 @@ export function Header() {
 
           <SmartLink
             href={RANKED_PAGES.has(pathname) ? '#rankings' : '/#rankings'}
-            className="hidden items-center gap-1.5 bg-brick px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-brick-dark active:scale-95 md:inline-flex"
+            className="hidden items-center gap-1.5 bg-brand px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-brand-dark active:scale-95 md:inline-flex"
           >
             See Our Rankings
           </SmartLink>
