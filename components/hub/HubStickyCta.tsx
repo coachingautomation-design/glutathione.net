@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import type { EdHubProvider } from '@/components/ed/types';
 import { HubLink } from './HubLink';
-import { scoreWording } from './theme';
+import { HUB_CTA, HUB_SCORE, scoreWording } from './theme';
 
 const DISMISS_KEY = 'stickyOfferDismissed';
 
 /**
- * Bottom sticky offer bar for the page's #1 pick: shown once the hero has
+ * Bottom sticky offer bar in the bestdebtoptions.com style for the page's #1 pick: shown once the hero has
  * scrolled out of view, dismissible for the session.
  */
 export function HubStickyCta({ provider, vertical }: { provider: EdHubProvider; vertical: string }) {
@@ -40,35 +40,40 @@ export function HubStickyCta({ provider, vertical }: { provider: EdHubProvider; 
     <div
       role="region"
       aria-label="Top offer"
-      className="fixed inset-x-0 bottom-0 z-50 rounded-t-2xl bg-white shadow-[0_-2px_12px_rgba(0,0,0,0.12)] md:rounded-none"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <div className="mx-auto flex max-w-content items-center gap-2 px-3 py-2 sm:gap-4 md:gap-6 md:px-6 md:py-3">
-        <div className="min-w-0 flex-1 md:flex md:items-center md:gap-6">
-          {provider.logoUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={provider.logoUrl} alt={`${provider.name} logo`} className="h-[22px] w-20 object-contain object-left md:w-[120px]" loading="lazy" />
-          ) : (
-            <span className="text-[14px] font-bold text-ink">{provider.name}</span>
-          )}
-          <p className="line-clamp-2 text-[13px] font-bold leading-snug text-ink md:line-clamp-none md:truncate md:text-[16px]">
-            {provider.tagline}
-          </p>
-        </div>
-        <div className="flex shrink-0 flex-col items-center gap-0.5 md:flex-row md:gap-2">
-          <div className="inline-flex items-center justify-center rounded-[5px] bg-copper-aa px-2 py-0.5 text-[16px] font-bold text-white md:bg-transparent md:px-0 md:py-0 md:text-[26px] md:font-extrabold md:text-ink">
-            {provider.rating.toFixed(2)}
-          </div>
-          <span className="hidden text-[12px] font-semibold text-inkMuted md:block">{scoreWording(provider.rating)}</span>
-        </div>
+      <div className="bdo-container flex items-center gap-3 py-2.5 sm:gap-5">
         <HubLink
           provider={provider}
           vertical={vertical}
           placement="sticky"
-          className="shrink-0 whitespace-nowrap rounded-lg bg-copper-aa px-4 py-2 text-center text-[14px] font-bold text-white transition-colors hover:bg-copper-dark sm:min-w-[157px] sm:py-2.5 sm:text-[16px]"
           label={`Visit ${provider.name}`}
+          className="group flex min-w-0 flex-1 items-center gap-3 text-inherit sm:gap-5"
         >
-          Visit Site
+          {provider.logoUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={provider.logoUrl} alt="" className="hidden h-9 w-24 flex-shrink-0 object-contain sm:block" loading="lazy" />
+          )}
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-sm font-bold text-black">{provider.name}</span>
+            <span className="hidden truncate text-xs text-gray-700 md:block">{provider.tagline}</span>
+          </span>
+          <span className="hidden flex-shrink-0 items-center gap-1.5 sm:flex">
+            <span className="px-2 py-1 text-sm font-bold text-white" style={{ background: HUB_SCORE }}>
+              {provider.rating.toFixed(1)}
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-700">{scoreWording(provider.rating)}</span>
+          </span>
+          <span
+            className="flex flex-shrink-0 items-center gap-1.5 whitespace-nowrap px-4 py-2.5 text-sm font-bold text-white group-hover:brightness-110"
+            style={{ background: HUB_CTA }}
+          >
+            Visit Site
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
         </HubLink>
         <button
           type="button"
@@ -81,7 +86,7 @@ export function HubStickyCta({ provider, vertical }: { provider: EdHubProvider; 
             }
             setDismissed(true);
           }}
-          className="ml-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black/5 text-[18px] leading-none text-inkMuted hover:bg-black/10 hover:text-ink"
+          className="flex-shrink-0 p-1 text-[18px] leading-none text-gray-600 hover:text-black"
         >
           ×
         </button>

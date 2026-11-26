@@ -10,29 +10,29 @@ import {
   SITE_CONFIG,
 } from '@/lib/seo-schema';
 import { HubHero } from './HubHero';
-import { HubTopThree } from './HubTopThree';
-import { HubProviderRow, HubBestOverallPick, HubOfferBanner } from './HubProviderRow';
+import { HubProviderRow, HubOfferBanner } from './HubProviderRow';
 import { HubRankedList } from './HubRankedList';
 import { HubFaqList } from './HubFaqList';
 import { HubStickyCta } from './HubStickyCta';
-import { HubHowWeRankStrip, HowWeRank, EditorialByline, Disclosure } from './HubSections';
-import { HUB_HEADING } from './theme';
+import { HubFooterBands } from './HubSections';
+import { HubComparisonTable, HubSidebar } from './HubSidebar';
 
 /**
- * The landing-page template in the bestnadtreatments.com design. Pages supply
- * copy and a roster, never layout. Section order is decision-first:
+ * The landing-page template, laid out like the bestdebtoptions.com homepage in
+ * glutathione.net's brown-red palette. Pages supply copy and a roster, never
+ * layout:
  *
- *   1. Navy hero band
- *   2. Top-3 flashcards pulled up over the hero, then the ranked rows with an
- *      interstitial offer banner, all on the navy band
- *   3. The #1 pick restated and the How We Rank strip, on white
- *   4. Optional "which option is right for me" cards
- *   5. The long-form guide in an 820px reading column on cream
- *   6. FAQs on a sand band
- *   7. Methodology, byline and medical disclaimer
- *   8. Closing "compare more" band
+ *   1. Compact white hero (H1, intro, updated date, advertiser disclosure)
+ *   2. Ranked cards with an interstitial featured-pick banner  |  sticky sidebar
+ *   3. Side-by-side comparison table
+ *   4. Optional "which option is right for me" section
+ *   5. The long-form guide
+ *   6. FAQs
+ *   7. "How we rank" + "How we make money" + medical disclaimer bands
  *
  * The previous EdHubPage template is frozen under app/v1 for the -v1 URLs.
+ * `bestOverallHeading` and `closing` are accepted for compatibility but this
+ * layout has no restated #1 block or closing band.
  */
 
 export type HubPageProps = {
@@ -107,31 +107,21 @@ export function HubPage({
   heading,
   providers,
   offerBannerAfterIndex = 1,
-  bestOverallHeading = 'Best Overall Pick',
   topBadge = 'Best Overall',
   initialVisibleCount = 7,
-  showTopPickVial = true,
   options,
   guide,
   faqs,
   faqHeading = 'Frequently Asked Questions',
-  closing,
   schema,
 }: HubPageProps) {
   const h1 = heading ?? metaTitle;
-  const closingBand = closing ?? {
-    heading: 'Not Sure Where to Start?',
-    body: 'Compare every glutathione provider side by side on price, format, shipping and plan terms.',
-    // The homepage is the full comparison, so it points on to the price view instead.
-    href: canonical === '/' ? '/cheapest-glutathione-injections/' : '/',
-    label: canonical === '/' ? 'Compare Prices' : 'Compare All Providers',
-  };
   const topPick = providers[0];
   const url = `${SITE_CONFIG.domain}${canonical}`;
 
   const rows = providers.map((provider, index) => (
     <Fragment key={provider.slug}>
-      <HubProviderRow provider={provider} vertical={vertical} topBadge={topBadge} vialFlip={showTopPickVial} />
+      <HubProviderRow provider={provider} vertical={vertical} topBadge={topBadge} index={index} />
       {index === offerBannerAfterIndex && providers.length > 3 && <HubOfferBanner provider={topPick} vertical={vertical} />}
     </Fragment>
   ));
@@ -153,148 +143,94 @@ export function HubPage({
   const moreGuides = (guide?.moreGuides ?? HUB_PAGES).filter((link) => link.href !== canonical);
 
   return (
-    <>
+    <div className="bdo">
       <PageEvent eventName="vertical_page_viewed" payload={{ vertical }} />
 
       {/* 1. Hero */}
-      <HubHero title={h1} />
+      <HubHero title={h1} description={metaDescription} />
 
-      {/* 2. Top picks and ranked rows on the navy band */}
-      <div className="bg-band">
-        {providers.length >= 3 && (
-          <section id="top-picks" className="relative z-10 hidden scroll-mt-20 px-4 sm:block lg:px-0">
-            <div className="mx-auto -mt-[26px] max-w-content">
-              <HubTopThree providers={providers} vertical={vertical} topBadge={`#1 ${topBadge}`} />
-            </div>
-          </section>
-        )}
+      {/* 2-6. Main column + sidebar */}
+      <div className="bdo-container pb-8 pt-5 sm:pb-10 sm:pt-6">
+        <div className="flex flex-col items-start gap-8 lg:flex-row">
+          <div className="w-full min-w-0 flex-1">
+            <section id="rankings" aria-label="Ranked providers" className="scroll-mt-20">
+              {initialVisibleCount === null ? (
+                <div className="space-y-3">{rows}</div>
+              ) : (
+                <HubRankedList initialVisibleCount={initialVisibleCount}>{rows}</HubRankedList>
+              )}
+            </section>
 
-        <div className="relative z-10 mx-auto max-w-content px-4 pb-10 sm:pt-8 lg:px-0">
-          <section id="rankings" aria-label="Ranked providers" className="-mt-[14px] min-w-0 scroll-mt-16 sm:mt-0">
-            {initialVisibleCount === null ? (
-              <div className="space-y-4">{rows}</div>
-            ) : (
-              <HubRankedList initialVisibleCount={initialVisibleCount}>{rows}</HubRankedList>
-            )}
-          </section>
-        </div>
-      </div>
+            <div className="mt-12 space-y-12">
+              {providers.length > 1 && <HubComparisonTable providers={providers} vertical={vertical} />}
 
-      {/* 3. Best overall and How We Rank */}
-      <div className="bg-white">
-        <div className="mx-auto max-w-content px-4 pb-10 pt-1 lg:px-0">
-          {bestOverallHeading && providers.length > 1 && (
-            <HubBestOverallPick provider={topPick} vertical={vertical} heading={bestOverallHeading} topBadge={topBadge} vialFlip={showTopPickVial} />
-          )}
-          <HubHowWeRankStrip />
-        </div>
-      </div>
+              {options && (
+                <section id="options" className="scroll-mt-20">
+                  <h2 className="section-heading">{options.heading}</h2>
+                  <div className="prose-editorial">
+                    <p>{options.intro}</p>
+                    <div className="mt-4 space-y-5">
+                      {options.items.map((item) => (
+                        <div key={item.name}>
+                          <h3 className="mb-1 text-base text-black">{item.name}</h3>
+                          <p>{item.body}</p>
+                          {item.onPage && (
+                            <p className="text-sm text-gray-700">
+                              <strong>On this page:</strong> {item.onPage}
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    {options.callout && (
+                      <div className="mt-6 border-l-4 border-brick bg-orange-50 p-4">
+                        <h3 className="mb-1 text-base text-black">{options.callout.heading}</h3>
+                        <p className="mb-0">{options.callout.body}</p>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )}
 
-      {/* 4. Which option is right for me? */}
-      {options && (
-        <section id="options" className="scroll-mt-20 border-t border-border bg-cream py-10 md:py-12">
-          <div className="mx-auto max-w-content px-4 lg:px-0">
-            <div className="max-w-[820px]">
-              <h2 className="text-[22px] leading-8 md:text-[28px] md:leading-[38px]" style={{ color: HUB_HEADING }}>
-                {options.heading}
-              </h2>
-              <p className="mt-2 text-[16px] leading-7 text-inkMuted md:text-[17px]">{options.intro}</p>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {options.items.map((item) => (
-                <div key={item.name} className="rounded-2xl border border-border bg-white p-5 shadow-[var(--card-shadow)]">
-                  <h3 className="text-[18px] leading-6 text-ink">{item.name}</h3>
-                  <p className="mt-2 text-[15px] leading-6 text-ink">{item.body}</p>
-                  {item.onPage && (
-                    <p className="mt-3 border-t border-border pt-3 text-[14px] leading-6 text-inkMuted">
-                      <span className="font-semibold text-copper-dark">On this page: </span>
-                      {item.onPage}
-                    </p>
+              {guide && (
+                <section id="education" className="scroll-mt-20">
+                  <h2 className="section-heading">{guide.heading}</h2>
+                  {guide.children}
+
+                  {moreGuides.length > 0 && (
+                    <div className="prose-editorial mt-8">
+                      <h3 className="mb-2 text-base text-black">Keep Reading</h3>
+                      <ul>
+                        {moreGuides.map((link) => (
+                          <li key={link.href}>
+                            <SmartLink href={link.href}>{link.label}</SmartLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
-                </div>
-              ))}
+                </section>
+              )}
+
+              {faqs.length > 0 && (
+                <section id="faq" className="scroll-mt-20">
+                  <h2 className="section-heading">{faqHeading}</h2>
+                  <HubFaqList items={faqs} />
+                </section>
+              )}
             </div>
-            {options.callout && (
-              <div className="mt-6 max-w-[820px] rounded-2xl border border-amber-300/60 bg-amber-tint p-5">
-                <h3 className="text-base text-amber-900">{options.callout.heading}</h3>
-                <p className="mt-1.5 text-[15px] leading-relaxed text-amber-900/90">{options.callout.body}</p>
-              </div>
-            )}
           </div>
-        </section>
-      )}
 
-      {/* 5. Guide */}
-      {guide && (
-        <section id="education" className="scroll-mt-20 bg-cream pb-6 pt-[30px]">
-          <div className="mx-auto max-w-[820px] px-4 lg:px-0">
-            <h2 className="mb-6 text-[22px] leading-8 text-ink md:text-[30px] md:leading-[40px]">{guide.heading}</h2>
-            {guide.children}
-
-            {moreGuides.length > 0 && (
-              <div className="mt-10">
-                <p className="text-[12px] font-bold uppercase tracking-widest text-inkMuted">More glutathione guides</p>
-                <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
-                  {moreGuides.map((link) => (
-                    <li key={link.href}>
-                      <SmartLink
-                        href={link.href}
-                        className="flex items-center justify-between gap-3 rounded-xl border border-border bg-white p-4 text-[15px] font-semibold text-ink transition-colors hover:border-copper hover:text-copper-dark"
-                      >
-                        {link.label}
-                        <span aria-hidden="true" className="text-copper">
-                          &rarr;
-                        </span>
-                      </SmartLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* 6. FAQs */}
-      <section id="faq" className="scroll-mt-20 bg-sand py-10">
-        <div className="mx-auto max-w-[820px] px-4 lg:px-0">
-          <h2 className="mb-6 text-[22px] leading-8 md:text-[26px] md:leading-9" style={{ color: HUB_HEADING }}>
-            {faqHeading}
-          </h2>
-          <HubFaqList items={faqs} />
+          <HubSidebar providers={providers} vertical={vertical} guides={moreGuides} />
         </div>
-      </section>
+      </div>
 
-      {/* 7. Methodology, byline and disclaimers */}
-      <section className="bg-cream py-8">
-        <div className="mx-auto max-w-[820px] space-y-4 px-4 lg:px-0">
-          <HowWeRank />
-          <EditorialByline />
-          <Disclosure variant="affiliate" />
-          <Disclosure variant="medical" />
-        </div>
-      </section>
-
-      {/* 8. Closing band */}
-      <section className="bg-ink py-8 text-white md:py-12">
-        <div className="mx-auto w-full max-w-[820px] px-4 text-center">
-          <h2 className="text-[20px] leading-7 text-white md:text-[28px] md:leading-[38px]">{closingBand.heading}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-[15px] leading-6 text-white/80 md:text-[16px]">{closingBand.body}</p>
-          <SmartLink
-            href={closingBand.href}
-            className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-copper-aa px-6 text-[16px] font-bold text-white transition-colors hover:bg-copper-dark"
-          >
-            {closingBand.label}
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </SmartLink>
-        </div>
-      </section>
+      {/* 7. Methodology and disclosures */}
+      <HubFooterBands />
 
       {topPick && <HubStickyCta provider={topPick} vertical={vertical} />}
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }} />
-    </>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import { Children, useState } from 'react';
-import { HUB_CTA } from './theme';
 
 /**
  * Ranked list with an in-place "Explore More Providers" expander. Rows past the
@@ -25,22 +24,21 @@ export function HubRankedList({
 
   return (
     <>
-      <div className="space-y-4">
+      <div className="space-y-3">
         {rows.map((row, index) => (
-          <div key={index} className={hasMore && !showAll && index >= initialVisibleCount ? 'hidden' : 'space-y-4'}>
+          <div key={index} className={hasMore && !showAll && index >= initialVisibleCount ? 'hidden' : 'space-y-3'}>
             {row}
           </div>
         ))}
       </div>
 
       {hasMore && (
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 flex justify-center">
           <button
             type="button"
             onClick={() => setShowAll((current) => !current)}
             aria-expanded={showAll}
-            className="inline-flex items-center justify-center gap-2 px-8 text-center transition-opacity hover:opacity-90"
-            style={{ backgroundColor: HUB_CTA, color: '#fff', borderRadius: 4, minHeight: 48, fontSize: 17, fontWeight: 600 }}
+            className="inline-flex min-h-[44px] items-center justify-center gap-2 border border-brick bg-white px-6 text-center text-sm font-semibold text-brick transition-colors hover:bg-brick hover:text-white"
           >
             {showAll ? fewerLabel : moreLabel}
             <svg

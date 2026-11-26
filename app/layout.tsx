@@ -16,6 +16,25 @@ import { Footer } from '@/components/layout/Footer';
 const fraunces = localFont({ src: './fonts/fraunces-latin.woff2', weight: '100 900', display: 'swap', variable: '--font-fraunces' });
 const frauncesExt = localFont({ src: './fonts/fraunces-latin-ext.woff2', weight: '100 900', display: 'swap', preload: false, variable: '--font-fraunces-ext' });
 const inter = localFont({ src: './fonts/inter-latin.woff2', weight: '100 900', display: 'swap', variable: '--font-inter' });
+// Merriweather headings for the comparison layout (components/hub), matching
+// bestdebtoptions.com.
+const merriweather = localFont({
+  src: [
+    { path: './fonts/merriweather-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/merriweather-latin-700-normal.woff2', weight: '700', style: 'normal' },
+  ],
+  display: 'swap',
+  variable: '--font-merriweather',
+});
+const merriweatherExt = localFont({
+  src: [
+    { path: './fonts/merriweather-latin-ext-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/merriweather-latin-ext-700-normal.woff2', weight: '700', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  variable: '--font-merriweather-ext',
+});
 const interExt = localFont({ src: './fonts/inter-latin-ext.woff2', weight: '100 900', display: 'swap', preload: false, variable: '--font-inter-ext' });
 
 export const metadata: Metadata = {
@@ -31,12 +50,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const organizationSchema = generateOrganizationSchema();
 
   return (
-    <html lang="en" dir="ltr" className={`${fraunces.variable} ${frauncesExt.variable} ${inter.variable} ${interExt.variable}`}>
+    <html lang="en" dir="ltr" className={`${fraunces.variable} ${frauncesExt.variable} ${inter.variable} ${interExt.variable} ${merriweather.variable} ${merriweatherExt.variable}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta name="theme-color" content="#0d172c" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="format-detection" content="telephone=no" />
 
         {/* AI / LLM discoverability */}

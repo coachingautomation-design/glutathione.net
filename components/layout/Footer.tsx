@@ -34,29 +34,29 @@ const SECTIONS = [
   { title: 'Site', links: SITE_LINKS },
 ];
 
-/** Site footer in the bestnadtreatments.com style: slate disclaimer strip, then an ink footer. */
+/** Site footer in the bestdebtoptions.com style: light disclaimer strip, then a plain white footer. */
 export function Footer() {
   return (
     <>
-      <div className="bg-slate-900 text-[12.5px] leading-snug text-slate-100">
-        <p className="mx-auto max-w-content px-4 py-2 md:px-6 lg:px-0">
+      <div className="border-t border-rule bg-gray-50 text-[12.5px] leading-snug text-gray-800">
+        <p className="mx-auto max-w-[1280px] px-4 py-3 sm:px-6 lg:px-8">
           <strong className="font-semibold">Medical disclaimer:</strong> This site is for informational purposes only
           and is not medical advice. Always consult a licensed healthcare provider before starting glutathione therapy.{' '}
-          <span className="text-slate-300">
+          <span className="text-gray-600">
             We may earn a commission from partner links -{' '}
-            <SmartLink href="/advertising-disclosure/" className="underline hover:text-white">
+            <SmartLink href="/advertising-disclosure/" className="underline hover:text-black">
               see our affiliate disclosure
             </SmartLink>
             .
           </span>
         </p>
       </div>
-      <footer className="bg-ink text-white" aria-label="Site footer">
-        <div className="mx-auto max-w-content px-4 py-10 md:px-6 lg:px-0 lg:py-12">
-          <SmartLink href="/" className="font-serif text-[21px] font-bold tracking-tight">
-            Glutathione<span className="text-[#E2A682]">.net</span>
+      <footer className="border-t border-rule bg-white text-black" aria-label="Site footer">
+        <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 lg:px-8">
+          <SmartLink href="/" className="font-merri text-base font-bold">
+            Glutathione<span className="text-brick">.net</span>
           </SmartLink>
-          <p className="mt-3 max-w-sm text-sm text-white/70">
+          <p className="mt-2 max-w-sm text-xs text-gray-700">
             Independent comparison of clinician-prescribed glutathione therapy providers: format, price, shipping and
             plan terms, side by side.
           </p>
@@ -64,11 +64,11 @@ export function Footer() {
           <div className="mt-7 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
             {SECTIONS.map((section) => (
               <div key={section.title}>
-                <p className="text-[12px] font-semibold uppercase tracking-wide text-white/60">{section.title}</p>
-                <ul className="mt-2.5 space-y-1.5 text-[13px] text-white/80">
+                <p className="font-merri text-sm font-bold text-black">{section.title}</p>
+                <ul className="mt-2.5 space-y-1.5 text-[13px]">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <SmartLink href={link.href} className="transition-colors hover:text-white">
+                      <SmartLink href={link.href} className="text-brick hover:underline">
                         {link.label}
                       </SmartLink>
                     </li>
@@ -78,12 +78,12 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="mt-8 border-t border-white/10 pt-6 text-[12.5px] leading-relaxed text-white/60">
+          <div className="mt-8 border-t border-rule pt-6 text-xs leading-relaxed text-gray-700">
             Affiliate Disclosure: We may earn commissions from qualifying purchases. This does not influence our
             reviews or rankings. Compounded glutathione is not an FDA-approved drug product. For emergencies, call 911.
           </div>
 
-          <p className="mt-5 text-[12px] text-white/50">© {currentYear()} Glutathione.net. All rights reserved.</p>
+          <p className="mt-4 text-xs text-gray-700">© {currentYear()} Glutathione.net. All rights reserved.</p>
         </div>
       </footer>
     </>
