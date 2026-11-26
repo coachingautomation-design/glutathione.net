@@ -9,6 +9,7 @@ import { TrackingParamsListener } from '@/components/tracking/TrackingParamsList
 import { TrackEventProvider } from '@/components/tracking/TrackEventProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import FullStory from '@/components/analytics/FullStory';
 
 // Fraunces (headings) and Inter (body/UI), self-hosted as in
 // bestnadtreatments.com so builds never depend on fonts.gstatic.com. Each file is
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Suspense>
           <SpeedInsights />
         </Suspense>
+        <FullStory />
       </body>
     </html>
   );
