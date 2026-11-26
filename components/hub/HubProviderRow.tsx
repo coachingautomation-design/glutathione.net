@@ -10,7 +10,7 @@ import { HUB_BANNER_GRADIENT, HUB_CTA, HUB_SCORE, scoreWording } from './theme';
 /**
  * Ranked provider card in the bestdebtoptions.com layout: badge chip, rank and
  * logo | name and check-mark highlights | boxed score, CTA and "On X's Website",
- * then a key-facts strip with an editorial-summary toggle. Brown-red palette.
+ * then a key-facts strip with an editorial-summary toggle. Blue-and-red palette.
  * The whole card is one affiliate link (an overlay), with the CTA and toggle
  * above it.
  */
@@ -49,7 +49,7 @@ export function HubLogo({ provider, height = 40, left = false }: { provider: EdH
   );
 }
 
-/** Boxed score: brown-red number tile, then the wording and stars in one bordered box. */
+/** Boxed score: blue-and-red number tile, then the wording and stars in one bordered box. */
 export function HubRating({ rating }: { rating: number }) {
   return (
     <div className="flex w-full items-stretch border border-gray-200 bg-white">
@@ -69,7 +69,7 @@ export function HubRating({ rating }: { rating: number }) {
 
 function Badge({ label }: { label: string }) {
   return (
-    <span className="inline-flex items-center gap-1 whitespace-nowrap bg-brick px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
+    <span className="inline-flex items-center gap-1 whitespace-nowrap bg-brand px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
       ✓ {label}
     </span>
   );
@@ -277,7 +277,7 @@ export function HubProviderRow({
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
-          className="inline-flex items-center gap-1 self-start whitespace-nowrap text-xs font-semibold text-brick hover:underline sm:self-auto"
+          className="inline-flex items-center gap-1 self-start whitespace-nowrap text-xs font-semibold text-brand hover:underline sm:self-auto"
           aria-expanded={expanded}
           aria-controls={summaryId}
         >
@@ -293,7 +293,7 @@ export function HubProviderRow({
           <div>
             <p className="text-sm leading-relaxed text-gray-700">{provider.tagline}</p>
             {provider.reviewPath && (
-              <SmartLink href={provider.reviewPath} className="mt-2 inline-block text-xs font-semibold text-brick hover:underline">
+              <SmartLink href={provider.reviewPath} className="mt-2 inline-block text-xs font-semibold text-brand hover:underline">
                 Read our full {provider.name} review →
               </SmartLink>
             )}

@@ -19,7 +19,7 @@ import { HubComparisonTable, HubSidebar } from './HubSidebar';
 
 /**
  * The landing-page template, laid out like the bestdebtoptions.com homepage in
- * glutathione.net's brown-red palette. Pages supply copy and a roster, never
+ * glutathione.net's blue-and-red palette. Pages supply copy and a roster, never
  * layout:
  *
  *   1. Compact white hero (H1, intro, updated date, advertiser disclosure)
@@ -183,7 +183,7 @@ export function HubPage({
                       ))}
                     </div>
                     {options.callout && (
-                      <div className="mt-6 border-l-4 border-brick bg-orange-50 p-4">
+                      <div className="mt-6 border-l-4 border-brand bg-blue-50 p-4">
                         <h3 className="mb-1 text-base text-black">{options.callout.heading}</h3>
                         <p className="mb-0">{options.callout.body}</p>
                       </div>

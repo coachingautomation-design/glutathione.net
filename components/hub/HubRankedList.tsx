@@ -38,7 +38,7 @@ export function HubRankedList({
             type="button"
             onClick={() => setShowAll((current) => !current)}
             aria-expanded={showAll}
-            className="inline-flex min-h-[44px] items-center justify-center gap-2 border border-brick bg-white px-6 text-center text-sm font-semibold text-brick transition-colors hover:bg-brick hover:text-white"
+            className="inline-flex min-h-[44px] items-center justify-center gap-2 border border-brand bg-white px-6 text-center text-sm font-semibold text-brand transition-colors hover:bg-brand hover:text-white"
           >
             {showAll ? fewerLabel : moreLabel}
             <svg

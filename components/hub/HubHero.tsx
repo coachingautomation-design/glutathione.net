@@ -26,7 +26,7 @@ export function HubHero({ title, description }: { title: string; description?: s
         </div>
         <a
           href="#rankings"
-          className="mt-4 inline-flex items-center gap-1.5 bg-brick px-3.5 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brick-dark"
+          className="mt-4 inline-flex items-center gap-1.5 bg-brand px-3.5 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-dark"
         >
           See Our Top Picks
           <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

@@ -17,11 +17,11 @@ const config: Config = {
         // action, a very dark navy band, cream/sand surfaces. Values live as CSS
         // variables in app/globals.css.
         // Comparison layout (components/hub): bestdebtoptions.com's structure in
-        // glutathione.net's brown-red palette.
-        brick: {
-          DEFAULT: '#7c2d12',
-          dark: '#5c200c',
-          cta: '#b0542a',
+        // glutathione.net's blue (brand) and red (calls to action) palette.
+        brand: {
+          DEFAULT: '#1e40af',
+          dark: '#1e3a8a',
+          cta: '#dc2626',
         },
         rule: '#d1d1d1',
         ink: 'var(--ink)',
