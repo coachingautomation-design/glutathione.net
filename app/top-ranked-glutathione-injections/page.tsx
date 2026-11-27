@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     q: 'Why is the cheapest provider not ranked first?',
-    a: 'Price is one criterion of four. Embody has the lowest first month ($49) but ranks seventh overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
+    a: 'Price is one criterion of four. Embody has the lowest first month ($49) but ranks fourth overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
   },
   {
     q: 'How often are the rankings updated?',

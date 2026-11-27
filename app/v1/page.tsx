@@ -283,17 +283,16 @@ export default function GlutathioneHomePage() {
 
             <EdGuideHeading id="how-they-compare">How the ranked providers compare</EdGuideHeading>
             <EdGuideText first>
-              System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
-              clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
-              ranks second as the most established platform here, and the only one offering three formats — weekly
-              injection, daily nasal spray or a needle-free patch — from $90/month. ReadyRx is third, the only other
-              provider here offering a nasal spray alongside its injection, priced per dose at $84 with no monthly
-              membership to cancel.
+              AgelessRx takes the top spot as the most established platform here, and the only one offering three
+              formats — weekly injection, daily nasal spray or a needle-free patch — from $90/month. ReadyRx ranks
+              second, the only other provider here offering a nasal spray alongside its injection, priced per dose at
+              $84 with no monthly membership to cancel. System is third and leads on entry price: $69 for the first
+              month (regularly $133) and a fully online clinician review. Embody is fourth, with a flat $99/month,
+              personalised 200mg–2000mg dosing and free 1–2 day shipping.
             </EdGuideText>
             <EdGuideText>
               Below those, Shed opens at 20% off the first month with health
-              coaching in the base plan, and Embody runs a flat $99/month with personalised 200mg–2000mg dosing and free
-              1–2 day shipping.
+              coaching in the base plan.
             </EdGuideText>
 
             <EdGuideHeading id="getting-started">How to get started</EdGuideHeading>
