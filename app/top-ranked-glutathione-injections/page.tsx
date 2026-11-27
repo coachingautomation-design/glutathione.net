@@ -73,7 +73,7 @@ const POSITIONING: Record<string, string> = Object.fromEntries(
 const FAQS = [
   {
     q: 'Which glutathione injection provider is ranked #1?',
-    a: `System, with an editorial score of ${ranked[0].rating.toFixed(2)}. It pairs the lowest entry price on the page ($69 for the first month) with a 2000mg monthly supply, injection supplies and 2-day temperature-controlled shipping, all through a fully online clinician review.`,
+    a: `AgelessRx, with an editorial score of ${ranked[0].rating.toFixed(2)}. Its injection is locked in at $99/month so the price never rises, it is the only provider here offering injection, nasal spray and needle-free patch, and it ships free with HSA/FSA accepted. System follows on the lowest entry price ($69 for the first month, then $133/month).`,
   },
   {
     q: 'How are glutathione injection providers ranked?',
@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     q: 'Why is the cheapest provider not ranked first?',
-    a: 'Price is one criterion of four. Embody has the lowest first month ($49) but ranks seventh overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
+    a: 'Price is one criterion of four. Embody has the lowest first month ($49) but ranks fourth overall, and System’s $69 first month renews at $133/month. The top three combine a competitive price with clear terms and strong clinical oversight.',
   },
   {
     q: 'How often are the rankings updated?',

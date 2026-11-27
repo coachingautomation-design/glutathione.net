@@ -262,18 +262,18 @@ export default function GlutathioneHomePage() {
 
             <GuideHeading id="how-they-compare">How the ranked providers compare</GuideHeading>
             <GuideText>
-              System takes the top spot on entry price: $69 for the first month (regularly $133) and a fully online
-              clinician review, which is the least you can commit and still be on a supervised protocol. AgelessRx
-              ranks second as the most established platform here, and the only one offering three formats — weekly
-              injection, daily nasal spray or a needle-free patch — with the injection locked in at $99/month. ReadyRx
-              is third, with a Black Friday price of $99/month locked in forever for a 2,000mg injection, and a nasal
-              spray alongside it.
+              AgelessRx takes the top spot as the most established platform here, and the only one offering three
+              formats — weekly injection, daily nasal spray or a needle-free patch — with the injection locked in at
+              $99/month. ReadyRx ranks second, with a Black Friday price of $99/month locked in forever for a 2,000mg
+              injection, and a nasal spray alongside it. System is third and leads on entry price: $69 for the first
+              month (regularly $133) and a fully online clinician review, which is the least you can commit and still
+              be on a supervised protocol. Embody is fourth, opening at $49 (then $99/month) with personalised
+              200mg–2,000mg dosing and free 1–2 day shipping.
             </GuideText>
             <GuideText>
               Below those, Shed opens at 20% off the first month with health
-              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, LTTL charges $89 for the
-              first month with a home injection kit and unlimited doctor consults, and Embody opens at $49 (then
-              $99/month) with personalised 200mg–2,000mg dosing and free 1–2 day shipping.
+              coaching in the base plan, Eden starts at $95 with free expedited shipping and FSA/HSA eligibility, and LTTL charges $89 for the
+              first month with a home injection kit and unlimited doctor consults.
             </GuideText>
 
             <GuideHeading id="getting-started">How to get started</GuideHeading>
