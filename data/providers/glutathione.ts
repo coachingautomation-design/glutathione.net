@@ -10,77 +10,17 @@ import type { Provider } from './types';
  */
 const allGlutathioneProviders: Provider[] = [
   {
-    slug: 'system',
-    name: 'System',
-    logoText: 'System',
-    logoUrl: '/logos/system.svg',
-    vialImageUrl: 'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png',
-    rating: 9.87,
-    stars: 4.94,
-    tagline: '$69 First Month — Pause or Cancel Anytime',
-    shortDescription: 'System offers injectable glutathione — a 2000mg monthly supply — starting at $69 for your first month (regularly $133), one of the lowest entry prices in the market. The plan includes injection supplies, 20% off a Rythm blood test and 2-day temperature-controlled shipping, with no clinic visit required. If you want an affordable, fully online path to injectable glutathione, System is the clear first choice.',
-    badges: ['#1 Ranked', 'Best Value'],
-    affiliate: {
-      url: 'https://track.revoffers.com/aff_c?offer_id=1575&aff_id=10248&url_id=12144',
-      network: 'custom',
-    },
-    features: [
-      'At-home injection kit included, 2-day shipping',
-      'Brighter skin + more energy, per verified customers',
-      '3rd-party lab tested + blood test discounts',
-    ],
-    pros: [
-      'Low first month at $69 (then $133/month)',
-      '2,000mg monthly glutathione injection supply',
-      '3rd-party lab tested and LegitScript-approved',
-      'Injection supplies included, nothing extra to order',
-      'Pause or cancel anytime, fully online',
-    ],
-    cons: [
-      'Price rises to $133/month after the discounted first month',
-      'Compounded glutathione, not an FDA-approved finished product',
-    ],
-    priceRange: 'From $69 first month, then $133/month',
-    bestFor: 'Anyone looking for an affordable, clinician-prescribed injectable glutathione protocol who wants to skip the clinic visit',
-    reviewContent: {
-      intro: 'System has built a compelling case as the most accessible entry point into injectable glutathione therapy. By combining a $69 first-month offer (down from $133) with a fully online experience, they have removed the two biggest barriers, cost and convenience, that keep patients from starting. The result is a platform that genuinely delivers on its promise: an injectable, pharmaceutical-grade protocol without a high upfront commitment.',
-      whatIsIt: 'System is a fully online telehealth platform offering a clinician-prescribed, injectable glutathione protocol — a 2000mg monthly supply — marketed around glowing skin and faster recovery. Glutathione, often called the "master antioxidant", is a tripeptide produced naturally by the body that plays a central role in neutralizing free radicals, supporting liver detox pathways, and protecting cells from oxidative stress. System sources pharmaceutical-grade glutathione from licensed compounding pharmacies and ships it directly to patients with clinician oversight built in.',
-      howItWorks: 'Getting started with System takes minutes online. You complete a brief health intake, a licensed clinician reviews your case and prescribes your injectable glutathione protocol, and your first shipment — injection supplies included — is prepared at a licensed compounding pharmacy and shipped via 2-day temperature-controlled delivery. Ongoing care is managed through the System platform, with clinician access available for protocol adjustments as your goals evolve.',
-      whoIsItFor: 'System is the right choice for patients who want to start an injectable glutathione protocol without a large upfront financial commitment and without a clinic visit. If you are focused on skin appearance and recovery and want a straightforward, doctor-prescribed option, System delivers exactly that at the most accessible first-month price point in this market.',
-      pricingDetails: 'System prices its 2000mg monthly injectable glutathione supply at $69 for the first month, discounted from a regular $133/month. Injection supplies and 20% off a Rythm blood test are included. Confirm at checkout whether the discounted rate applies to any additional months beyond the first.',
-      ourVerdict: 'System earns the top spot on this page by delivering what matters most: accessible first-month pricing, an injectable format with supplies included, and a fully online experience. The $69 first-month offer dramatically lowers the cost of entry into a 2000mg monthly injectable protocol. For patients who want to start now without overcomplicating the process, System is the strongest option available — just budget for the $133/month it becomes afterward.',
-    },
-    faq: [
-      {
-        question: 'How does the $69 first-month offer work at System?',
-        answer: 'New System patients start at $69 for their first month of injectable glutathione therapy, discounted from the regular $133/month. The discounted pricing is applied at signup, no coupon code required.',
-      },
-      {
-        question: 'What format is System\'s glutathione, and what does it include?',
-        answer: 'System dispenses a 2000mg monthly supply of injectable glutathione. The plan includes injection supplies and 20% off a Rythm blood test, so there is nothing extra to order before your first dose.',
-      },
-      {
-        question: 'How does shipping work with System?',
-        answer: 'System ships your compounded glutathione via 2-day temperature-controlled delivery to keep it stable in transit, with injection supplies included in the box.',
-      },
-      {
-        question: 'Do I need a prescription for System glutathione?',
-        answer: 'Yes. System requires a licensed clinician to evaluate your health intake and prescribe your glutathione protocol. This evaluation is included in the process at no extra charge.',
-      },
-    ],
-  },
-  {
     slug: 'agelessrx',
     name: 'AgelessRx',
     logoText: 'AgelessRx',
     logoUrl: '/logos/agelessrx.svg',
-    rating: 9.78,
-    stars: 4.9,
+    rating: 9.87,
+    stars: 4.94,
     tagline: '$99/mo Locked In — Price Never Rises',
     shortDescription: 'AgelessRx is a research-led longevity platform that has served 197,000+ customers. Its Rx-grade glutathione injections start at $99/month, locked in so the price never increases, dosed at 100mg up to five times a week, and glutathione is also available as a needle-free patch or nasal spray. Shipping is free and HSA/FSA payment is accepted at checkout.',
-    badges: ['Most Established', '3 Delivery Formats'],
+    badges: ['#1 Ranked', 'Most Established'],
     affiliate: {
-      url: 'https://join.agelessrx.com/energy/glutathione/ns/aff/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=glutathione&utm_term=aff10&_ef_transaction_id=&oid=6&affid=10',
+      url: 'https://get.agelessrx.com/gsh-injection/energy/narrative/ns/?utm_source=everflow&utm_medium=affiliate&utm_campaign=GSHInjection_CPA_Evergreen_Affiliate&utm_content=gsh-injection&utm_term=aff10&_ef_transaction_id=&oid=6&affid=10&uid=6&oid=6&affid=10',
       network: 'everflow',
     },
     features: [
@@ -129,6 +69,66 @@ const allGlutathioneProviders: Provider[] = [
       {
         question: 'Can I pause or cancel AgelessRx glutathione anytime?',
         answer: 'Yes. AgelessRx lets you adjust, pause, or cancel anytime, with a care team available throughout. Payment is only taken if a licensed provider approves your request, and shipping is free from a US-licensed pharmacy in discreet packaging.',
+      },
+    ],
+  },
+  {
+    slug: 'system',
+    name: 'System',
+    logoText: 'System',
+    logoUrl: '/logos/system.svg',
+    vialImageUrl: 'https://pub-39359099163f4c69946f8ef82ee5436d.r2.dev/uploads/cc807d43-ee87-48f5-af99-00d7009f4462.png',
+    rating: 9.78,
+    stars: 4.9,
+    tagline: '$69 First Month — Pause or Cancel Anytime',
+    shortDescription: 'System offers injectable glutathione — a 2000mg monthly supply — starting at $69 for your first month (regularly $133), one of the lowest entry prices in the market. The plan includes injection supplies, 20% off a Rythm blood test and 2-day temperature-controlled shipping, with no clinic visit required.',
+    badges: ['Best Value', 'Lowest First Month'],
+    affiliate: {
+      url: 'https://track.revoffers.com/aff_c?offer_id=1575&aff_id=10248&url_id=12144',
+      network: 'custom',
+    },
+    features: [
+      'At-home injection kit included, 2-day shipping',
+      'Brighter skin + more energy, per verified customers',
+      '3rd-party lab tested + blood test discounts',
+    ],
+    pros: [
+      'Low first month at $69 (then $133/month)',
+      '2,000mg monthly glutathione injection supply',
+      '3rd-party lab tested and LegitScript-approved',
+      'Injection supplies included, nothing extra to order',
+      'Pause or cancel anytime, fully online',
+    ],
+    cons: [
+      'Price rises to $133/month after the discounted first month',
+      'Compounded glutathione, not an FDA-approved finished product',
+    ],
+    priceRange: 'From $69 first month, then $133/month',
+    bestFor: 'Anyone looking for an affordable, clinician-prescribed injectable glutathione protocol who wants to skip the clinic visit',
+    reviewContent: {
+      intro: 'System has built a compelling case as the most accessible entry point into injectable glutathione therapy. By combining a $69 first-month offer (down from $133) with a fully online experience, they have removed the two biggest barriers, cost and convenience, that keep patients from starting. The result is a platform that genuinely delivers on its promise: an injectable, pharmaceutical-grade protocol without a high upfront commitment.',
+      whatIsIt: 'System is a fully online telehealth platform offering a clinician-prescribed, injectable glutathione protocol — a 2000mg monthly supply — marketed around glowing skin and faster recovery. Glutathione, often called the "master antioxidant", is a tripeptide produced naturally by the body that plays a central role in neutralizing free radicals, supporting liver detox pathways, and protecting cells from oxidative stress. System sources pharmaceutical-grade glutathione from licensed compounding pharmacies and ships it directly to patients with clinician oversight built in.',
+      howItWorks: 'Getting started with System takes minutes online. You complete a brief health intake, a licensed clinician reviews your case and prescribes your injectable glutathione protocol, and your first shipment — injection supplies included — is prepared at a licensed compounding pharmacy and shipped via 2-day temperature-controlled delivery. Ongoing care is managed through the System platform, with clinician access available for protocol adjustments as your goals evolve.',
+      whoIsItFor: 'System is the right choice for patients who want to start an injectable glutathione protocol without a large upfront financial commitment and without a clinic visit. If you are focused on skin appearance and recovery and want a straightforward, doctor-prescribed option, System delivers exactly that at the most accessible first-month price point in this market.',
+      pricingDetails: 'System prices its 2000mg monthly injectable glutathione supply at $69 for the first month, discounted from a regular $133/month. Injection supplies and 20% off a Rythm blood test are included. Confirm at checkout whether the discounted rate applies to any additional months beyond the first.',
+      ourVerdict: 'System earns the top spot on this page by delivering what matters most: accessible first-month pricing, an injectable format with supplies included, and a fully online experience. The $69 first-month offer dramatically lowers the cost of entry into a 2000mg monthly injectable protocol. For patients who want to start now without overcomplicating the process, System is the strongest option available — just budget for the $133/month it becomes afterward.',
+    },
+    faq: [
+      {
+        question: 'How does the $69 first-month offer work at System?',
+        answer: 'New System patients start at $69 for their first month of injectable glutathione therapy, discounted from the regular $133/month. The discounted pricing is applied at signup, no coupon code required.',
+      },
+      {
+        question: 'What format is System\'s glutathione, and what does it include?',
+        answer: 'System dispenses a 2000mg monthly supply of injectable glutathione. The plan includes injection supplies and 20% off a Rythm blood test, so there is nothing extra to order before your first dose.',
+      },
+      {
+        question: 'How does shipping work with System?',
+        answer: 'System ships your compounded glutathione via 2-day temperature-controlled delivery to keep it stable in transit, with injection supplies included in the box.',
+      },
+      {
+        question: 'Do I need a prescription for System glutathione?',
+        answer: 'Yes. System requires a licensed clinician to evaluate your health intake and prescribe your glutathione protocol. This evaluation is included in the process at no extra charge.',
       },
     ],
   },

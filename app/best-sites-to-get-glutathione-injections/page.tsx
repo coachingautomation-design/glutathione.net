@@ -47,7 +47,7 @@ const POSITIONING: Record<string, string> = {
 const FAQS = [
   {
     q: 'What is the best site to get glutathione injections?',
-    a: 'On our scoring, System is the best site to get glutathione injections online: a fully online clinician review, a 2000mg monthly supply with injection supplies included, 2-day temperature-controlled shipping, and a $69 first month (then $133/month). AgelessRx and ReadyRx are the strongest alternatives.',
+    a: 'On our scoring, AgelessRx is the best site to get glutathione injections online: an established longevity platform with 197,000+ customers, an injection price locked in at $99/month, free shipping, HSA/FSA accepted, and a choice of injection, nasal spray or needle-free patch. System and ReadyRx are the strongest alternatives.',
   },
   {
     q: 'Can you legally buy glutathione injections online?',
